@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOTE: these are baseline values for large scale screens. See values-sw360dp-h1dp for normal screens dimens -->
+<resources>
+    <dimen name="square_header_size">550dp</dimen>
+	<dimen name="NavbarBounds_height">40dp</dimen>
+	<dimen name="NavbarBounds_height_scene_navbar_2lines">90dp</dimen>
+
+
+
+
+
+
+
+
+
+
+
+	<!-- This is the extra room for title / line2 / menu / like/unlike below AA image -->
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,117 @@
+
+> Configure project :dais_dark_extra
+Using Poweramp-build-1007-resources.zip PA resources
+WARNING: no stable-ids.txt specified
+
+> Configure project :poweramp_skin_sample
+Using Poweramp-build-1007-resources.zip PA resources
+WARNING: no stable-ids.txt specified
+
+> Task :PowerampAICompanion:preBuild UP-TO-DATE
+> Task :PowerampAICompanion:preDebugBuild UP-TO-DATE
+> Task :PowerampAICompanion:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :poweramp_api_lib:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :poweramp_api_lib:preBuild UP-TO-DATE
+> Task :poweramp_api_lib:preDebugBuild UP-TO-DATE
+> Task :poweramp_api_lib:generateDebugResValues UP-TO-DATE
+> Task :poweramp_api_lib:generateDebugResources UP-TO-DATE
+> Task :poweramp_api_lib:packageDebugResources UP-TO-DATE
+> Task :poweramp_api_lib:processDebugNavigationResources UP-TO-DATE
+> Task :poweramp_api_lib:parseDebugLocalResources UP-TO-DATE
+> Task :poweramp_api_lib:generateDebugRFile UP-TO-DATE
+> Task :poweramp_api_lib:compileDebugKotlin UP-TO-DATE
+> Task :poweramp_api_lib:javaPreCompileDebug UP-TO-DATE
+> Task :poweramp_api_lib:compileDebugJavaWithJavac UP-TO-DATE
+> Task :poweramp_api_lib:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :PowerampAICompanion:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :poweramp_api_lib:compileDebugLibraryResources UP-TO-DATE
+> Task :poweramp_api_lib:writeDebugAarMetadata UP-TO-DATE
+> Task :PowerampAICompanion:checkDebugAarMetadata UP-TO-DATE
+> Task :PowerampAICompanion:processDebugNavigationResources UP-TO-DATE
+> Task :PowerampAICompanion:compileDebugNavigationResources UP-TO-DATE
+> Task :PowerampAICompanion:generateDebugResValues UP-TO-DATE
+> Task :PowerampAICompanion:mapDebugSourceSetPaths UP-TO-DATE
+> Task :PowerampAICompanion:generateDebugResources UP-TO-DATE
+> Task :PowerampAICompanion:mergeDebugResources UP-TO-DATE
+> Task :PowerampAICompanion:packageDebugResources UP-TO-DATE
+> Task :PowerampAICompanion:parseDebugLocalResources UP-TO-DATE
+> Task :PowerampAICompanion:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :poweramp_api_lib:extractDeepLinksDebug UP-TO-DATE
+> Task :poweramp_api_lib:processDebugManifest UP-TO-DATE
+> Task :PowerampAICompanion:extractDeepLinksDebug UP-TO-DATE
+> Task :PowerampAICompanion:processDebugMainManifest UP-TO-DATE
+> Task :PowerampAICompanion:processDebugManifest UP-TO-DATE
+> Task :PowerampAICompanion:processDebugManifestForPackage UP-TO-DATE
+> Task :PowerampAICompanion:processDebugResources UP-TO-DATE
+> Task :PowerampAICompanion:javaPreCompileDebug UP-TO-DATE
+> Task :poweramp_api_lib:generateDebugAssets UP-TO-DATE
+> Task :poweramp_api_lib:mergeDebugAssets UP-TO-DATE
+> Task :PowerampAICompanion:generateDebugAssets UP-TO-DATE
+> Task :PowerampAICompanion:mergeDebugAssets UP-TO-DATE
+> Task :PowerampAICompanion:compressDebugAssets UP-TO-DATE
+> Task :poweramp_api_lib:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :PowerampAICompanion:desugarDebugFileDependencies UP-TO-DATE
+> Task :poweramp_api_lib:processDebugJavaRes UP-TO-DATE
+> Task :PowerampAICompanion:checkDebugDuplicateClasses UP-TO-DATE
+> Task :PowerampAICompanion:mergeExtDexDebug UP-TO-DATE
+> Task :poweramp_api_lib:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :PowerampAICompanion:mergeLibDexDebug UP-TO-DATE
+> Task :poweramp_api_lib:mergeDebugJniLibFolders UP-TO-DATE
+> Task :poweramp_api_lib:mergeDebugNativeLibs NO-SOURCE
+> Task :poweramp_api_lib:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :PowerampAICompanion:mergeDebugJniLibFolders UP-TO-DATE
+> Task :PowerampAICompanion:mergeDebugNativeLibs NO-SOURCE
+> Task :PowerampAICompanion:stripDebugDebugSymbols NO-SOURCE
+> Task :PowerampAICompanion:validateSigningDebug UP-TO-DATE
+> Task :PowerampAICompanion:writeDebugAppMetadata UP-TO-DATE
+> Task :PowerampAICompanion:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :PowerampAICompanion:kaptGenerateStubsDebugKotlin
+> Task :PowerampAICompanion:kaptDebugKotlin UP-TO-DATE
+
+> Task :PowerampAICompanion:compileDebugKotlin
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/AutoDjService.kt:68:73 'static field TRACK: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/ExploreFragment.kt:544:60 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/ExploreFragment.kt:555:87 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/MainActivity.kt:35:96 'static field TRACK: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/MainActivity.kt:50:87 'static field STATE: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/MainActivity.kt:82:106 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/MainActivity.kt:131:82 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/MainActivity.kt:140:109 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/MainActivity.kt:143:135 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/MainActivity.kt:157:67 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/MainActivity.kt:158:65 'static field COMMAND: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/MainActivity.kt:164:67 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/MainActivity.kt:165:65 'static field COMMAND: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/MainActivity.kt:171:67 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/MainActivity.kt:172:65 'static field COMMAND: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/MainActivity.kt:177:106 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/MainActivity.kt:305:60 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/PowerampController.kt:39:29 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/PowerampController.kt:400:44 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/PowerampController.kt:408:41 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/PowerampController.kt:435:36 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/PowerampController.kt:643:36 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/PowerampController.kt:649:36 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/PowerampController.kt:811:40 'static field PACKAGE_NAME: String' is deprecated. Deprecated in Java.
+w: file:///home/oliver/AndroidStudioProjects/powerampapi/PowerampAICompanion/src/main/java/com/maxmpz/poweramp/companion/RecommendationEngine.kt:237:31 'fun create(contentType: MediaType?, content: String): RequestBody' is deprecated. Moved to extension function. Put the 'content' argument first to fix Java.
+
+> Task :PowerampAICompanion:compileDebugJavaWithJavac
+> Task :PowerampAICompanion:dexBuilderDebug
+> Task :PowerampAICompanion:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :PowerampAICompanion:processDebugJavaRes UP-TO-DATE
+> Task :PowerampAICompanion:mergeDebugJavaResource UP-TO-DATE
+> Task :PowerampAICompanion:mergeProjectDexDebug
+> Task :PowerampAICompanion:packageDebug
+> Task :PowerampAICompanion:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :PowerampAICompanion:assembleDebug
+
+[Incubating] Problems report is available at: file:///home/oliver/AndroidStudioProjects/powerampapi/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 28s
+57 actionable tasks: 6 executed, 51 up-to-date

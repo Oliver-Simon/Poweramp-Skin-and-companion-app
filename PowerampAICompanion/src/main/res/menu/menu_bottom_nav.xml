@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@android:drawable/ic_menu_edit" android:id="@id/nav_generate" android:title="Generieren" />
+    <item android:icon="@android:drawable/ic_menu_compass" android:id="@id/nav_explore" android:title="Entdecken" />
+    <item android:icon="@android:drawable/ic_menu_search" android:id="@id/nav_discovery" android:title="Radar" />
+</menu>

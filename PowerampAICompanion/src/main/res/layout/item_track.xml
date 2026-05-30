@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="4.0dip" android:layout_marginVertical="6.0dip" app:cardBackgroundColor="?colorSurfaceVariant" app:cardCornerRadius="12.0dip" app:cardElevation="2.0dip" app:strokeWidth="0.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.google.android.material.checkbox.MaterialCheckBox android:id="@id/cbSelectTrack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" />
+        <com.google.android.material.imageview.ShapeableImageView android:id="@id/ivAlbumArt" android:background="#ff333333" android:layout_width="56.0dip" android:layout_height="56.0dip" android:scaleType="centerCrop" android:layout_marginEnd="16.0dip" app:shapeAppearanceOverlay="@style/RoundedImageView" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="?android:textColorPrimary" android:ellipsize="end" android:id="@id/tvTrackTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+            <TextView android:textSize="14.0sp" android:textColor="?android:textColorSecondary" android:ellipsize="end" android:id="@id/tvTrackArtist" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+        </LinearLayout>
+        <ImageButton android:id="@id/btnPlayNextTrack" android:background="?selectableItemBackgroundBorderless" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_play_next" android:contentDescription="Play Next" android:layout_marginStart="4.0dip" app:tint="?colorPrimary" />
+        <ImageButton android:id="@id/btnQueueTrack" android:background="?selectableItemBackgroundBorderless" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@android:drawable/ic_menu_add" android:contentDescription="Add to Queue" android:layout_marginStart="4.0dip" app:tint="?colorPrimary" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

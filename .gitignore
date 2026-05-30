@@ -1,0 +1,22 @@
+.gradle
+build/
+local.properties
+.idea
+*.apk
+*.aar
+*.flat
+.kotlin
+
+# Non-skin heavy folders
+PowerampAICompanion/
+poweramp_provider_example/
+poweramp_api_example/
+poweramp_lyrics_plugin_example/
+poweramp_vis_presets_example/
+backups_burn_in/
+backups_fix/
+poweramp_skin_sample_backup_20260325/
+*.zip
+*.txt
+*.poweramp-settings
+

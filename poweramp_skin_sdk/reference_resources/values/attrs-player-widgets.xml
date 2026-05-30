@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010-2020 Maksim Petrov
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted for themes, skins, widgets, plugins, applications and other software
+which communicate with Poweramp music player application on Android platform.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<resources>
+		
+	<!-- Main Poweramp list, i.e. main screen AA and all the Library lists and Library itself. 
+		 NOTE: derived from PowerList - accepts PowerList attributes as well -->
+	<declare-styleable name="ListWidget">
+		<attr name="moveableToolbar" format="reference"/><!-- Id of the toolbar which can be moved by list on scroll -->
+		<attr name="moveableToolbarExtraStates" format="boolean"/><!-- If true, PowerList will set state w:state_toolbar_in_header for NavBar and NavBarButtons drawables when toolbar is over header -->
+		<attr name="moveableToolbarAnchor">
+			<enum name="fixedTop" value="0"/><!-- Toolbar always on top, doesn't move (also should be set in xml layout as top aligned) -->
+			<enum name="top" value="1"/><!-- Toolbar moves away top on scroll (also should be set in xml layout as top aligned) -->
+			<enum name="bottom" value="2"/><!-- Toolbar moves away bottom on scroll (also should be set in xml layout as bottom aligned) -->
+			<enum name="fixedBottom" value="3"/><!-- Toolbar always on bottom, doesn't move (also should be set in xml layout as bottom aligned) -->
+		</attr>
+
+		<!-- Space to reserve for moveable toobar on bottom. Should be large enough so the toolbar doesn't overlap last item -->
+		<attr name="bottomReservedSpace" format="dimension|reference"/>
+
+		<!-- Space to reserve for extended moveable toobar on bottom (with the seekbar) -->
+		<attr name="bottomReservedSpace2" format="dimension|reference"/>
+
+		<!-- The extra space to add to bottomReservedSpace for the selection mode. Allows space increase/decrease relative to bottomReservedSpace,
+		     which can be dynamic due to the theme options  -->
+		<attr name="selectionBottomReservedExtraSpace" format="dimension|reference"/>
+
+		<!-- ListWidget popup menu animation time -->
+		<attr name="popupEnterAnimTime"/><!-- ms -->
+		<!-- ListWidget popup menu animation time -->
+		<attr name="popupExitAnimTime"/><!-- ms -->
+		<attr name="menuPlaceholder"/><!-- Some top level MenuHelper-enabled layout (poped-out item transformed into menu and attached there) -->
+		
+		<!-- Animation time between AA states (playing/paused) -->
+		<attr name="preferredAAAnimTime" format="integer"/><!-- ms -->
+		
+		<!-- Controls AA blur background. Note that user can also disable background in the Background settings.
+		     See also aaEffectList, aaEffectLyrics attributes, which define effects applied for the appropriate backgrounds -->
+		<attr name="listMilkMode" format="integer">
+			<flag name="none" value="0"/><!-- No any AA images are applied to the background -->
+			<flag name="mainAA" value="0x1"/><!-- Default. AA from the main screen is applied to the background -->
+			<!-- @Deprecated -->
+			<flag name="listHeader" value="0x2"/>
+			<flag name="list" value="0x2"/><!-- AA is applied to the list background. See also aaEffectList -->
+			<flag name="lyrics" value="0x4"/><!-- AA is applied to the lyrics background. See also aaEffectLyrics -->
+		</attr>
+		
+		<!-- Milk (visualization) AA widget id --> 
+		<attr name="listMilkAA" format="reference"/>
+		
+		<!-- Number of styles to apply to list internals -->
+		<attr name="listSubstyle" format="reference"/>
+		
+		<!-- Automatically set top padding and add to bottomReservedSpace from status bar or/and android navigation bar.
+			 NOTE: only top padding is modified for statusBar and bottomReservedSpace for navigationBar
+		 -->
+		<attr name="offsetWindowInsets">
+			<flag name="none" value="0"/>
+			<flag name="statusBar" value="0x1"/>
+			<flag name="navigationBar" value="0x2"/>
+		</attr>
+	</declare-styleable>
+	<!-- NOTE: see attrs-player.xml for ListSubstyle -->
+	
+	<!-- Expandable Navbar area -->			
+	<declare-styleable name="NavbarExtension">
+		<attr name="shim" format="reference"/><!-- id of shim view which covers whole screen when NavbarExtension is expanded -->
+		<attr name="content" format="reference"/><!-- id of the content layout. If null/not specified - navbar_extension is the content view itself -->
+		<attr name="twoLineEnterAnimTime" format="integer"/><!-- Miniplayer enter time -->
+		<attr name="twoLineExitAnimTime" format="integer"/><!-- Miniplayer exit  time -->
+	</declare-styleable>
+	
+	<!-- List item view - heading with small button --> 
+	<declare-styleable name="SeparatorItemView">
+		<!-- Extra padding (can be negative) to apply when this is the first item in list -->
+		<attr name="paddingTopWhenFirst" format="dimension"/>
+	</declare-styleable>
+	
+
+	<!-- Behavior, which is currently integrated into com.maxmpz.widget.player.TopNavSceneFastLayout (=> @style/TopContainer) 
+	     Defines and controls all the top-level navigation -->
+	<declare-styleable name="TopNavBehavior">
+		<!-- Main screen enter animation duration. Applied to UI, but not inside List. List has own animation durations -->
+		<attr name="animMainEnterTime" format="integer"/>
+		<!-- Main screen exit animation duration. Applied to UI, but not inside List. List has own animation durations -->
+		<attr name="animMainExitTime" format="integer"/>
+		<!-- Play <-> pause animation duration -->		
+		<attr name="playStateAnimTime" format="integer"/>
+		<!-- Other screes animation durations. Applied to UI, but not inside List. List has own animation durations -->
+		<attr name="animTime"/>
+		<!-- Alternative animation time to apply when animTime=0 and code still requires some forced anim (as for search results anim) -->
+		<attr name="forcedAnimTime" format="integer"/>
+		<!-- State anim duration, e.g. for state_seeking anim -->
+		<attr name="stateAnimTime" format="integer"/>
+		<!-- Vis enter/exit anim duration -->
+		<attr name="visAnimTime" format="integer"/>
+		<!-- NOTE: not used anymore, instead now defined by user option. Temporary UI (on touch, when vis is enabled) duration -->
+		<attr name="tempUITime" format="integer"/>
+		
+		<!-- 
+			 AA background hide anim duration during navigation 
+			 NOTE: this duration works for main => eq navigation. 
+			 Main => lib and main => search navigation are different, as navigation is withing the list itself.
+			 List has own animation durations
+		-->
+		<attr name="aaBlurExitAnimTime" format="integer"/>
+		<!-- Vis entering anim duration during navigation -->
+		<attr name="visEnterAnimTime" format="integer"/>
+		<!-- Vis exiting anim duration during navigation -->
+		<attr name="visExitAnimTime" format="integer"/>
+		<!-- AA entering anim duration during navigation -->
+		<attr name="aaEnterAnimTime" format="integer"/>
+		
+		<!-- Fast time to change AA blur e.g. when new bitmap is loaded. Should be fast
+			 NOTE: transition time between different bitmaps blurs generally is defined by actual AA animation time, which depends on many things,
+			 or can be e.g. manual, thus controlled by user
+		-->
+		<attr name="aaBlurUpdateAnimTime" format="integer"/>
+		
+		<!-- Anim time to use if AA blur loaded with the delay -->
+		<attr name="aaBlurLongerUpdateAnimTime" format="integer"/>
+		
+		<!-- Anim time to use for cases as no-AA (null/solid color) to AA transition happens.
+		     NOTE: in-list transitions override this time to sync blur transition to in-list transition, so Search to Main screen
+		     is not affected, and the only controlled time here is Eq to Main screen
+		 -->
+		<attr name="aaBlurNoAAToAAAnimTime" format="integer"/>
+
+		<!-- Anim time for locking AA, which usually happens when we navigate to non-main page and want some static background -->
+		<attr name="aaLockDurationMs" format="integer"/>
+		
+		<!-- Needed for Android 10+ and small Android navbar line. That line requires slight offset, so our paddings look fine
+			 and consistent around it.
+		     Basically we need to offset inset by our navbar bottom margin (normal margin, not overlap_navbar_offset).
+		     TopContainer will try to adjust bottom inset when needed (Android 10+, only when small line-navbar is visible) -->
+		<attr name="reduceBottomInset" format="dimension"/>
+		
+	</declare-styleable>
+	
+	<!-- Visualization panel layout -->	
+	<declare-styleable name="VisPanelFrame">
+		<!-- Size of normal item -->
+		<attr name="itemSize" format="dimension"/>
+		<!-- Size of list item -->
+		<attr name="listItemSize"/>
+	</declare-styleable>
+		
+	<declare-styleable name="InfoTextView">
+		<!-- InfoTextHelper class name to use. Can start with . to resolve class name vs package name --> 
+		<attr name="infoTextHelper" format="string"/>
+	</declare-styleable>
+
+
+	<declare-styleable name="ListSearchCatsLayoutBase">
+		<attr name="catButtonStyle" format="reference"/>
+	</declare-styleable>
+
+	<declare-styleable name="ListSearchEditText">
+		<!-- The list bus id. Default is @id/list -->
+		<attr name="busId"/>
+	</declare-styleable>
+
+	<declare-styleable name="EqPresetPopupListLayout">
+		<attr name="separatorSize"/>
+		<!-- This is taken from the default theme -->
+		<attr name="equ_graphic_small"/>
+		<!-- This is taken from the default theme -->
+		<attr name="equ_parametric_small"/>
+		<attr name="bottomReservedSpace"/>
+		<!-- True for the dialog list. This changes behavior to be focused around specific filters/assign cb/etc. as commanded
+		     by the intent -->
+		<attr name="isDialog" format="boolean"/>
+	</declare-styleable>
+
+	<declare-styleable name="DraggableSourceBehavior">
+		<!-- The layout we're dragging the view in. Expected to be a ancestor of this view in the view tree -->
+		<attr name="draggingContainer" format="reference"/>
+		<!-- The target view we want to drag into. Expected to be a descendant child view of the draggingContainer -->
+		<attr name="draggingTarget" format="reference"/>
+		<attr name="draggableButtons" format="reference"/>
+		<!-- The style for the FastLayout which contains each draggable button and label -->
+		<attr name="draggableButtonContainerStyle" format="reference"/>
+		<!-- The style for the FastTextView we use for the button label -->
+		<attr name="draggableButtonLabelStyle" format="reference"/>
+	</declare-styleable>
+
+
+	<declare-styleable name="SubAAButtonsLayout">
+		<!-- This is defined within SubAAButtonsLayout styleable, but it's set in the global theme (to simplify overriding).
+		     Default is false. If true (may be set for the old skins with the targetBuild<1003 via ActivityTheme_Legacy_subAA),
+		     SubAAButtonsLayout will try to check few unused attrs/styles - TopVisButtonLayout, TopSleepTimerButtonLayout,
+		     TopRepeatButtonLayout, TopShuffleButtonLayout.
+		     SubAAButtonsLayout will check specific attributes affecting _height_: layout_marginTop, layout_marginBottom, paddingTop,
+		     paddingBottom.
+		     Based on these, SubAAButtonsLayout will add to its vertical padding (paddingTop/paddingBottom) so the resulting
+		     SubAAButtonsLayout is close to the height in the old Poweramp builds+this skin.
+		     This partially resolves issue with skins which are not yet updated, but still the new features, such as 2 line button layout
+		     will not work properly
+
+		     WARNING: this complicates things a lot and makes further skin modifications for SubAA buttons much more complicated and
+		     surprising. It is recommended to set <skin> targetBuild to value >= 1003 and modify SubAA related styles, so the padding
+		     of SubAAButtonsLayout is set directly instead of this complicated logic of extracting that info from the button styles -->
+		<attr name="SubAAButtonsLayout_legacyMode" format="boolean"/>
+
+		<!-- Reference to the array of possible buttons -->
+		<attr name="buttons" format="reference"/>
+
+		<!-- Reference to the appropriate LoadableDraggableButtonsBehavior.
+		     We assume it's a behavior for the parent view of SubAAButtonsLayout -->
+		<attr name="loadableDraggable" format="reference"/>
+
+		<!-- Width of the slot, generally should be the same as the appropriate dragged button size,
+		     e.g. @dimen/TopBaseButtonLayout_width -->
+		<attr name="slotWidth" format="dimension"/>
+
+		<!-- Reduced size (e.g. round) slot width -->
+		<attr name="smallSlotWidth" format="dimension"/>
+
+		<!-- Try to fit at least x values when centered layout is used. If 0, we don't apply this logic -->
+		<attr name="fitCentered" format="integer"/>
+		<!-- Try to fit at least x values when centered layout is used -->
+		<attr name="smallFitCentered" format="integer"/>
+		<!-- We won't go below that for a slot width when trying to fit them in centered layout -->
+		<attr name="minSlotWidthForFitCentered" format="dimension"/>
+
+		<!-- Slot line height -->
+		<attr name="slotLineHeight" format="dimension"/>
+
+		<!-- Vertical padding between 2 slot lines (for 2 lines mode) -->
+		<attr name="slotLinePadding" format="dimension"/>
+
+		<!-- The padding between slots. Only applied between slots, not before the first one or after the last one -->
+		<attr name="slotPadding" format="dimension"/>
+
+		<attr name="slotDrawable" format="dimension"/>
+		<attr name="highlightedSlotDrawable" format="dimension"/>
+
+		<!-- The top container to use for the scene anims. Differs for pa vs peq -->
+		<attr name="topSceneContainer" format="reference"/>
+	</declare-styleable>
+
+	<!-- Styleable used internally for SubAAButtonsLayout_legacyMode button height related calculations -->
+	<declare-styleable name="SubAAButtonsLayout_legacyButton">
+		<attr name="android:paddingTop"/>
+		<attr name="android:paddingBottom"/>
+		<attr name="android:layout_marginTop"/>
+		<attr name="android:layout_marginBottom"/>
+	</declare-styleable>
+
+
+
+</resources>

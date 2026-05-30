@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Both enter/exit reqiured for proper enabled/disable state fade -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:exitFadeDuration="250" android:enterFadeDuration="250">
+	<!-- NOTE: default/intrisics size is defined by first state being measured -->
+	<item android:state_enabled="false">
+		<!-- Invisible rect. Still required for proper dimensions calcs, etc. -->
+		<shape android:shape="rectangle"
+			android:useLevel="false"
+		>
+			<solid android:color="#0000" />
+			<size android:width="18dp" android:height="10dp" />
+		</shape>
+	</item>
+	
+	<item android:state_pressed="true">
+		<shape android:shape="rectangle"
+			android:useLevel="false"
+		>
+			<solid android:color="?colorKnobPressed" />
+			<size android:width="18dp" android:height="10dp" />
+			<corners android:radius="10dp"/>
+		</shape>
+		
+	</item>
+	
+	<item>
+		<shape android:shape="rectangle"
+			android:useLevel="false"
+		>
+			<solid android:color="?colorSeekbarThumb" />
+			<size android:width="18dp" android:height="10dp" />
+			<corners android:radius="10dp"/>
+		</shape>
+	</item>
+</selector>

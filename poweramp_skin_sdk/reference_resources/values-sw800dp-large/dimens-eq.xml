@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010-2020 Maksim Petrov
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted for themes, skins, widgets, plugins, applications and other software
+which communicate with Poweramp music player or Poweramp Equalizer applications on Android platform.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+
+<!-- values-sw800dp-large -->
+<resources>
+	<dimen name="EqLinearKnob_thumbWidth">48dp</dimen>
+	<dimen name="EqLinearKnob_thumbHeight">96dp</dimen>
+	<dimen name="knob_thumb_indicator_top_bottom">46dp</dimen>
+	<dimen name="knob_thumb_indicator_left_right">10dp</dimen>
+	<dimen name="knob_thumb_radius">30dp</dimen>
+	<dimen name="knob_thumb_radius_less_rounded">20dp</dimen>
+	<dimen name="EqLinearKnob_paddingLR">12dp</dimen>
+	<dimen name="linear_knob_text_size">14dp</dimen>
+	
+	<dimen name="preamp_knob_width">108dp</dimen>
+	<dimen name="preamp_bg_insetRight">16dp</dimen>
+		
+	<dimen name="EqKnobValueText_size">12sp</dimen>
+	<dimen name="EqKnobLabelText_size">14dp</dimen>
+	
+	<dimen name="EqButton_width">80dp</dimen>
+	<dimen name="EqButton_height">44dp</dimen>
+	<dimen name="EqButtonsBase_smallSlotWidth">57dp</dimen>
+
+	<dimen name="EqMenu_size">44dp</dimen>
+	<!--<dimen name="EqButton_paddingLR">24dp</dimen>-->
+	<dimen name="EqButton_textSize">16dp</dimen><!-- Default (fixed) font -->
+
+	<dimen name="EqParamRoundKnobPortBase_paddingBottom">48sp</dimen>
+
+	<dimen name="EqParamPopupButtonLayout_height_port">44dp</dimen>
+	<dimen name="EqParamPlaceholder2_height_port">116dp</dimen><!-- 4 + 44 + 4 + 44 + 20 -->
+	<dimen name="EqParamTypePopupButtonLayout_marginBottom_port">20dp</dimen>
+
+	<dimen name="EqParamRoundKnobBase_maxSize_port">180dp</dimen>
+
+
+	<dimen name="eq_frs_height">96dp</dimen>
+	
+	<dimen name="EqButton_maxWidth">128dp</dimen>
+	<dimen name="EqButton_marginSide">16dp</dimen>
+	
+	<dimen name="EqEquPresetButtonLayout_width">272dp</dimen>
+
+	<dimen name="EqToneRoundKnobLabel_maxWidth">80dp</dimen>
+	
+	<dimen name="EqKnob_spacing">8dp</dimen>
+	
+	<dimen name="EqToneRoundKnob_maxSize">240dp</dimen>
+	<dimen name="EqRoundKnob_maxSize">300dp</dimen>
+
+	<dimen name="EqLargerRoundKnob_maxSize">350dp</dimen>
+
+	<dimen name="EqToneRoundKnobLayout_maxWidth">320dp</dimen>
+	<dimen name="EqToneRoundKnobLayout_maxSize">280dp</dimen>
+	
+	<dimen name="EqRoundKnobLayout_maxSize">320dp</dimen>
+	<dimen name="EqLargerRoundKnobLayout_maxSize">350dp</dimen>
+
+
+
+</resources>

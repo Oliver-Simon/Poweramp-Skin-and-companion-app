@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceCycle, NewApi">
+
+	<style name="SampleSkin_Alt_Centered_Base" parent="com.maxmpz.audioplayer:style/ActivityTheme_Black">
+		<item name="Alt_AAImage_consumeSpace">0x82080000</item>
+		
+		<!-- Fix Art Aspect Ratio -->
+		<item name="com.maxmpz.audioplayer:ItemTrackAAImage_scene_aa">@style/Alt_Centered_Art_Square</item>
+
+		<!-- Centered labels -->
+		<item name="com.maxmpz.audioplayer:ItemTrackTitle_scene_aa">@style/Alt_Centered_Label_Title</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackLine2_scene_aa">@style/Alt_Centered_Label_Line2</item>
+
+		<!-- Handle "Text Background: None" settings -->
+		<item name="ItemTrackTitle_scene_aa_no_bg">@style/Alt_Centered_Label_Title_NoBg</item>
+		<item name="ItemTrackLine2_scene_aa_no_bg">@style/Alt_Centered_Label_Line2_NoBg</item>
+
+		<item name="com.maxmpz.audioplayer:textSizeMultiplierPref">@+id/titleLine2FontSize</item>
+	</style>
+
+	<style name="SampleSkin_Alt_Centered" parent="SampleSkin_Alt_Centered_Base">
+	</style>
+
+	<style name="Alt_Centered_Art_Square" parent="com.maxmpz.audioplayer:Alt_ItemTrackAAImage_scene_aa">
+		<item name="com.maxmpz.audioplayer:layout_consumeSpace">?attr/Alt_AAImage_consumeSpace</item>
+		<item name="android:scaleType">fitCenter</item>
+		<item name="com.maxmpz.audioplayer:layout_gravityGroup">0</item>
+	</style>
+
+	<style name="Alt_Centered_Label_Title" parent="com.maxmpz.audioplayer:Alt_ItemTrackTitle_scene_aa">
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+		<item name="android:gravity">center_horizontal</item>
+		<item name="com.maxmpz.audioplayer:layout_attachLeft">parent</item>
+		<item name="com.maxmpz.audioplayer:layout_attachRight">parent</item>
+		<item name="com.maxmpz.audioplayer:layout_attachTop">@null</item>
+		<item name="com.maxmpz.audioplayer:layout_attachBottom">@com.maxmpz.audioplayer:id/line2</item>
+		<item name="com.maxmpz.audioplayer:layout_gravityGroup">0</item>
+	</style>
+
+	<style name="Alt_Centered_Label_Line2" parent="com.maxmpz.audioplayer:Alt_ItemTrackLine2_scene_aa">
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+		<item name="android:gravity">center_horizontal</item>
+		<item name="android:layout_marginBottom">25dp</item>
+		<item name="com.maxmpz.audioplayer:layout_attachLeft">parent</item>
+		<item name="com.maxmpz.audioplayer:layout_attachRight">parent</item>
+		<item name="com.maxmpz.audioplayer:layout_attachTop">@null</item>
+		<item name="com.maxmpz.audioplayer:layout_attachBottom">parent</item>
+		<item name="com.maxmpz.audioplayer:layout_gravityGroup">0</item>
+	</style>
+
+	<style name="Alt_Centered_Label_Title_NoBg" parent="Alt_Centered_Label_Title">
+		<item name="com.maxmpz.audioplayer:lineBackground">@null</item>
+		<item name="android:background">@null</item>
+	</style>
+
+	<style name="Alt_Centered_Label_Line2_NoBg" parent="Alt_Centered_Label_Line2">
+		<item name="com.maxmpz.audioplayer:lineBackground">@null</item>
+		<item name="android:background">@null</item>
+	</style>
+
+	<!-- Needed references from Poweramp sdk -->
+	<style name="Alt_ItemTrackAAImage_scene_aa" parent="com.maxmpz.audioplayer:Alt_ItemTrackAAImage_scene_aa">
+		<item name="com.maxmpz.audioplayer:layout_consumeSpace">?attr/Alt_AAImage_consumeSpace</item>
+	</style>
+
+	<style name="Alt_TopAABounds" parent="com.maxmpz.audioplayer:Alt_TopAABounds">
+	</style>
+
+</resources>

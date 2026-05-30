@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skins targetBuild="1003">
+    <skin allowNewPadding="true" author="@string/skin_author" darkMode="@style/SampleSkinDark" description="@string/skin_sample_description" forceGlobalOptions="true" name="@string/skin_sample" style="@style/SampleSkin">
+        <include file="@xml/skin_sample_shared_options" />
+    </skin>
+    <skin author="@string/skin_author" description="@string/skin_sample_description" forceGlobalOptions="true" lightMode="@style/SampleSkin" name="@string/skin_sample_dark" style="@style/SampleSkinDark">
+        <include file="@xml/skin_sample_shared_options" />
+    </skin>
+    <include file="@xml/skin_sample_aaa" />
+</skins>

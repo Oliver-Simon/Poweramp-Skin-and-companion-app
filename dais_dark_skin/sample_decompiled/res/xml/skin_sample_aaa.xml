@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin author="@string/skin_author" description="@string/skin_sample_aaa_description" name="@string/skin_sample_aaa" style="@style/SampleSkinAAA">
+    <option checkedByDefault="false" key="no_aa_blur" name="@string/skin_no_aa_blur" overlapStyle="@style/SampleSkinAAA_noAABlur" summary="@string/skin_summary_no_aa_blur" />
+    <option checkedByDefault="false" key="seekbar_and_waveseek" name="@string/skin_seekbar_and_waveseek" overlapStyle="@style/SampleSkinAAA_seekbar_and_waveseek" summary="@string/skin_summart_seekbar_and_waveseek" />
+</skin>

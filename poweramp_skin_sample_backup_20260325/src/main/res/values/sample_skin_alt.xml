@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceCycle, NewApi">
+
+	<!-- NOTE: see also values-land/sample_skin_alt.xml -->
+
+	<style name="SampleSkin_Alt_Centered_Base" parent="com.maxmpz.audioplayer:ActivityTheme_Whitepro_AltLayout">
+
+		<!-- ===== CRITICAL CRASH FIX ===== -->
+		<!-- Ensure this attribute is resolvable in the Alt Layout context -->
+		<item name="com.maxmpz.audioplayer:textSizeMultiplierPref">@+id/titleLine2FontSize</item>
+
+		<!-- ===== RESTORE PRO BUTTONS (FORCE) ===== -->
+		<!-- We MUST override these back to visible because ActivityTheme_Whitepro_AltLayout or base themes might hide them -->
+		<item name="com.maxmpz.audioplayer:TopSubAAButtons">@com.maxmpz.audioplayer:style/TopSubAAButtons</item>
+		<item name="com.maxmpz.audioplayer:TopSubAAButtons_scenes_playing">@com.maxmpz.audioplayer:style/TopSubAAButtons_scenes_playing</item>
+		<item name="com.maxmpz.audioplayer:TopVisButtonLayout">@com.maxmpz.audioplayer:style/TopVisButtonLayout</item>
+		<item name="com.maxmpz.audioplayer:TopSleepTimerButtonLayout">@com.maxmpz.audioplayer:style/TopSleepTimerButtonLayout</item>
+		<item name="com.maxmpz.audioplayer:TopShuffleButtonLayout">@com.maxmpz.audioplayer:style/TopShuffleButtonLayout</item>
+		<item name="com.maxmpz.audioplayer:TopRepeatButtonLayout">@com.maxmpz.audioplayer:style/TopRepeatButtonLayout</item>
+
+		<!-- ===== STATIC SEEKBAR COMPATIBILITY ===== -->
+		<!-- We NO LONGER set these to @null because it causes a crash (barBitmap required). 
+		     However, if the user has Static Seekbar selected, it should ideally win. 
+		     By not setting them here, they will use either the Alt Layout defaults or 
+		     the Static Seekbar defaults if that overlap is active. -->
+
+		<!-- ===== PUSH LABELS BELOW COVER (FORCE) ===== -->
+		<!-- Force AA image to consume space to push labels down -->
+		<item name="com.maxmpz.audioplayer:ItemTrackAAImage_scene_aa">@style/Alt_ItemTrackAAImage_scene_aa</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackAAImage_scene_aa_playing">@style/Alt_ItemTrackAAImage_scene_aa</item>
+
+		<!-- ===== CENTERED LABELS IN SCENE_AA ===== -->
+		<item name="com.maxmpz.audioplayer:ItemTrackTitle_scene_aa">@style/Alt_Centered_ItemTrackTitle_scene_aa</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackLine2_scene_aa">@style/Alt_ItemTrackLine2_scene_aa</item>
+
+		<!-- FIX: list row spacing regression -->
+		<item name="com.maxmpz.audioplayer:ItemTrackLine2_scene_1_small">@com.maxmpz.audioplayer:style/ItemTrackLine2_scene_1_small</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackLine2_scene_1">@com.maxmpz.audioplayer:style/ItemTrackLine2_scene_1</item>
+
+		<!-- Register our custom list substyle which includes our square header logic -->
+		<item name="com.maxmpz.audioplayer:TopListWidget">@style/Alt_SampleSkin_TopListWidget</item>
+		
+		<!-- Critical header positioning fix (Text below album cover) -->
+		<item name="com.maxmpz.audioplayer:ItemTrackTitle_scene_header">@style/ItemTrackTitle_scene_header</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackLine2_scene_header">@style/ItemTrackLine2_scene_header</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackMeta_scene_header">@style/ItemTrackMeta_scene_header_w_meta</item>
+
+	</style>
+
+	<!-- Standard entry point for the Alt layout overlap -->
+	<style name="SampleSkin_Alt_Centered" parent="SampleSkin_Alt_Centered_Base">
+	</style>
+
+	<!-- Explicit AA image style for Alt Layout - inherits from Poweramp's Alt style for correct consumption -->
+	<style name="Alt_ItemTrackAAImage_scene_aa" parent="com.maxmpz.audioplayer:Alt_ItemTrackAAImage_scene_aa">
+		<!-- Keep our skin's AA scale -->
+		<item name="com.maxmpz.audioplayer:scale">?SampleSkin_ItemTrackAAImage_scene_aa_scale</item>
+	</style>
+
+	<!-- TopListWidget override that registers our square substyle for Alt Layout -->
+	<style name="Alt_SampleSkin_TopListWidget" parent="com.maxmpz.audioplayer:Alt_TopListWidget">
+		<item name="com.maxmpz.audioplayer:listSubstyle">@style/Alt_SampleSkin_ListSubstyle</item>
+	</style>
+
+	<style name="Alt_Centered_ItemTrackTitle_scene_aa" parent="com.maxmpz.audioplayer:Alt_ItemTrackTitle_scene_aa">
+		<item name="com.maxmpz.audioplayer:layout_attachLeft">@null</item>
+		<item name="com.maxmpz.audioplayer:layout_attachRight">@null</item>
+		<item name="com.maxmpz.audioplayer:layout_attachTop">@null</item>
+		<item name="com.maxmpz.audioplayer:layout_attachBottom">@com.maxmpz.audioplayer:id/line2</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+	</style>
+
+	<style name="Alt_ItemTrackLine2_scene_aa" parent="com.maxmpz.audioplayer:Alt_ItemTrackLine2_scene_aa">
+		<item name="com.maxmpz.audioplayer:layout_attachLeft">@null</item>
+		<item name="com.maxmpz.audioplayer:layout_attachRight">@null</item>
+		<item name="com.maxmpz.audioplayer:layout_attachTop">@null</item>
+		<item name="com.maxmpz.audioplayer:layout_attachBottom">parent</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+	</style>
+
+</resources>

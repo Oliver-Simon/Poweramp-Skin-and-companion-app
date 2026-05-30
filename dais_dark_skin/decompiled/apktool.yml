@@ -1,0 +1,20 @@
+version: 2.7.0-dirty
+apkFileName: dais_dark_skin.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: '21'
+  targetSdkVersion: '31'
+packageInfo:
+  forcedPackageId: '128'
+compressionType: false
+resourcesAreCompressed: false
+doNotCompress:
+- resources.arsc
+- png
+- jpg
+- webp
+- xml
+- json

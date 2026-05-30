@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010-2021 Maksim Petrov
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted for themes, skins, widgets, plugins, applications and other software
+which communicate with Poweramp music player or Poweramp Equalizer applications on Android platform.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<resources>
+	<item type="id" name="_knob"/>
+	<item type="id" name="_label"/>
+	<item type="id" name="_value_label"/>
+	<item type="id" name="_lock_label"/>
+	<item type="id" name="_skin_option"/>
+	<item type="id" name="_preamp"/>
+	<item type="id" name="_param"/>
+	<item type="id" name="_gain"/>
+	<item type="id" name="_q"/>
+	<item type="id" name="_q_label"/>
+	<item type="id" name="_q_value"/>
+	<item type="id" name="_placeholder1"/>
+	<item type="id" name="_placeholder2"/>
+	<item type="id" name="_lr"/>
+	<item type="id" name="_type"/>
+	<item type="id" name="_freq"/>
+	<item type="id" name="_controls"/>
+	<item type="id" name="_empty_controls"/>	
+	<item type="id" name="_freq_value"/>
+	<item type="id" name="_freq_label_and_value"/>
+	<item type="id" name="_q_label_and_value"/>
+	<item type="id" name="_color"/>
+	<item type="id" name="_edit"/>
+	<item type="id" name="_lock"/>
+	<item type="id" name="_left_label"/>
+	<item type="id" name="_right_label"/>
+	<item type="id" name="_button"/>
+	<item type="id" name="_icon"/>
+	<item type="id" name="_popup_button_index"/>
+
+	<item type="id" name="vis_frame"/>
+	<item type="id" name="milk_frs"/>
+	<item type="id" name="menu_more_button"/>
+	<item type="id" name="perm_panel"/>
+	<item type="id" name="track_seek" />
+	<item type="id" name="play_pause" />
+	<item type="id" name="track_duration" />
+	<item type="id" name="track_elapsed" />
+	<item type="id" name="behavior_help"/>
+	<item type="id" name="search"/>
+	<item type="id" name="link"/>
+	<item type="id" name="select"/>
+	<item type="id" name="add_new"/>
+	<item type="id" name="buttons1" />
+	<item type="id" name="button1"/>
+	<item type="id" name="button2"/>
+	<item type="id" name="button3"/>
+	<item type="id" name="separator3"/>
+	<item type="id" name="separator2"/>
+	<item type="id" name="separator"/>
+	<item type="id" name="buttlist_indexerons1" />
+	<item type="id" name="navigation_bar_bg"/>
+	<item type="id" name="cat_image"/>
+	<item type="id" name="num"/>
+	<item type="id" name="frequency_response_scroller"/>
+	<item type="id" name="tags_edit"/>
+	<item type="id" name="frs_info_label"/>
+	<item type="id" name="equ_button"/>
+	<item type="id" name="tone_panel"/>
+	<item type="id" name="save_button"/>
+	<item type="id" name="reset_button"/>
+	<item type="id" name="mono_button"/>
+	<item type="id" name="insetLeft"/>
+	<item type="id" name="insetTop"/>
+	<item type="id" name="insetBottom"/>
+	<item type="id" name="copy_item"/>
+	<item type="id" name="share_item"/>
+	<item type="id" name="list_item"/>
+
+	<item type="id" name="top_container"/>
+	<item type="id" name="aa_bounds"/>
+	<item type="id" name="cc_button"/>
+	<item type="id" name="waveseek_layout"/>
+	<item type="id" name="waveseek"/>
+	<item type="id" name="play_pause_behind"/>
+	<item type="id" name="pause"/>
+	<item type="id" name="play"/>
+	<item type="id" name="meta_info_layout"/>
+	<item type="id" name="meta_info"/>
+	<item type="id" name="vis_button_layout"/>
+	<item type="id" name="sleep_timer_layout"/>
+	<item type="id" name="sleep_timer_button"/>
+	<item type="id" name="shuffle_button_layout"/>
+	<item type="id" name="repeat_button_layout"/>
+	<item type="id" name="behavior_eq_layout"/>
+	<item type="id" name="behavior_search_layout"/>
+	<item type="id" name="vis_panel_loadable_beahvior"/>
+	<item type="id" name="behavior_subaabuttons_edit"/>
+
+	<item type="id" name="anim_temp_hidden"/>
+
+
+	<!-- Some old ids keeped for compatibility with skins -->
+	
+	<!--
+	<item type="id" name=""/>
+	<item type="id" name=""/>
+	<item type="id" name=""/>
+	<item type="id" name=""/>
+	<item type="id" name=""/>
+	<item type="id" name=""/>
+	<item type="id" name=""/>
+	<item type="id" name=""/>
+	>-->
+</resources>

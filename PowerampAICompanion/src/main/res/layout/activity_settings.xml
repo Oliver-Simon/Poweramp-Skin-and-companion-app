@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:orientation="vertical">
+
+    <!-- Header (Fixed) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            android:tint="?colorPrimary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="SETTINGS"
+            android:textColor="?colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Data Source"
+                android:textColor="?colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@id/tvCurrentCsv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Current CSV: Default (App Bundle)"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@id/btnLoadCsv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Load new Last.fm CSV"
+                android:textColor="?colorOnSurfaceVariant"
+                app:backgroundTint="?colorSurfaceVariant" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Last.fm Live Scrobble"
+                android:textColor="?colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:boxBackgroundColor="?colorSurfaceVariant"
+                app:boxStrokeColor="?colorPrimary"
+                app:hintTextColor="?colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@id/etLastfmUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last.fm Username"
+                    android:maxLines="1"
+                    android:textColor="?android:textColorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:boxBackgroundColor="?colorSurfaceVariant"
+                app:boxStrokeColor="?colorPrimary"
+                app:hintTextColor="?colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@id/etLastfmApiKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last.fm API Key"
+                    android:maxLines="1"
+                    android:textColor="?android:textColorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="AI Configuration"
+                android:textColor="?colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Choose your preferred AI backend for smarter playlists. Groq is recommended for speed and free tier availability."
+                android:textColor="?android:textColorSecondary"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:boxBackgroundColor="?colorSurfaceVariant"
+                app:hintTextColor="?colorPrimary">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinnerProvider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="AI Provider"
+                    android:inputType="none"
+                    android:text="Gemini" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:boxBackgroundColor="?colorSurfaceVariant"
+                app:boxStrokeColor="?colorPrimary"
+                app:hintTextColor="?colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAiModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Model Name (e.g. gemini-2.0-flash, llama-3.3-70b-versatile)"
+                    android:maxLines="1"
+                    android:textColor="?android:textColorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:boxBackgroundColor="?colorSurfaceVariant"
+                app:boxStrokeColor="?colorPrimary"
+                app:hintTextColor="?colorPrimary"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="?colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@id/etGeminiKey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="API Key"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="?android:textColorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutAiBaseUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:visibility="gone"
+                app:boxBackgroundColor="?colorSurfaceVariant"
+                app:boxStrokeColor="?colorPrimary"
+                app:hintTextColor="?colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAiBaseUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Custom API Base URL"
+                    android:maxLines="1"
+                    android:textColor="?android:textColorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Blacklist Filter"
+                android:textColor="?colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Künstler oder Genres, die IMMER ignoriert werden sollen (z.B. Hörspiele, Metal, Rammstein)."
+                android:textColor="?android:textColorSecondary"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:boxBackgroundColor="?colorSurfaceVariant"
+                app:boxStrokeColor="?colorPrimary"
+                app:hintTextColor="?colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@id/etBlacklist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Exclude (comma separated)"
+                    android:inputType="text"
+                    android:maxLines="2"
+                    android:textColor="?android:textColorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Infinite Auto-DJ (Radio)"
+                android:textColor="?colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@id/switchAutoDj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Enable Background DJ Service"
+                android:textColor="?android:textColorPrimary" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@id/switchShuffleQueue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Shuffle Tracks when adding to Queue"
+                android:textColor="?android:textColorPrimary" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@id/switchQueueRemaining"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Show remaining Queue duration"
+                android:textColor="?android:textColorPrimary" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@id/switchMiniPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Show 'Now Playing' Mini-Player"
+                android:textColor="?android:textColorPrimary" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/switchTweakBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:text="Show Iteration Taskbar (Tweak Prompts)"
+                android:textColor="?android:textColorPrimary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@id/btnSaveGeminiKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Save API Key"
+                android:textColor="?colorOnPrimary"
+                app:backgroundTint="?colorPrimary" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

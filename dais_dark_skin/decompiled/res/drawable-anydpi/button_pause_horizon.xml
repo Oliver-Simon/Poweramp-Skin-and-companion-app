@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="48.0" android:viewportHeight="48.0">
+            <path android:pathData="M18.85,1.47h10.3M18.79,46.53H29.21M12.47,4H35.53M8.82,6.47H39.18M6.44,9H41.56m-37,2.5H43.43m-38.87,25H43.44M6.43,39H41.57M8.92,41.53H39.08M12.44,44H35.56M15.16,16.49h-13M15.07,19H1.43M15.07,21.5H1M15.07,24H0.88m14.19,2.5H1M15.07,29H1.43m13.73,2.5h-13m43.74-15h-13m-11.12,0h4.45M46.57,19H32.93M21.81,19h4.28M47,21.5h-14m-11.12,0H26M47.12,24H32.93M21.81,24h4.28M47,26.5h-14m-11.12,0h4.28M46.57,29H32.93M21.81,29h4.28m19.78,2.5h-13m-11.12,0h4.46M44.84,34H30.41m-1.7,0H19.29m-1.7,0H3.16M17.59,14H3.16m41.68,0H30.41m-1.7,0H19.29" android:strokeColor="?2130772234" android:strokeWidth="1.0" android:strokeLineCap="round" android:strokeMiterLimit="10.0" android:strokeAlpha="0.3" />
+        </vector>
+    </item>
+    <item android:drawable="?2130772268" />
+</layer-list>

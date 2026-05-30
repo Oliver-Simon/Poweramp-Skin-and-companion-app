@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector android:exitFadeDuration="500"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:color="?attr/colorAccent" />
+    <item android:state_pressed="true" android:color="?attr/colorIconPrimary" />
+    <item android:color="?attr/colorIconPrimary" />
+</selector>

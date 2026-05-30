@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+    <category name="@string/skin_basic_options">
+        <seekbar centerLabel="@string/skin_normal" defaultValue="1000" floatScale="1000" id="@2139095112" key="searchEditFontSize" leftLabel="@string/skin_smaller" max="1500" min="500" name="@string/skin_searchEditFontSize" rightLabel="@string/skin_larger" scale="1000" step="125" summary="@string/skin_summary_fontSize" summary2="@string/skin_size_2f" ticks="true" />
+        <seekbar centerLabel="@string/skin_normal" defaultValue="1000" floatScale="1000" id="@2139095130" key="titleLine2FontSize" leftLabel="@string/skin_smaller" max="1500" min="500" name="@string/skin_title_line2_fontSize" rightLabel="@string/skin_larger" scale="1000" step="125" summary="@string/skin_size_2f" ticks="true" />
+        <radio defaultValue="" key="font" name="@string/skin_font">
+            <option name="@string/_default" overlapStyle="" />
+        </radio>
+        <radio defaultValue="" key="text_background" name="@string/skin_text_background">
+            <option name="@string/skin_text_background_solid" overlapStyle="@style/SampleSkin_TextBackground_Solid" />
+            <option name="@string/skin_text_background_outline" overlapStyle="@style/SampleSkin_TextBackground_Outline" />
+            <option name="@string/skin_text_background_none" overlapStyle="@style/SampleSkin_TextBackground_None" />
+        </radio>
+        <option key="hide_breadcrumb" name="@string/skin_hide_breadcrumb" overlapStyle="@style/SampleSkin_HideBreadcrumb" summary="@string/skin_summary_hide_breadcrumb" />
+    </category>
+    <option checkedByDefault="false" key="static_seekbar" name="@string/skin_static_seekbar" overlapStyle="@2131624288" />
+    <msg icon="@drawable/check_big" line1="Some hint title here" smallLine1="Some hint message here" />
+    <msg icon="@drawable/app_icon" iconAlign="top" iconTint="none" line1="Another hint title here 1" line2="Another hint title here 2" line3="Another hint title here 3" line4="Another hint title here 4" smallLine1="Some small hint message here 1" smallLine2="Some small hint message here 2" smallLine3="Some small hint message here 3" smallLine4="Some small hint message here 4" />
+    <radio defaultValue="" key="alt_layout_radio" name="@string/skin_alt_layout" summary="@string/skin_summary_alt_layout"> --> <option icon="@drawable/default_layout" name="@string/skin_disabled" overlapStyle="" />
+        <option icon="@drawable/alt_layout" name="@string/skin_alt_layout_default" overlapAttr="@2130773577" />
+        <option icon="@drawable/alt2_layout" name="@string/skin_alt_layout_centered" overlapStyle="@style/SampleSkin_Alt_Centered" />
+    </radio>
+    <category name="Some Category">
+        <page name="@string/skin_corners">
+            <option key="dynamicCorners" name="@string/skin_dynamicCorners" overlapStyle="@style/SampleSkin_dynamicCorners" summary="@string/skin_summary_dynamicCorners" />
+            <seekbar defaultValue="4" dependency="dynamicCorners" floatScale="1" id="@2139095086" key="cornersAA" max="64" min="-1" name="@string/skin_cornerRadiusAA" scale="1" step="1" summary="%.0fdp" />
+            <seekbar defaultValue="4" dependency="dynamicCorners" floatScale="1" id="@2139095089" key="cornersTracks" max="64" min="-1" name="@string/skin_cornerRadiusTracks" scale="1" step="1" summary="%.0fdp" />
+            <seekbar defaultValue="4" dependency="dynamicCorners" floatScale="1" id="@2139095087" key="cornersAlbums" max="64" min="-1" name="@string/skin_cornerRadiusAlbums" scale="1" step="1" summary="%.0fdp" />
+            <seekbar defaultValue="4" dependency="dynamicCorners" floatScale="1" id="@2139095088" key="cornersOther" max="64" min="-1" name="@string/skin_cornerRadiusOther" scale="1" step="1" summary="%.0fdp" />
+        </page>
+        <option checkedByDefault="false" key="color1" name="@string/skin_text_color1" overlapStyle="@style/SampleSkin_color1" />
+    </category>
+    <page name="@string/skin_aa_options">
+        <option key="aaOptions" name="@string/skin_aa_options" overlapStyle="@style/SampleSkin_aaOptions" summary="@string/skin_summary_866only" />
+        <seekbar defaultValue="-1000" dependency="aaOptions" floatScale="100" id="@2139095042" key="aaMaxYRotation" max="3000" min="-3000" name="@string/skin_aaMaxYRotation" scale="100" step="10" summary="@string/skin_summary_aaMaxYRotation" summary2="%.2f" />
+        <seekbar defaultValue="550" dependency="aaOptions" floatScale="100" id="@2139095043" key="aaMaxZRotation" max="3000" min="-3000" name="@string/skin_aaMaxZRotation" scale="100" step="10" summary="@string/skin_summary_aaMaxZRotation" summary2="%.2f" />
+        <seekbar defaultValue="75" dependency="aaOptions" floatScale="100" id="@2139095040" key="aaDenseFactor" max="200" min="25" name="@string/skin_aaDenseFactor" scale="100" step="5" summary="@string/skin_summary_aaDenseFactor" summary2="%.2f" />
+        <seekbarOptions centerLabel="@string/skin_normal" defaultValue="@style/SampleSkin_aaScale_1" dependency="aaOptions" key="aaScaleStyle" leftLabel="@string/skin_smaller" name="@string/skin_aaScale" rightLabel="@string/skin_larger" summary="@string/skin_summary_aaScale" summary2="%s">
+            <option name="0.75" overlapStyle="@style/SampleSkin_aaScale_075" />
+            <option name="0.8" overlapStyle="@style/SampleSkin_aaScale_08" />
+            <option name="0.85" overlapSt5yle="@style/SampleSkin_aaScale_085" />
+            <option name="0.9" overlapStyle="@style/SampleSkin_aaScale_09" />
+            <option name="0.95" overlapStyle="@style/SampleSkin_aaScale_095" />
+            <option name="1.0" overlapStyle="@style/SampleSkin_aaScale_1" />
+            <option name="1.1" overlapStyle="@style/SampleSkin_aaScale_11" />
+            <option name="1.15" overlapStyle="@style/SampleSkin_aaScale_115" />
+            <option name="1.25" overlapStyle="@style/SampleSkin_aaScale_125" />
+            <option name="1.33" overlapStyle="@style/SampleSkin_aaScale_133" />
+            <option name="1.5" overlapStyle="@style/SampleSkin_aaScale_15" />
+        </seekbarOptions>
+        <seekbar defaultValue="50" dependency="aaOptions" floatScale="100" id="@2139095041" key="aaMaxScale" max="200" min="25" name="@string/skin_aaMaxScale" scale="100" summary="@string/skin_summary_aaMaxScale" summary2="%.2f" />
+    </page>
+    <radio defaultValue="" key="color2" name="@string/skin_select_text_color" summary="@string/skin_summary_select_text_color">
+        <option name="@string/skin_default" overlapStyle="" summary="@string/skin_summary_default" />
+        <option name="@string/skin_red" overlapStyle="@style/SampleSkin_color_red" summary="@string/skin_red_w_color" />
+        <option name="@string/skin_green" overlapStyle="@style/SampleSkin_color_green" summary="@string/skin_green_w_color" />
+        <option name="@string/skin_blue" overlapStyle="@style/SampleSkin_color_blue" summary="@string/skin_blue_w_color" />
+    </radio>
+    <multiSwitch key="bg_color" name="@string/skin_select_bg_color" summary="@string/skin_summary_select_bg_color_s">
+        <option name="@string/skin_default" overlapStyle="" />
+        <option icon="@drawable/circle_red" iconTint="none" name="@string/skin_red" overlapStyle="@style/SampleSkin_bg_color_red" />
+        <option icon="@drawable/circle_black" iconTint="@color/green" name="@string/skin_green" overlapStyle="@style/SampleSkin_bg_color_green" />
+        <option icon="@drawable/v_circle_16dp" iconTint="#ff0000ff" name="@string/skin_blue" overlapStyle="@style/SampleSkin_bg_color_blue" />
+    </multiSwitch>
+    <page icon="@drawable/app_icon" name="@string/skin_page_1" summary="@string/skin_page_1_summary">
+        <option checkedByDefault="false" key="trans_bg_main" name="@string/skin_trans_bg_main" overlapStyle="@style/SampleSkin_transBgMain" summary="@string/skin_summary_trans_bg_main" />
+        <option checkedByDefault="false" key="trans_navbar" name="@string/skin_transparent_navbar" overlapStyle="@style/SampleSkin_transparentNavbar" summary="@string/skin_summary_transparent_navbar" />
+        <option checkedByDefault="false" key="divided_waveseek" name="@string/skin_divided_waveseek" overlapStyle="@style/SampleSkin_dividedWaveseek" summary="@string/skin_summary_divided_waveseek" />
+    </page>
+    <option checkedByDefault="false" key="no_aa_blur" name="@string/skin_no_aa_blur" overlapStyle="@style/SampleSkin_noAABlur" summary="@string/skin_summary_no_aa_blur" />
+    <option checkedByDefault="false" key="main_mini_spectrum" name="@string/skin_main_mini_spectrum" overlapStyle="@style/SampleSkin_mainMiniSpectrum" summary="@string/skin_summary_main_mini_spectrum" />
+    <option checkedByDefault="false" key="volume_knob" name="@string/skin_volume_knob" overlapStyle="@style/SampleSkin_VolumeKnob" summary="@string/skin_summary_volume_knob" />
+    <option key="useless_option" name="Useless option" overlapStyle="@style/SampleSkin_Useless" summary="Some useless option which controls availability of the page below" />
+    <page dependency="useless_option" icon="@drawable/app_icon" name="Another sub page" summary="Demonstrating sub pages and sub categories">
+        <category name="Sub page category">
+            <page name="Another sub-sub page">
+                <page name="Another sub-sub-sub page">
+                    <category name="Sub-sub-sub page category">
+                        <option key="volume_knob2" name="@string/skin_volume_knob" overlapStyle="@style/SampleSkin_VolumeKnob" summary="@string/skin_summary_volume_knob" />
+                    </category>
+                </page>
+                <category name="Sub-sub page category" />
+            </page>
+        </category>
+        <option key="useless_option2" name="Useless option2" overlapStyle="@style/SampleSkin_Useless" summary="Some useless option" />
+    </page>
+    <include file="@xml/skin_sample_subpage2" />
+</merge>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="?com.maxmpz.audioplayer:colorStroke"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <selector>
+            <item android:state_enabled="false">
+                <layer-list>
+                    <item>
+                        <shape android:shape="rectangle">
+                            <solid android:color="?com.maxmpz.audioplayer:colorBgPrimary" />
+                            <corners android:radius="?com.maxmpz.audioplayer:corners_large" />
+                            <stroke android:width="1.5dip" android:color="?com.maxmpz.audioplayer:colorStroke" />
+                        </shape>
+                    </item>
+                </layer-list>
+            </item>
+            <item android:state_pressed="true">
+                <layer-list>
+                    <item>
+                        <shape android:shape="rectangle">
+                            <solid android:color="?com.maxmpz.audioplayer:colorBgPrimary" />
+                            <corners android:radius="?com.maxmpz.audioplayer:corners_large" />
+                            <stroke android:width="1.5dip" android:color="?com.maxmpz.audioplayer:colorStroke" />
+                        </shape>
+                    </item>
+                    <item>
+                        <shape android:shape="rectangle">
+                            <solid android:color="?com.maxmpz.audioplayer:colorBgPrimary" />
+                            <corners android:radius="?com.maxmpz.audioplayer:corners_large" />
+                        </shape>
+                    </item>
+                    <item>
+                        <shape android:shape="rectangle">
+                            <solid android:color="?com.maxmpz.audioplayer:colorBgPrimary" />
+                            <corners android:radius="?com.maxmpz.audioplayer:corners_large" />
+                        </shape>
+                    </item>
+                </layer-list>
+            </item>
+        </selector>
+    </item>
+</ripple>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010-2025 Maksim Petrov
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted for themes, skins, widgets, plugins, applications and other software
+which communicate with Poweramp music player or Poweramp Equalizer applications on Android platform.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<!-- Generic colors and few other global theme attribures. See also attrs-colors.xml, attrs-player.xml -->
+
+<resources>
+	<!-- Primary background color, e.g. white for Light theme -->
+	<attr name="colorBgPrimary" format="color"/>
+	<!-- Alpha faded primary background color -->
+	<attr name="colorBgPrimaryAlpha" format="color"/>
+	<!-- Color used for the player button background while in the collapsed mode. Previously, colorBgPrimaryAlpha was used for that,
+	     and colorBgPrimaryAlpha is the default value for it -->
+	<attr name="colorBgPlayerButton" format="color"/>
+	<!-- A bit more pronounced alpha-faded primary background color -->
+	<attr name="colorBgLessAlpha" format="color"/>
+	<!-- This is expected to be strictly the colorBgPrimary color with a slight alpha -->
+	<attr name="colorBgPrimaryStrictAlpha" format="color"/>
+	<!-- Foreground color for inverted color controls -->
+	<attr name="colorInverse" format="color"/>
+	<!-- Inverse background color, e.g. black for Light theme -->
+	<attr name="colorBgInverse" format="color"/>
+	<!-- Inverse checked background color, e.g. EQ checkable buttons -->
+	<attr name="colorBgInverseChecked" format="color"/>
+	<!-- Color for button stroke -->
+	<attr name="colorStroke" format="color"/>
+	<!-- Color for help balloons bg (gradient start) -->
+	<attr name="colorBgHelp" format="color"/>
+	<!-- Color for help balloons bg (gradient end) -->
+	<attr name="colorBgHelpEnd" format="color"/>
+	<!-- Color for less visible stroke, e.g. for help hints -->
+	<attr name="colorStrokeHelp" format="color"/>
+	<!-- Tint/foreground color for a bit less contrast icons/buttons -->
+	<attr name="colorLessContrast" format="color"/>
+	<!-- Color used for the ripple on main playback buttons (v31+), since 964. Needed as ripple is rendered differently on v33 -->
+	<attr name="colorPlaybackRipple" format="color"/>
+	<!-- Color used for the colorLessContrast ripple. Needed as ripple is rendered differently on v33 -->
+	<attr name="colorLessContrastRipple" format="color"/>
+	<!-- Shade colors for popup menus -->
+	<attr name="colorShade" format="color"/>
+	<!-- E.g. menu separator -->
+	<attr name="colorSeparator" format="color"/>
+	<!-- E.g. menu separator (lighter) -->
+	<attr name="colorSeparatorLight" format="color"/>
+	<!-- Color used to indicate placeholder/slot to add the button, etc. Should be slightly contrast vs default bg color -->
+	<attr name="colorPlaceholder" format="color"/>
+	<!-- Non-contrast bg. Used ATM for Search Frame bg -->
+	<attr name="colorBgLight" format="color"/>
+	<!-- Bg used for the checkable buttons in popups - should have some contrast over the popup bg color -->
+	<attr name="colorBgCheckedLight" format="color"/>
+	<!-- Semi-transparent background for text labels -->
+	<attr name="colorTextBgAlpha" format="color"/>
+
+	<!-- Optional positive (OK) dialog button bg color, which is used in ?dialogPositiveButtonBg (by default == ) -->
+	<attr name="colorBgPositive" format="color"/>
+
+	<!-- Usually same as colorPrimary, but for black/#000 it should be #0000 to avoid tinting at all -->
+	<attr name="colorIconPrimary" format="color"/>
+	<!-- Forced non-transparent color - for cases when we need color explicitly set for icon, e.g. top decor icons -->
+	<attr name="colorIconPrimaryForced" format="color"/>
+	<!-- Tint/foreground color for a bit less contrast icons -->
+	<attr name="colorIconLessContrast" format="color"/>
+	<!-- Usually same as colorInverse, but for black/#000 it should be #0000 to avoid tinting at all -->
+	<attr name="colorIconInverse" format="color"/>
+	<!-- Forced non-transparent color - for cases when we need color explicitly set for icon, e.g. top decor icons -->
+	<attr name="colorIconInverseForced" format="color"/>
+	<!-- NOTE: used only in few places, e.g. vis/repeat/shuffle icons (alt) -->
+	<attr name="colorIconDisabled" format="color"/>
+	<!-- Not used ATM -->
+	<attr name="colorItemActive" format="color"/>
+	<!-- Used for text disabled color in very few places where text is rendered by the view, e.g. in LinearKnob
+		 Should be visible/readable enough as this is also locked state where user should be able to read the text -->
+	<attr name="colorTextDisabled" format="color"/>
+	<!-- Same as colorTextDisabled, little less visible, but still readable -->
+	<attr name="colorTextDisabledSecondary" format="color"/>
+
+
+	<!-- Shade under status bar -->
+	<attr name="statusBarBg" format="color|reference"/>
+	<!-- Shade under Android navigation bar -->
+	<attr name="navigationBarBg" format="color|reference"/>
+		
+	
+	<attr name="dialog_AlertDialogActivity"/>
+	<attr name="dialog_AlertDialogActivity_centered"/>
+	<attr name="dialog_AlertDialogActivity_list"/>
+	<attr name="dialog_AlertDialogActivity_list_centered"/>
+	<attr name="dialog_AlertDialogActivity_list_no_title"/>
+	<attr name="dialog_AlertDialogActivity_list_no_title_centered"/>
+	<attr name="dialog_AlertDialogActivity_vertical_buttons"/>
+	<attr name="dialog_AlertDialogActivity_vertical_buttons_centered"/>
+	<attr name="dialog_AlertDialogActivity_no_title"/>
+	<attr name="dialog_AlertDialogActivity_no_title_centered"/>
+	<attr name="dialog_AlertDialogActivity_no_title_vertical_buttons"/>
+
+	<!-- Additional theme styles applied for Poweramp Equalizer. Can be overridden by skins as required --> 
+	<attr name="PeqStyles" format="reference"/>
+
+</resources>

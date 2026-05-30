@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="_default">Системный</string>
+    <string name="aa_corners_summary">Установите значение &lt;span style=\\"color: #2979ff;\\"&gt; -1&lt;/span&gt; если вы хотите получить&lt;span style=\\"color: #2979ff;\\"&gt; круглые&lt;/span&gt; обложки</string>
+    <string name="aa_shadow_default_hide">Спрятать</string>
+    <string name="aa_shadow_radius_title">Размер тени альбома</string>
+    <string name="aa_shadow_summary">Скрыть или увеличить размер тени альбома</string>
+    <string name="aa_shadow_title">Тень</string>
+    <string name="aa_summary">Углы, размер, переходы вращения и многое другое </string>
+    <string name="aa_title">Альбом</string>
+    <string name="accent">Акцент</string>
+    <string name="accent_material_ui">Material</string>
+    <string name="accent_neutral">Neutral</string>
+    <string name="accent_pastel">Pastel</string>
+    <string name="accent_vivid">Vivid</string>
+    <string name="bottom_menu_logo">Логотип нижнего меню</string>
+    <string name="bottom_menu_logo_dais">Dais</string>
+    <string name="bottom_menu_logo_default">Poweramp</string>
+    <string name="bottom_menu_logo_hide">Скрывать</string>
+    <string name="bottom_menu_logo_summary">Показать / скрыть альтернативный нижний логотип</string>
+    <string name="bottom_meta_info_font_size">Мета информация</string>
+    <string name="bottom_meta_info_option">Скрыть метаинформацию</string>
+    <string name="bottombar_corner_radius">Нижняя панель Углы</string>
+    <string name="buttons_corner_radius">Кнопки Уголки</string>
+    <string name="category_aa_corners">Уголки альбома </string>
+    <string name="category_corners_summary">Tamaño de la esquina del álbum </string>
+    <string name="category_scale_paused">Размер во время паузы</string>
+    <string name="category_scale_playing">Размер во время игры</string>
+    <string name="category_scale_playing_summary">Размер альбома во время воспроизведения и паузы</string>
+    <string name="category_scale_title">Размер</string>
+    <string name="category_swipe_transition">Ротация альбома </string>
+    <string name="category_swipe_transition_summary">Создавайте уникальные повороты альбомов, изменяя значения y, z</string>
+    <string name="choose_alt_library_icons_style">Выберите альтернативный стиль для значков библиотеки</string>
+    <string name="circle_default">Круг (По умолчанию)</string>
+    <string name="controls_bg">Скрыть элементы управления Vis, Timer, Repeat и Shuffle</string>
+    <string name="controls_shadow_100">100%</string>
+    <string name="controls_shadow_25">25%</string>
+    <string name="controls_shadow_50">50%</string>
+    <string name="controls_shadow_accent">Цвет</string>
+    <string name="controls_shadow_disabled">Отключено</string>
+    <string name="controls_shadow_summary">Добавляет тень позади и элементы управления для лучшей видимости</string>
+    <string name="controls_shadow_title">Нижняя фоновая тень</string>
+    <string name="corner_radius">Динамические углы</string>
+    <string name="corner_radius_summary">Значки библиотеки, нижняя панель и углы кнопок </string>
+    <string name="default_aa_img">Изображение альбома по умолчанию </string>
+    <string name="default_aa_img_summary">Альтернативные варианты изображения альбома по умолчанию </string>
+    <string name="default_aa_play">Dais</string>
+    <string name="default_hide">Скрывать</string>
+    <string name="default_img">Винил</string>
+    <string name="default_img_default">По умолчанию</string>
+    <string name="eq_knob_buttons_default">Дефолт</string>
+    <string name="eq_knob_buttons_minimal">Минимальный</string>
+    <string name="eq_knob_buttons_round">Круглый</string>
+    <string name="eq_knob_buttons_summary">Параметры кнопки эквалайзера</string>
+    <string name="eq_knob_buttons_title">Кнопки эквалайзера</string>
+    <string name="font_size">Размер шрифта</string>
+    <string name="font_size_elapse_durarion">Прогресс/длительность</string>
+    <string name="font_size_summary">Параметры размера шрифта</string>
+    <string name="font_size_track_counter">Счетчик песен</string>
+    <string name="fonts">Шрифты</string>
+    <string name="gradient_accents">Красивые варианты расцветок</string>
+    <string name="hide_chromecast">Скрыть значок Chromecast</string>
+    <string name="hide_library_icons">Скрыть значки</string>
+    <string name="hide_menu">Скрыть значок меню</string>
+    <string name="hide_rating_menu">Скрыть значки рейтингов</string>
+    <string name="hide_ui_elements">Скрыть элементы пользовательского интерфейса</string>
+    <string name="knob_alt_disc_filled">Диск (Заполненный)</string>
+    <string name="knob_alt_disc_outline">Диск (Схема)</string>
+    <string name="knob_alt_ring">Звенеть</string>
+    <string name="knob_alt_simple_outline">Контур</string>
+    <string name="knob_alt_style_title">Стили кнопок</string>
+    <string name="knob_colorful">Красочный</string>
+    <string name="knob_disabled">Отключено</string>
+    <string name="knob_highlight_summary">Добавляет линии вокруг ручек</string>
+    <string name="knob_highlight_title">Подсветка кнопок</string>
+    <string name="knob_highlights_title">Подсветка кнопок</string>
+    <string name="knob_single_color">Один цвет</string>
+    <string name="knob_white">Белый</string>
+    <string name="labels_alignment_category">Выравнивание</string>
+    <string name="labels_color_accent">Цвет</string>
+    <string name="labels_color_semitransparent">Полупрозрачный</string>
+    <string name="labels_color_white">Белый</string>
+    <string name="labels_line2_color_category">Цвет линии2</string>
+    <string name="labels_title_color_category">Цвет заголовка</string>
+    <string name="library_icons_bg_accent">Круглый (Цвет)</string>
+    <string name="library_icons_bg_multicolor">Круглый (Многоцветный)</string>
+    <string name="library_icons_bg_white">Круглый (Белый)</string>
+    <string name="library_icons_corner_radius">Углы значков библиотеки </string>
+    <string name="library_icons_material_multicolor">Материал (Многоцветный)</string>
+    <string name="library_icons_minimal_accent">Минимальный (Цвет)</string>
+    <string name="library_icons_minimal_multicolor">Минимальный (Многоцветный)</string>
+    <string name="library_icons_minimal_white">Минимальный (Белый)</string>
+    <string name="library_icons_multicolor_bg">Круглый (многоцветный фон)</string>
+    <string name="library_icons_pastel">Pastel</string>
+    <string name="library_icons_scale">Размер значков библиотеки</string>
+    <string name="library_icons_scale_category">Размер и видимость</string>
+    <string name="library_icons_scale_summary">Перетащите ползунок до упора влево, чтобы скрыть значки библиотеки.</string>
+    <string name="library_icons_style">Значки библиотеки</string>
+    <string name="library_icons_style_title">Иконки библиотеки</string>
+    <string name="mini_player_subtitle_text">Субтитры мини-плеера</string>
+    <string name="mini_player_title_text">Титул мини-игрока</string>
+    <string name="monet_accent_category_title">Material You Цвет</string>
+    <string name="monet_background_category_title">Material You Задний план</string>
+    <string name="monet_category_title">Только Android 12 и выше!</string>
+    <string name="monet_library_icons_category_title">Material You Иконки библиотеки</string>
+    <string name="monet_text_category_title">Material You Текст</string>
+    <string name="monet_wallpaper_summary">Включает поддержку цветов на основе обоев</string>
+    <string name="monet_wallpaper_title">Материал для вас (только для Android 12)</string>
+    <string name="more_options">Больше вариантов</string>
+    <string name="navbar_semi_transparent">Полупрозрачный</string>
+    <string name="navbar_shadow">Тень</string>
+    <string name="navbar_shadow_accent">Акцент с тенью</string>
+    <string name="navbar_solid">Сплошной</string>
+    <string name="navbar_transparent">Прозрачный (по умолчанию)</string>
+    <string name="pause_button">Кнопка паузы</string>
+    <string name="pause_button_styles">Стили кнопок паузы</string>
+    <string name="pause_flower_outline">Цветок (Белый)</string>
+    <string name="pause_hexagon">Hexagon</string>
+    <string name="pause_horizon_default">Горизонт (Белый)</string>
+    <string name="pause_icon_background_accent">Фон кнопки паузы (цветной)</string>
+    <string name="pause_icon_background_system">Фон кнопки (Система)</string>
+    <string name="pause_icon_color_accent">Цвет значка паузы (цветной)</string>
+    <string name="pause_icon_normal">Стиль значка паузы (обычный)</string>
+    <string name="pause_outline">Контур с градиентом</string>
+    <string name="pause_semi_transparent">Полупрозрачный</string>
+    <string name="pause_solid">Непрозрачный (требуется цвет или система)</string>
+    <string name="pause_trans">Прозрачный</string>
+    <string name="play_button">Кнопка воспроизведения</string>
+    <string name="play_button_styles">Стили кнопок воспроизведения</string>
+    <string name="play_flower_outline">Цветок (Белый)</string>
+    <string name="play_hexagon">Hexagon</string>
+    <string name="play_horizon_default">Горизонт (Белый)</string>
+    <string name="play_icon_background_accent">Фон кнопки воспроизведения (цветной)</string>
+    <string name="play_icon_background_system">Фон кнопки (Система)</string>
+    <string name="play_icon_color_accent">Цвет значка воспроизведения (цветной)</string>
+    <string name="play_icon_normal">Стиль значка воспроизведения (обычный)</string>
+    <string name="play_outline">Контур с градиентом (По умолчанию)</string>
+    <string name="play_pause_button_summary">Альтернативные стили кнопок воспроизведения и паузы</string>
+    <string name="play_pause_buttons">Воспроизвести и приостановить</string>
+    <string name="play_semi_transparent">Полупрозрачный</string>
+    <string name="play_solid">Непрозрачный (требуется цвет или система)</string>
+    <string name="play_trans">Прозрачный</string>
+    <string name="player_controls_accent">Цветной (активный)</string>
+    <string name="player_controls_accent_all">Цветной (Все)</string>
+    <string name="player_controls_bg_accent">Цвет</string>
+    <string name="player_controls_bg_hide">Скрывать</string>
+    <string name="player_controls_bg_semi_trans">Полупрозрачный</string>
+    <string name="player_controls_bg_solid">Непрозрачный</string>
+    <string name="player_controls_default">По умолчанию (белый)</string>
+    <string name="player_ui_controls_category">Фон</string>
+    <string name="player_ui_controls_icons_category">Иконки</string>
+    <string name="player_ui_controls_summary">Заголовок / строка2 и фон кнопок управления</string>
+    <string name="player_ui_controls_title">Кнопки управления</string>
+    <string name="pnffrw_button_styles">Пред. След. Ff Rw Стили кнопок</string>
+    <string name="pnffrw_buttons_background">Пред., След., Ff, rw фоны</string>
+    <string name="pnffrw_default">По умолчанию</string>
+    <string name="pnffrw_flower">Цветок</string>
+    <string name="pnffrw_hexagon">Hexagon</string>
+    <string name="pnffrw_horizon">Горизонт</string>
+    <string name="pnffrw_icon_background_accent">Фон кнопки Pnfr (цветной)</string>
+    <string name="pnffrw_icon_background_system">Фон кнопки (Система)</string>
+    <string name="pnffrw_icon_color_accent">Цвет значка Pnfr (Цвет)</string>
+    <string name="pnffrw_semi_transparent">Полупрозрачный</string>
+    <string name="pnffrw_solid">Непрозрачный (требуется цвет или система)</string>
+    <string name="pnffrw_trans">Прозрачный</string>
+    <string name="preamp_bg">Скрыть фон предусилителя эквалайзера</string>
+    <string name="pref_plain_seekbar_with_buttons">Полоса прогресса с Про кнопками</string>
+    <string name="prev_next_cat_buttons">Скрыть управление предыдущей/следующей категорией</string>
+    <string name="progressbar_color">Цвет индикатора выполнения</string>
+    <string name="progressbar_color_accent">Цвет</string>
+    <string name="progressbar_color_white">Белый</string>
+    <string name="round_default">Круглый (По умолчанию)</string>
+    <string name="seekbar_a12">Стиль Android 12</string>
+    <string name="seekbar_big">Большой</string>
+    <string name="seekbar_medium">Середина</string>
+    <string name="seekbar_small">Небольшой</string>
+    <string name="seekbar_ui">Размер индикатора выполнения </string>
+    <string name="show_rating_stars">Отображать звезды для рейтинга</string>
+    <string name="skin_a200">&lt;span style=\\"color: #FF5252;\\"&gt;⬤&lt;/span&gt; A200 (FF5252)</string>
+    <string name="skin_a400">&lt;span style=\\"color: #FF1744;\\"&gt;⬤&lt;/span&gt; A400 (FF1744)</string>
+    <string name="skin_aa200">&lt;span style=\\"color: #FFC400;\\"&gt;⬤&lt;/span&gt; Aa200 (FFC400)</string>
+    <string name="skin_aa400">&lt;span style=\\"color: #FFC400;\\"&gt;⬤&lt;/span&gt; Aa400 (FFC400)</string>
+    <string name="skin_aaDenseFactor">Плотность </string>
+    <string name="skin_aaMaxYRotation">Максимальное вращение по оси Y</string>
+    <string name="skin_aaMaxZRotation">Максимальное вращение по оси Z</string>
+    <string name="skin_aa_shadow">Скрыть тень обложек альбомов</string>
+    <string name="skin_alt_layout">Альтернативная разметка</string>
+    <string name="skin_alt_layout_centered">Надписи в центре</string>
+    <string name="skin_alt_layout_default">Надписи слева</string>
+    <string name="skin_alt_layout_disabled">Отключено</string>
+    <string name="skin_alt_layout_labels">Разметка надписей</string>
+    <string name="skin_ba200">&lt;span style=\\"color: #448AFF;\\"&gt;⬤&lt;/span&gt; Ba200 (448AFF)</string>
+    <string name="skin_ba400">&lt;span style=\\"color: #2979FF;\\"&gt;⬤&lt;/span&gt; Ba400 (2979FF)</string>
+    <string name="skin_background_alien_purple">&lt;span style=\\"color: #490648;\\"&gt;⬤&lt;/span&gt; Alien Purple (490648)</string>
+    <string name="skin_background_amoled">&lt;span style=\\"color: #000000;\\"&gt;⬤&lt;/span&gt; Amoled Black (000000)</string>
+    <string name="skin_background_antique_brown">&lt;span style=\\"color: #553f2d;\\"&gt;⬤&lt;/span&gt; Antique Brown (553f2d)</string>
+    <string name="skin_background_astronaut_blue">&lt;span style=\\"color: #214559;\\"&gt;⬤&lt;/span&gt; Astronaut Blue (214559)</string>
+    <string name="skin_background_black_chocolate">&lt;span style=\\"color: #1b1811;\\"&gt;⬤&lt;/span&gt; Black Chocolate (1b1811)</string>
+    <string name="skin_background_blackcurrant">&lt;span style=\\"color: #0a0315;\\"&gt;⬤&lt;/span&gt; Blackcurrant (0a0315)</string>
+    <string name="skin_background_blackend_brown">&lt;span style=\\"color: #442200;\\"&gt;⬤&lt;/span&gt; Blackend Brown (442200)</string>
+    <string name="skin_background_blue_charcoal">&lt;span style=\\"color: #262b2f;\\"&gt;⬤&lt;/span&gt; Blue Charcoal (262b2f)</string>
+    <string name="skin_background_blue_lagoon">&lt;span style=\\"color: #00626f;\\"&gt;⬤&lt;/span&gt; Blue Lagoon (00626f)</string>
+    <string name="skin_background_blue_opal">&lt;span style=\\"color: #0f3b57;\\"&gt;⬤&lt;/span&gt; Blue Opal (0f3b57)</string>
+    <string name="skin_background_brick_grey">&lt;span style=\\"color: #48412b;\\"&gt;⬤&lt;/span&gt; Brick Grey (48412b)</string>
+    <string name="skin_background_burgundy">&lt;span style=\\"color: #900020;\\"&gt;⬤&lt;/span&gt; Burgundy (900020)</string>
+    <string name="skin_background_burnt_maroon">&lt;span style=\\"color: #420303;\\"&gt;⬤&lt;/span&gt; Burnt Maroon (420303)</string>
+    <string name="skin_background_cape_cod">&lt;span style=\\"color: #4e5552;\\"&gt;⬤&lt;/span&gt; Cape Cod (4e5552)</string>
+    <string name="skin_background_christalle">&lt;span style=\\"color: #391285;\\"&gt;⬤&lt;/span&gt; Christalle (391285)</string>
+    <string name="skin_background_copper_orange">&lt;span style=\\"color: #7f4330;\\"&gt;⬤&lt;/span&gt; Copper Orange (7f4330)</string>
+    <string name="skin_background_dark_chocolate">&lt;span style=\\"color: #490206;\\"&gt;⬤&lt;/span&gt; Dark Chocolate (490206)</string>
+    <string name="skin_background_dark_green">&lt;span style=\\"color: #033500;\\"&gt;⬤&lt;/span&gt; Dark Green (033500)</string>
+    <string name="skin_background_dark_grey">&lt;span style=\\"color: #363737;\\"&gt;⬤&lt;/span&gt; Dark Grey (363737)</string>
+    <string name="skin_background_dark_navy_blue">&lt;span style=\\"color: #00022e;\\"&gt;⬤&lt;/span&gt; Dark Navy Blue (00022e)</string>
+    <string name="skin_background_dark_olive">&lt;span style=\\"color: #373e02;\\"&gt;⬤&lt;/span&gt; Dark Olive (373e02)</string>
+    <string name="skin_background_dark_purple">&lt;span style=\\"color: #35063e;\\"&gt;⬤&lt;/span&gt; Dark Purple (35063e)</string>
+    <string name="skin_background_dark_red">&lt;span style=\\"color: #840000;\\"&gt;⬤&lt;/span&gt; Dark Red (840000)</string>
+    <string name="skin_background_dark_water">&lt;span style=\\"color: #112222;\\"&gt;⬤&lt;/span&gt; Dark Water (112222)</string>
+    <string name="skin_background_elm_green">&lt;span style=\\"color: #547053;\\"&gt;⬤&lt;/span&gt; Elm Green (547053)</string>
+    <string name="skin_background_evergreen">&lt;span style=\\"color: #11574a;\\"&gt;⬤&lt;/span&gt; Evergreen (11574a)</string>
+    <string name="skin_background_flat_brown">&lt;span style=\\"color: #754600;\\"&gt;⬤&lt;/span&gt; Flat Brown (754600)</string>
+    <string name="skin_background_garden_green">&lt;span style=\\"color: #495e35;\\"&gt;⬤&lt;/span&gt; Garden Green (495e35)</string>
+    <string name="skin_background_marsh">&lt;span style=\\"color: #5c5337;\\"&gt;⬤&lt;/span&gt; Marsh (5c5337)</string>
+    <string name="skin_background_midnight_green">&lt;span style=\\"color: #004953;\\"&gt;⬤&lt;/span&gt; Midnight Green (004953)</string>
+    <string name="skin_background_midnight_purple">&lt;span style=\\"color: #280137;\\"&gt;⬤&lt;/span&gt; Midnight Purple (280137)</string>
+    <string name="skin_background_neutral_green">&lt;span style=\\"color: #a6a488;\\"&gt;⬤&lt;/span&gt; Neutral Green (a6a488)</string>
+    <string name="skin_background_night_blue">&lt;span style=\\"color: #040348;\\"&gt;⬤&lt;/span&gt; Night Blue (040348)</string>
+    <string name="skin_background_no_blur">Отключает размытие обложек альбомов</string>
+    <string name="skin_background_picklet_beet">&lt;span style=\\"color: #4d233d;\\"&gt;⬤&lt;/span&gt; Picklet Beet (4d233d)</string>
+    <string name="skin_background_pink_raspberry">&lt;span style=\\"color: #980036;\\"&gt;⬤&lt;/span&gt; Pink Raspberry (980036)</string>
+    <string name="skin_background_pixel">&lt;span style=\\"color: #202124;\\"&gt;⬤&lt;/span&gt; Google Pixel (202124)</string>
+    <string name="skin_background_pixie_powder">&lt;span style=\\"color: #3d225d;\\"&gt;⬤&lt;/span&gt; Pixie Powder (3d225d)</string>
+    <string name="skin_background_pot_black">&lt;span style=\\"color: #151515;\\"&gt;⬤&lt;/span&gt; Pot Black (151515)</string>
+    <string name="skin_background_purple_brown">&lt;span style=\\"color: #673a3f;\\"&gt;⬤&lt;/span&gt; Purple Brown (673a3f)</string>
+    <string name="skin_background_purple_stone">&lt;span style=\\"color: #605467;\\"&gt;⬤&lt;/span&gt; Purple Stone (605467)</string>
+    <string name="skin_background_racing_green">&lt;span style=\\"color: #014600;\\"&gt;⬤&lt;/span&gt; Racing Green (014600)</string>
+    <string name="skin_background_rustic_red">&lt;span style=\\"color: #3a181a;\\"&gt;⬤&lt;/span&gt; Rustic Red (3a181a)</string>
+    <string name="skin_background_smoke_pine">&lt;span style=\\"color: #3e6257;\\"&gt;⬤&lt;/span&gt; Smoke Pine (3e6257)</string>
+    <string name="skin_background_very_blue">&lt;span style=\\"color: #0000aa;\\"&gt;⬤&lt;/span&gt; Very Blue (0000aa)</string>
+    <string name="skin_background_very_dark_blue">&lt;span style=\\"color: #000133;\\"&gt;⬤&lt;/span&gt; Very Dark Blue (000133)</string>
+    <string name="skin_background_very_dark_green">&lt;span style=\\"color: #062e03;\\"&gt;⬤&lt;/span&gt; Very Dark Green (062e03)</string>
+    <string name="skin_background_void">&lt;span style=\\"color: #050d25;\\"&gt;⬤&lt;/span&gt; Void (050d25)</string>
+    <string name="skin_bariol_font">Bariol</string>
+    <string name="skin_basis_font">Basis</string>
+    <string name="skin_bottombar_background">Нижняя панель Фон</string>
+    <string name="skin_bottombar_bg_color_accent">Фон (Цвет)</string>
+    <string name="skin_bottombar_bg_color_system">Фон (Система)</string>
+    <string name="skin_bottombar_bg_color_title">Цвет фона нижней панели</string>
+    <string name="skin_bottombar_icon_color">Цвет значка нижней панели</string>
+    <string name="skin_bottombar_icons_accent">Цвет (Выбранный)</string>
+    <string name="skin_bottombar_icons_accent_all">Цвет (Все)</string>
+    <string name="skin_bottombar_icons_default">Белый (По умолчанию)</string>
+    <string name="skin_bottombar_icons_white_all_icons">Белый (Все)</string>
+    <string name="skin_bottombar_outline">Контур</string>
+    <string name="skin_bottombar_semi_transparent">Полупрозрачный</string>
+    <string name="skin_bottombar_solid">Непрозрачный (требуется цвет или система)</string>
+    <string name="skin_bottombar_style">Нижняя панель</string>
+    <string name="skin_bottombar_style_options">Альтернативный фон нижней панели</string>
+    <string name="skin_bottombar_transparent">Прозрачный</string>
+    <string name="skin_brains_font">JetBrains</string>
+    <string name="skin_ca200">&lt;span style=\\"color: #18FFFF;\\"&gt;⬤&lt;/span&gt; Ca200 (18FFFF)</string>
+    <string name="skin_ca400">&lt;span style=\\"color: #00E5FF;\\"&gt;⬤&lt;/span&gt; Ca400 (00E5FF)</string>
+    <string name="skin_comfortaa_font">Comfortaa</string>
+    <string name="skin_cornerRadiusAA">Углы альбома на главном экране</string>
+    <string name="skin_cornerRadiusAlbums">Углы для альбомов</string>
+    <string name="skin_cornerRadiusOther">Углы для других элементов</string>
+    <string name="skin_cornerRadiusTracks">Углы для песен</string>
+    <string name="skin_default">По умолчанию</string>
+    <string name="skin_default_waveseek">Waveseek по умолчанию</string>
+    <string name="skin_default_white">&lt;span style=\\"color: #FFFFFF;\\"&gt;⬤&lt;/span&gt; Default</string>
+    <string name="skin_disabled">Выключен</string>
+    <string name="skin_divided_waveseek">Разделённый Waveseek</string>
+    <string name="skin_dmsans_font">Dm Sans</string>
+    <string name="skin_doa200">&lt;span style=\\"color: #FF6E40;\\"&gt;⬤&lt;/span&gt; Doa200 (FF6E40)</string>
+    <string name="skin_doa400">&lt;span style=\\"color: #FF3D00;\\"&gt;⬤&lt;/span&gt; Doa400 (FF3D00)</string>
+    <string name="skin_dpa200">&lt;span style=\\"color: #7C4DFF;\\"&gt;⬤&lt;/span&gt; Dpa200 (7C4DFF)</string>
+    <string name="skin_dpa400">&lt;span style=\\"color: #651FFF;\\"&gt;⬤&lt;/span&gt; Dpa400 (651FFF)</string>
+    <string name="skin_fira_font">Fira Monospace</string>
+    <string name="skin_font">Шрифты</string>
+    <string name="skin_font_summary">Параметры шрифта и размера текста</string>
+    <string name="skin_ga200">&lt;span style=\\"color: #69F0AE;\\"&gt;⬤&lt;/span&gt; Ga200 (69F0AE)</string>
+    <string name="skin_ga400">&lt;span style=\\"color: #00E676;\\"&gt;⬤&lt;/span&gt; Ga400 (00E676)</string>
+    <string name="skin_gals_font">Gals</string>
+    <string name="skin_inter_font">Inter</string>
+    <string name="skin_jura_font">Jura</string>
+    <string name="skin_la200">&lt;span style=\\"color: #EEFF41;\\"&gt;⬤&lt;/span&gt; La200 (EEFF41)</string>
+    <string name="skin_la400">&lt;span style=\\"color: #C6FF00;\\"&gt;⬤&lt;/span&gt; La400 (C6FF00)</string>
+    <string name="skin_larger">Больше</string>
+    <string name="skin_lba200">&lt;span style=\\"color: #40C4FF;\\"&gt;⬤&lt;/span&gt; Lba200 (40C4FF)</string>
+    <string name="skin_lba400">&lt;span style=\\"color: #00B0FF;\\"&gt;⬤&lt;/span&gt; Lba400 (00B0FF)</string>
+    <string name="skin_lga200">&lt;span style=\\"color: #B2FF59;\\"&gt;⬤&lt;/span&gt; Lga200 (B2FF59)</string>
+    <string name="skin_lga400">&lt;span style=\\"color: #76FF03;\\"&gt;⬤&lt;/span&gt; Lga400 (76FF03)</string>
+    <string name="skin_more_buttons">Про Кнопки</string>
+    <string name="skin_nasalization_font">Nasalization</string>
+    <string name="skin_navbar_background">Фон панели навигации</string>
+    <string name="skin_navbar_offset">Сдвинуть панель навигации</string>
+    <string name="skin_neutral_cashmere">&lt;span style=\\"color: #D8B192;\\"&gt;⬤&lt;/span&gt; Cashmere (D8B192)</string>
+    <string name="skin_neutral_just">&lt;span style=\\"color: #E1C2B0;\\"&gt;⬤&lt;/span&gt; Just (E1C2B0)</string>
+    <string name="skin_neutral_kangaroo">&lt;span style=\\"color: #C3C1AC;\\"&gt;⬤&lt;/span&gt; Kangaroo (C3C1AC)</string>
+    <string name="skin_neutral_light">&lt;span style=\\"color: #E7E5D9;\\"&gt;⬤&lt;/span&gt; Light (E7E5D9)</string>
+    <string name="skin_neutral_meiser">&lt;span style=\\"color: #C1CCCA;\\"&gt;⬤&lt;/span&gt; Meiser (C1CCCA)</string>
+    <string name="skin_neutral_oyster">&lt;span style=\\"color: #D6B7B5;\\"&gt;⬤&lt;/span&gt; Oyster (D6B7B5)</string>
+    <string name="skin_neutral_pearl">&lt;span style=\\"color: #F1E9D6;\\"&gt;⬤&lt;/span&gt; Pearl (F1E9D6)</string>
+    <string name="skin_neutral_tan">&lt;span style=\\"color: #F1CB9C;\\"&gt;⬤&lt;/span&gt; Tan (F1CB9C)</string>
+    <string name="skin_neutral_tuft">&lt;span style=\\"color: #F4D2B9;\\"&gt;⬤&lt;/span&gt; Tuft (F4D2B9)</string>
+    <string name="skin_no_aa_blur">Без размытия фона</string>
+    <string name="skin_normal">Обычный</string>
+    <string name="skin_oa200">&lt;span style=\\"color: #FFAB40;\\"&gt;⬤&lt;/span&gt; Oa200 (FFAB40)</string>
+    <string name="skin_oa400">&lt;span style=\\"color: #FF9100;\\"&gt;⬤&lt;/span&gt; Oa400 (FF9100)</string>
+    <string name="skin_opensans_font">OpenSans</string>
+    <string name="skin_pa200">&lt;span style=\\"color: #FF4081;\\"&gt;⬤&lt;/span&gt; Pa200 (FF4081)</string>
+    <string name="skin_pa400">&lt;span style=\\"color: #F50057;\\"&gt;⬤&lt;/span&gt; Pa400 (F50057)</string>
+    <string name="skin_pastel_cruise">&lt;span style=\\"color: #B5EAD7;\\"&gt;⬤&lt;/span&gt; Cruise (B5EAD7)</string>
+    <string name="skin_pastel_haze">&lt;span style=\\"color: #67618E;\\"&gt;⬤&lt;/span&gt; Purple Haze (67618E)</string>
+    <string name="skin_pastel_karry">&lt;span style=\\"color: #FFDAC1;\\"&gt;⬤&lt;/span&gt; Karry (FFDAC1)</string>
+    <string name="skin_pastel_lace">&lt;span style=\\"color: #FEC8D8;\\"&gt;⬤&lt;/span&gt; Lace (FEC8D8)</string>
+    <string name="skin_pastel_lily">&lt;span style=\\"color: #D291BC;\\"&gt;⬤&lt;/span&gt; Lily (D291BC)</string>
+    <string name="skin_pastel_majesty">&lt;span style=\\"color: #957DAD;\\"&gt;⬤&lt;/span&gt; Majesty (957DAD)</string>
+    <string name="skin_pastel_melon">&lt;span style=\\"color: #FFB7B2;\\"&gt;⬤&lt;/span&gt; Melon (FFB7B2)</string>
+    <string name="skin_pastel_periwinkle">&lt;span style=\\"color: #C7CEEA;\\"&gt;⬤&lt;/span&gt; Periwinkle (C7CEEA)</string>
+    <string name="skin_pastel_pipin">&lt;span style=\\"color: #FFDFD3;\\"&gt;⬤&lt;/span&gt; Pipin (FFDFD3)</string>
+    <string name="skin_pastel_thistle">&lt;span style=\\"color: #E0BBE4;\\"&gt;⬤&lt;/span&gt; Thistle (E0BBE4)</string>
+    <string name="skin_pastel_wewak">&lt;span style=\\"color: #FF9AA2;\\"&gt;⬤&lt;/span&gt; Wewak (FF9AA2)</string>
+    <string name="skin_pastel_willow">&lt;span style=\\"color: #E2F0CB;\\"&gt;⬤&lt;/span&gt; Willow (E2F0CB)</string>
+    <string name="skin_play_font">Play</string>
+    <string name="skin_prime_font">Prime</string>
+    <string name="skin_productsans_font">ProductSans</string>
+    <string name="skin_pua200">&lt;span style=\\"color: #E040FB;\\"&gt;⬤&lt;/span&gt; Pua200 (E040FB)</string>
+    <string name="skin_pua400">&lt;span style=\\"color: #D500F9;\\"&gt;⬤&lt;/span&gt; Pua400 (D500F9)</string>
+    <string name="skin_roboto_flex_font">Roboto Flex</string>
+    <string name="skin_roboto_font">Roboto</string>
+    <string name="skin_searchEditFontSize">Размер шрифта поиска/редактирования</string>
+    <string name="skin_seekbar_style_one">Стиль полосы прогресса</string>
+    <string name="skin_seekbar_style_options">Альтернативная полоса прогресса и Waveseek</string>
+    <string name="skin_select_bg_color">Фон</string>
+    <string name="skin_semi_trans_bg_main">Полупрозрачный фон</string>
+    <string name="skin_setting_navbar">Фон панели навигации</string>
+    <string name="skin_setting_navbar_summary">Альтернативные фоны панели навигации</string>
+    <string name="skin_setting_statusbar">Фон строки состояния</string>
+    <string name="skin_setting_statusbar_navbar">Строка состояния и панель навигации</string>
+    <string name="skin_setting_statusbar_summary">Альтернативный фон строки состояния</string>
+    <string name="skin_settings_ui">Элементы интерфейса</string>
+    <string name="skin_settings_ui_summary">Цвет, фон, значки и многое другое</string>
+    <string name="skin_size_2f">Размер: %.2f</string>
+    <string name="skin_smaller">Меньше</string>
+    <string name="skin_static_seekbar">Статическая Waveseek</string>
+    <string name="skin_statusbar_background">Фон строки состояния</string>
+    <string name="skin_statusbar_navbar_background_summary">Альтернативный фон строки состояния и панели навигации</string>
+    <string name="skin_summary_aaDenseFactor">Значения меньше 1 сделают альбомы ближе друг к другу при смахивании влево / вправо</string>
+    <string name="skin_summary_alt_layout">Перемещает надписи песен под альбомы</string>
+    <string name="skin_summary_divided_waveseek">Waveseek с разделенными верхней и нижней частями</string>
+    <string name="skin_summary_fontSize">Размер шрифта применяется к некоторым элементам управления</string>
+    <string name="skin_summary_more_buttons">Включение или отключение Про кнопок</string>
+    <string name="skin_summary_navbar_offset">Слегка перемещает панель навигации от углов (для широкоугольных экранов)</string>
+    <string name="skin_summary_select_bg_color_s">Уникальные варианты цвета фона</string>
+    <string name="skin_summary_semi_trans_bg_main">Делает основной фон полупрозрачным</string>
+    <string name="skin_summary_trans_bg_main">Делает основной фон прозрачным</string>
+    <string name="skin_ta200">&lt;span style=\\"color: #64FFDA;\\"&gt;⬤&lt;/span&gt; Ta200 (64FFDA)</string>
+    <string name="skin_ta400">&lt;span style=\\"color: #1DE9B6;\\"&gt;⬤&lt;/span&gt; Ta400 (1DE9B6)</string>
+    <string name="skin_title_subtitle_font_size">Название альбома/подзаголовок</string>
+    <string name="skin_trans_bg_main">Прозрачный фон</string>
+    <string name="skin_ubuntu_font">Ubuntu</string>
+    <string name="skin_ubuntu_mono_font">Ubuntu Monospace</string>
+    <string name="skin_ui_elements">Больше вариантов</string>
+    <string name="skin_ui_elements_hide_show">Скрыть / показать элементы интерфейса и многое другое</string>
+    <string name="skin_ui_extra_options">Разные варианты</string>
+    <string name="skin_vivid_blue_violet">&lt;span style=\\"color: #8029F5;\\"&gt;⬤&lt;/span&gt; Blue Violet (8029F5)</string>
+    <string name="skin_vivid_bourbon">&lt;span style=\\"color: #B1713D;\\"&gt;⬤&lt;/span&gt; Bourbon (B1713D)</string>
+    <string name="skin_vivid_bright_green">&lt;span style=\\"color: #64DD17;\\"&gt;⬤&lt;/span&gt; Bright Green (64DD17)</string>
+    <string name="skin_vivid_bright_purple">&lt;span style=\\"color: #ec00fc;\\"&gt;⬤&lt;/span&gt; Bright Purple (EC00FC)</string>
+    <string name="skin_vivid_carrot_orange">&lt;span style=\\"color: #FA8925;\\"&gt;⬤&lt;/span&gt; Carrot Orange (FA8925)</string>
+    <string name="skin_vivid_iris_blue">&lt;span style=\\"color: #01B4BC;\\"&gt;⬤&lt;/span&gt; Iris Blue (01B4BC)</string>
+    <string name="skin_vivid_just_yellow">&lt;span style=\\"color: #F6D51F;\\"&gt;⬤&lt;/span&gt; Just Yellow (F6D51F)</string>
+    <string name="skin_vivid_la_palma">&lt;span style=\\"color: #4AA021;\\"&gt;⬤&lt;/span&gt; La Palma (4AA021)</string>
+    <string name="skin_vivid_neon_blue">&lt;span style=\\"color: #3D5AFE;\\"&gt;⬤&lt;/span&gt; Neon Blue (3D5AFE)</string>
+    <string name="skin_vivid_radical_red">&lt;span style=\\"color: #FA5457;\\"&gt;⬤&lt;/span&gt; Radical Red (FA5457)</string>
+    <string name="skin_vivid_ruby">&lt;span style=\\"color: #e91e63;\\"&gt;⬤&lt;/span&gt; Ruby (E91E63)</string>
+    <string name="skin_vivid_safety_orange">&lt;span style=\\"color: #FF6F00;\\"&gt;⬤&lt;/span&gt; Safety Orange (FF6F00)</string>
+    <string name="skin_vivid_salad">&lt;span style=\\"color: #5FA55A;\\"&gt;⬤&lt;/span&gt; Salad (5FA55A)</string>
+    <string name="skin_vivid_yellow">&lt;span style=\\"color: #ffff00;\\"&gt;⬤&lt;/span&gt; Yellow (FFFF00)</string>
+    <string name="skin_ya200">&lt;span style=\\"color: #FFFF00;\\"&gt;⬤&lt;/span&gt; Ya200 (FFFF00)</string>
+    <string name="skin_ya400">&lt;span style=\\"color: #FFEA00;\\"&gt;⬤&lt;/span&gt; Ya400 (FFEA00)</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="statusbar_semi_transparent">Полупрозрачный (по умолчанию)</string>
+    <string name="statusbar_shadow">Тень</string>
+    <string name="statusbar_shadow_accent">Акцент с тенью</string>
+    <string name="statusbar_solid">Сплошной</string>
+    <string name="statusbar_transparent">Прозрачный</string>
+    <string name="swipe_transition_summary">Максимальное вращение альбома по оси y, z при смахивании влево / вправо</string>
+    <string name="text_color_accent">Цвет</string>
+    <string name="text_color_summary">Альтернативные варианты цвета текста</string>
+    <string name="text_color_title">Цвет шрифта</string>
+</resources>

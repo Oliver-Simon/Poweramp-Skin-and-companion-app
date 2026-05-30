@@ -1,0 +1,17 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = "poweramp_public_api"
+include ':poweramp_api_lib'
+include ':poweramp_api_example'
+include ':poweramp_provider_example'
+include ':poweramp_skin_sample'
+include ':dais_dark_extra'
+include ':poweramp_vis_presets_example'
+include ':poweramp_lyrics_plugin_example'
+include ':PowerampAICompanion'

@@ -1,0 +1,13 @@
+--- Poweramp Skin Info ---
+Name: Dais Dark
+Package: com.poweramp.v3.dais
+Author: giannisgx89
+Extraction Date: Fri Mar 13 11:39:26 PM CET 2026
+
+Features:
+- Material You (Monet) Support
+- 40+ Backgrounds (Amoled, Void, etc.)
+- Custom Button Styles (Flower, Hexagon, etc.)
+- Android 12 Seekbar Styles
+- Equalizer Knob Customization
+- Visualizer Presets included

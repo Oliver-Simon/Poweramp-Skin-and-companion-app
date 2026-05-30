@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.PowerampAICompanion" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Original Orange Theme -->
+        <item name="colorPrimary">#FF9800</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSurface">#1F1F1F</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+        <item name="colorSurfaceVariant">#333333</item>
+        <item name="colorOnSurfaceVariant">#B3B3B3</item>
+        <item name="android:colorBackground">#121212</item>
+        <item name="android:statusBarColor">#121212</item>
+        <item name="android:navigationBarColor">#1F1F1F</item>
+    </style>
+
+    <style name="RoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+</resources>

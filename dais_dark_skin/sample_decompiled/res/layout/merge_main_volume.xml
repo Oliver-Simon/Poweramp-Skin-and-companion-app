@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:w="http://schemas.android.com/apk/res/com.maxmpz.audioplayer">
+    <com.maxmpz.widget.player.DSPRoundKnobLayout android:id="@2139095098" w:param="@2131558679" w:updateMsgId="@2131558644" w:valueFormat="" w:valueFormatMin="0.0" w:valueFormatMax="100.0" w:labelText="@-2146697087" style="@style/SampleSkin_mainRoundVolumeKnob" />
+    <SceneParams android:visibility="visible" w:scene="@2131558444" w:baseScene="0" />
+    <SceneParams android:visibility="invisible" w:scene="@2131558449" w:scene_2="@2131558450" w:scene_3="@2131558446" w:scene_4="@2131558447" w:scene_5="@2131558445" w:baseScene="0" />
+    <SceneParams android:visibility="gone" w:scene="@2131558448" w:baseScene="0" />
+    <com.maxmpz.widget.player.DSPLinearKnob android:id="@2139095099" android:text="@string/volume" w:param="@2131558679" w:updateMsgId="@2131558644" w:valueFormat="" w:valueFormatMin="0.0" w:valueFormatMax="100.0" style="@style/SampleSkin_mainLinearVolumeKnob" />
+    <SceneParams android:visibility="visible" w:scene="@2131558444" w:baseScene="0" />
+    <SceneParams android:visibility="invisible" w:scene="@2131558449" w:scene_2="@2131558450" w:scene_3="@2131558448" w:scene_4="@2131558446" w:scene_5="@2131558447" w:scene_6="@2131558445" style="@style/SampleSkin_mainLinearVolumeKnobHidden" />
+    <com.maxmpz.widget.player.DSPLinearKnob android:orientation="horizontal" android:id="@2139095100" android:text="@string/volume" w:param="@2131558679" w:updateMsgId="@2131558644" w:valueFormat="" w:valueFormatMin="0.0" w:valueFormatMax="100.0" style="@style/SampleSkin_mainLinearVolumeKnob_horiz" />
+    <SceneParams android:visibility="visible" w:scene="@2131558444" w:baseScene="0" />
+    <SceneParams android:visibility="invisible" w:scene="@2131558449" w:scene_2="@2131558450" w:scene_3="@2131558448" w:scene_4="@2131558446" w:scene_5="@2131558447" w:scene_6="@2131558445" style="@style/SampleSkin_mainLinearVolumeKnobHidden" />
+</merge>

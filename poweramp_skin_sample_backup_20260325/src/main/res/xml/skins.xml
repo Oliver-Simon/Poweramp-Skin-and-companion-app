@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- targetBuild is important. Some specific values are checked and layer of additional styles may be applied.
+     See reference_resources/values/legacy-styles.xml -->
+<skins targetBuild="1003">
+	<!-- NOTE: forceGlobalOptions=true means global options (by default in styles-options.xml) will force-override base skin attributes.
+
+	     By default, global options do not override base skin theme, just add to it,
+	     but for more complicated cases, overriding may be required (e.g. for our own OptionCounter here)-->
+
+	<skin
+		name="@string/skin_sample"
+		author="@string/skin_author"
+		description="@string/skin_sample_description"
+		style="@style/SampleSkin"
+		forceGlobalOptions="true"
+		darkMode="@style/SampleSkinDark"
+		allowNewPadding="true"
+	>
+		<include file="@xml/skin_sample_shared_options"/>
+	</skin>
+
+	<skin
+		name="@string/skin_sample_dark"
+		author="@string/skin_author"
+		description="@string/skin_sample_description"
+		style="@style/SampleSkinDark"
+		forceGlobalOptions="true"
+		lightMode="@style/SampleSkin"
+	>
+		<include file="@xml/skin_sample_shared_options"/>
+	</skin>
+
+	<!-- Include is supported by build 866+ and ignored by the builds prior that -->
+
+
+</skins>

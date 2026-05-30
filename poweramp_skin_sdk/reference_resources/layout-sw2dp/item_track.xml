@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010-2023 Maksim Petrov
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted for themes, skins, widgets, plugins, applications and other software
+which communicate with Poweramp music player application on Android platform.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<!--
+	Main Poweramp list item, which represents:
+	- track
+	- any category with album art, including folders
+	- various scenes: popup menu, header, zoom levels, selection, etc.
+	
+	For the top level library items/headers, see @layout/item_text
+	For the extra views loaded into scenes, see:
+	- @layout/merge_item_aa_and_header
+	- @layout/merge_item_header
+	- @layout/merge_item_popup_menu
+
+	NOTE: clipChildren=false is needed for some devices, which fail to apply RenderNode transformations to the clip area (e.g. Huaweis)
+	NOTE: AAItemView is a (Scene)FastLayout
+	NOTE: default scene is a "list" scene
+	NOTE: merge_item_header (and other included/loaded layouts) should be updated as well for menu/header layouts
+	NOTE: scenes are required to have all the proper layouts and properties, as any item can be retrieved from the viewpool
+	      in any scene state and item can be moved to any other scene
+	
+	Base scenes:
+	- default list == 0       (_tag_scene_zero/defaultScene depending on context) 
+	- list 1-line             (scene_1) 
+	- small list no-aa        (scene_small_no_aa)
+	- small list              (scene_small)
+	- small list 1-line       (scene_1_small)
+	- small list 1-line no-aa (scene_1_small_no_aa)
+	- zoomed list             (scene_zoomed)
+	- zoom list 1-line        (scene_1_zoomed)
+	- grid                    (scene_grid) also used for alt mode with an increased cell height
+	- grid 1-line             (scene_grid_1)
+	- grid 1-line alt         (scene_grid_1_alt) used for human categories (artists, composers)
+	- zoomed grid             (scene_grid_zoomed) also used for alt mode with an increased cell height
+	- zoomed grid 1-line      (scene_grid_1_zoomed)
+	- zoomed grid 1-line alt  (scene_grid_1_alt_zoomed) used for human categories (artists, composers)
+	NOTE: rounded AA image is implemented via bind property, which forces it to use cornerRadiusAlt attribute
+	== 14
+
+	Special:		   
+	- header	              (scene_header)
+	- header 1-line           (scene_header_1)
+	- bottom buttons          (scene_bottom_toolbar) optionally enabled via OptionNoHeaderButtons
+	- item_menu               (scene_item_menu)
+	- item_menu like/unlike   (scene_item_menu_lu) menu with like/unlike buttons
+	- aa                      (scene_aa)
+	- aa_vis                  (scene_aa_vis)
+	- aa_playing              (scene_aa_playing)
+	- lyrics header           (scene_lyrics)
+	== +10
+	Total: 24
+		
+-->
+<!--suppress AndroidElementNotAllowed -->
+<com.maxmpz.widget.player.list.AAItemView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:w="http://schemas.android.com/apk/res-auto"
+	
+	style="?ItemTrack"
+>
+	<!-- playing_mark -->
+	<!-- The currently loaded / playing track mark. Invisible in AA / menu / header scenes and visible in list scenes.
+	     This can be a simple background, or it can be also any other mark (e.g. some symbol / icon) with appropriate transitionZ tweaks -->
+	<com.maxmpz.widget.player.list.PlayingMark android:id="@+id/playing_mark" 
+		style="?ItemTrackPlayingMark"	
+	/>
+	<SceneParams w:scene="@+id/scene_small" w:scene_2="@+id/scene_1_small" w:scene_3="@+id/scene_small_no_aa" w:scene_4="@+id/scene_1_small_no_aa"
+		style="?ItemTrackPlayingMark_scene_small"
+	/>
+	<SceneParams w:scene="@+id/scene_1"
+		style="?ItemTrackPlayingMark_scene_1"
+	/>
+	<SceneParams w:scene="@+id/scene_zoomed"
+		style="?ItemTrackPlayingMark_scene_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_1_zoomed"
+		style="?ItemTrackPlayingMark_scene_1_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid"
+		style="?ItemTrackPlayingMark_scene_grid"
+	/>
+	<!-- playing_mark -->
+	<SceneParams w:scene="@+id/scene_grid_1" 
+		style="?ItemTrackPlayingMark_scene_grid_1"
+	/>
+	<!-- playing_mark -->
+	<SceneParams w:scene="@+id/scene_grid_1_alt" 
+		style="?ItemTrackPlayingMark_scene_grid_1_alt"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_zoomed"
+		style="?ItemTrackPlayingMark_scene_grid_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1_zoomed"
+		style="?ItemTrackPlayingMark_scene_grid_1_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1_alt_zoomed"
+		style="?ItemTrackPlayingMark_scene_grid_1_alt_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_header" w:scene_2="@+id/scene_header_1" w:scene_3="@+id/scene_aa" w:scene_4="@+id/scene_aa_vis"
+		w:scene_5="@+id/scene_aa_playing" w:scene_6="@+id/scene_bottom_toolbar"
+		style="?ItemTrackPlayingMark_scenes_hidden"
+	/>
+	<SceneParams w:scene="@+id/scene_lyrics"
+		style="?ItemTrackPlayingMark_scenes_hidden"
+		/>
+	<SceneParams w:scene="@+id/scene_item_menu" w:scene_2="@+id/scene_item_menu_lu"
+		style="?ItemTrackPlayingMark_scene_item_menu"
+	/>
+	<!-- playing_mark -->
+
+
+	<!-- num -->
+	<com.maxmpz.widget.base.FastTextView android:id="@+id/num"
+		style="?ItemTrackNum"
+	/>
+	<SceneParams w:scene="@+id/scene_small" w:scene_2="@+id/scene_small_no_aa"
+		style="?ItemTrackNum_scene_small"
+	/>
+	<SceneParams w:scene="@+id/scene_1"
+		style="?ItemTrackNum_scene_1"
+	/>
+	<SceneParams w:scene="@+id/scene_1_small" w:scene_2="@+id/scene_1_small_no_aa"
+		style="?ItemTrackNum_scene_1_small"
+	/>
+	<SceneParams w:scene="@+id/scene_zoomed"
+		style="?ItemTrackNum_scene_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_1_zoomed"
+		style="?ItemTrackNum_scene_1_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid" 
+		style="?ItemTrackNum_scene_grid"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1" 
+		style="?ItemTrackNum_scene_grid_1"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1_alt" 
+		style="?ItemTrackNum_scene_grid_1_alt"
+	/>
+	<!-- num -->
+	<SceneParams w:scene="@+id/scene_grid_zoomed" 
+		style="?ItemTrackNum_scene_grid_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1_zoomed" 
+		style="?ItemTrackNum_scene_grid_1_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1_alt_zoomed" 
+		style="?ItemTrackNum_scene_grid_1_alt_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_header" w:scene_2="@+id/scene_header_1" w:scene_3="@+id/scene_bottom_toolbar"
+		style="?ItemTrackNum_scene_header"
+	/>
+	<SceneParams w:scene="@+id/scene_lyrics"
+		style="?ItemTrackNum_scene_lyrics"
+		/>
+	<SceneParams w:scene="@+id/scene_aa"
+		style="?ItemTrackNum_scene_aa" 
+	/>
+	<SceneParams w:scene="@+id/scene_aa_vis"
+		style="?ItemTrackNum_scene_aa_vis" 
+	/>
+	<SceneParams w:scene="@+id/scene_aa_playing"
+		style="?ItemTrackNum_scene_aa_playing" 
+	/>
+	<SceneParams w:scene="@+id/scene_item_menu"
+		style="?ItemTrackNum_scene_item_menu"
+	/>
+	<SceneParams w:scene="@+id/scene_item_menu_lu"
+		style="?ItemTrackNum_scene_item_menu_lu"
+	/>
+	<!-- num -->
+
+
+	<!-- aa_image -->
+	<com.maxmpz.widget.player.list.AAImageView android:id="@+id/aa_image"
+		style="?ItemTrackAAImage"
+	/>
+	<SceneParams w:scene="@+id/scene_1"
+		w:baseScene="defaultScene"
+		w:recalcChildren="dynamic"
+	/>
+	<SceneParams w:scene="@+id/scene_zoomed" w:scene_2="@+id/scene_1_zoomed"
+		style="?ItemTrackAAImage_scene_zoomed" 
+	/>
+	<SceneParams w:scene="@+id/scene_small" w:scene_2="@+id/scene_1_small"
+		style="?ItemTrackAAImage_scene_small"
+	/>
+	<SceneParams w:scene="@+id/scene_small_no_aa" w:scene_2="@+id/scene_1_small_no_aa"
+		style="?ItemTrackAAImage_scene_small_no_aa"
+	/>
+	<SceneParams w:scene="@+id/scene_aa"
+		style="?ItemTrackAAImage_scene_aa"
+	/>
+	<SceneParams w:scene="@+id/scene_aa_vis"
+		style="?ItemTrackAAImage_scene_aa_vis"
+	/>
+	<SceneParams w:scene="@+id/scene_aa_playing"
+		style="?ItemTrackAAImage_scene_aa_playing"
+	/>
+	<SceneParams w:scene="@+id/scene_grid" w:scene_2="@+id/scene_grid_1" w:scene_3="@+id/scene_grid_1_alt"
+		style="?ItemTrackAAImage_scene_grid"
+	/>
+	<!-- aa_image -->
+	<SceneParams w:scene="@+id/scene_grid_1_alt"
+		style="?ItemTrackAAImage_scene_grid_1_alt"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_zoomed" w:scene_2="@+id/scene_grid_1_zoomed"
+		style="?ItemTrackAAImage_scene_grid_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1_alt_zoomed"
+		style="?ItemTrackAAImage_scene_grid_1_alt_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_header" w:scene_2="@+id/scene_header_1"
+		style="?ItemTrackAAImage_scene_header"
+	/>
+	<!-- NOTE: it's here VS menu layout, as we have different approaches for aa_image depending on item type - and menu layout is shared for all of them -->
+	<SceneParams w:scene="@+id/scene_item_menu" 
+		style="?ItemTrackAAImage_scene_item_menu"
+	/>
+	<!-- Separate scene for scene_item_menu_lu where text lines are laid out bottom-top and we need to adjust AA size according to the lines total height -->
+	<SceneParams w:scene="@+id/scene_item_menu_lu"
+		style="?ItemTrackAAImage_scene_item_menu_lu"
+	/>
+	<SceneParams w:scene="@+id/scene_bottom_toolbar"
+		android:visibility="gone"
+		/>
+	<SceneParams w:scene="@+id/scene_lyrics"
+		style="?ItemTrackAAImage_scene_lyrics"
+		/>
+	<!-- aa_image -->
+
+
+	<!-- cat_image -->
+	<!-- NOTE: this can be completely GONE or INVISIBLE for items. Controlled by the code -->
+	<com.maxmpz.widget.player.list.CatImage android:id="@+id/cat_image" 
+		style="?ItemTrackCatImage"
+	/>
+	<SceneParams w:scene="@+id/scene_1"
+		w:baseScene="defaultScene" 
+	/>
+	<SceneParams w:scene="@+id/scene_zoomed" w:scene_2="@+id/scene_1_zoomed"
+		style="?ItemTrackCatImage_scene_zoomed" 
+	/>
+	<SceneParams w:scene="@+id/scene_small" w:scene_2="@+id/scene_small_no_aa"
+		style="?ItemTrackCatImage_scene_small" 
+	/>
+	<SceneParams w:scene="@+id/scene_1_small" w:scene_2="@+id/scene_1_small_no_aa"
+		style="?ItemTrackCatImage_scene_1_small" 
+	/>
+	<SceneParams w:scene="@+id/scene_aa"
+		style="?ItemTrackCatImage_scene_aa"
+	/>
+	<SceneParams w:scene="@+id/scene_aa_vis"
+		style="?ItemTrackCatImage_scene_aa_vis"
+	/>
+	<!-- cat_image -->
+	<SceneParams w:scene="@+id/scene_aa_playing"
+		style="?ItemTrackCatImage_scene_aa_playing"
+	/>
+	<SceneParams w:scene="@+id/scene_grid" w:scene_2="@+id/scene_grid_1" w:scene_3="@+id/scene_grid_1_alt"
+		style="?ItemTrackCatImage_scene_grid"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_zoomed" w:scene_2="@+id/scene_grid_1_zoomed" w:scene_3="@+id/scene_grid_1_alt_zoomed"
+		style="?ItemTrackCatImage_scene_grid_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_header" w:scene_2="@+id/scene_header_1"
+		style="?ItemTrackCatImage_scene_header"
+	/>
+	<!-- NOTE: it's here VS menu layout, as we have different approaches for aa_image depending on item type - and menu layout is shared for all of them -->
+	<SceneParams w:scene="@+id/scene_item_menu" w:scene_2="@+id/scene_item_menu_lu"
+		style="?ItemTrackCatImage_scene_item_menu"
+	/>
+	<SceneParams w:scene="@+id/scene_bottom_toolbar"
+		android:visibility="gone"
+		/>
+	<SceneParams w:scene="@+id/scene_lyrics"
+		style="?ItemTrackCatImage_scene_lyrics"
+		/>
+	<!-- cat_image -->
+
+
+	<!-- title -->
+	<com.maxmpz.audioplayer.widget.MarqueeFastTextView android:id="@+id/title"
+		style="?ItemTrackTitle"
+		android:importantForAccessibility="yes"
+	/>
+	<SceneParams w:scene="@+id/scene_1"
+		style="?ItemTrackTitle_scene_1"	   
+	/>
+	<SceneParams w:scene="@+id/scene_small" w:scene_2="@+id/scene_small_no_aa"
+		style="?ItemTrackTitle_scene_small"	   
+	/>
+	<SceneParams w:scene="@+id/scene_1_small" w:scene_2="@+id/scene_1_small_no_aa"
+		style="?ItemTrackTitle_scene_1_small"	   
+	/>
+	<SceneParams w:scene="@+id/scene_zoomed"
+		style="?ItemTrackTitle_scene_zoomed" 
+	/>
+	<SceneParams w:scene="@+id/scene_1_zoomed"
+		style="?ItemTrackTitle_scene_1_zoomed" 
+	/>
+	<SceneParams w:scene="@+id/scene_grid"
+		style="?ItemTrackTitle_scene_grid"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1"
+		style="?ItemTrackTitle_scene_grid_1"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1_alt"
+		style="?ItemTrackTitle_scene_grid_1_alt"
+	/>
+	<!-- title -->
+	<SceneParams w:scene="@+id/scene_grid_zoomed" 
+		style="?ItemTrackTitle_scene_grid_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1_zoomed"
+		style="?ItemTrackTitle_scene_grid_1_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1_alt_zoomed"
+		style="?ItemTrackTitle_scene_grid_1_alt_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_header"
+		style="?ItemTrackTitle_scene_header"
+	/>
+	<SceneParams w:scene="@+id/scene_header_1"
+		style="?ItemTrackTitle_scene_header_1"
+	/>
+	<SceneParams w:scene="@id/scene_aa"
+		style="?ItemTrackTitle_scene_aa" 
+	/>
+	<SceneParams w:scene="@id/scene_aa_vis"
+		style="?ItemTrackTitle_scene_aa_vis" 
+	/>
+	<SceneParams w:scene="@id/scene_aa_playing"
+		style="?ItemTrackTitle_scene_aa_playing" 
+	/>
+	<SceneParams w:scene="@+id/scene_item_menu"
+		style="?ItemTrackTitle_scene_item_menu"
+	/>
+	<SceneParams w:scene="@+id/scene_item_menu_lu"
+		style="?ItemTrackTitle_scene_item_menu_lu"
+	/>
+	<!-- REVISIT: this may introduce cycles due to layout kept as is, thus we still apply some -->
+	<SceneParams w:scene="@+id/scene_bottom_toolbar"
+		android:layout_width="0px"
+		android:layout_height="0px"
+		android:visibility="gone"
+		/>
+	<SceneParams w:scene="@+id/scene_lyrics"
+		style="?ItemTrackTitle_scene_lyrics"
+		/>
+	<!-- title -->
+
+
+	<!-- line2 -->
+	<com.maxmpz.audioplayer.widget.MarqueeFastTextView android:id="@+id/line2"
+		style="?ItemTrackLine2"
+		android:importantForAccessibility="yes"
+	/>
+	<SceneParams w:scene="@+id/scene_small" w:scene_2="@+id/scene_small_no_aa"
+		style="?ItemTrackLine2_scene_small"
+	/>
+	<SceneParams w:scene="@+id/scene_1"
+		style="?ItemTrackLine2_scene_1"
+	/>
+	<SceneParams w:scene="@+id/scene_1_small" w:scene_2="@+id/scene_1_small_no_aa"
+		style="?ItemTrackLine2_scene_1_small"
+	/>
+	<SceneParams w:scene="@+id/scene_zoomed"
+		style="?ItemTrackLine2_scene_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_1_zoomed"
+		style="?ItemTrackLine2_scene_1_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid"
+		style="?ItemTrackLine2_scene_grid"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1"
+		style="?ItemTrackLine2_scene_grid_1"
+	/>
+	<!-- line2 -->
+	<SceneParams w:scene="@+id/scene_grid_1_alt"  
+		style="?ItemTrackLine2_scene_grid_1_alt"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_zoomed"
+		style="?ItemTrackLine2_scene_grid_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1_zoomed"
+		style="?ItemTrackLine2_scene_grid_1_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1_alt_zoomed"
+		style="?ItemTrackLine2_scene_grid_1_alt_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_header"
+		style="?ItemTrackLine2_scene_header"
+	/>
+	<!-- NOTE: force hidden right here  -->
+	<SceneParams w:scene="@+id/scene_header_1"
+		android:visibility="gone"
+	/>
+	<SceneParams w:scene="@+id/scene_aa"
+		style="?ItemTrackLine2_scene_aa" 
+	/>
+	<SceneParams w:scene="@+id/scene_aa_vis"
+		style="?ItemTrackLine2_scene_aa_vis" 
+	/>
+	<SceneParams w:scene="@+id/scene_aa_playing"
+		style="?ItemTrackLine2_scene_aa_playing" 
+	/>
+	<SceneParams w:scene="@+id/scene_item_menu"
+		style="?ItemTrackLine2_scene_item_menu"
+	/>
+	<SceneParams w:scene="@+id/scene_item_menu_lu"
+		style="?ItemTrackLine2_scene_item_menu_lu"
+	/>
+	<SceneParams w:scene="@+id/scene_bottom_toolbar"
+		style="?ItemTrackLine2_scene_bottom_toolbar"
+		/>
+	<SceneParams w:scene="@+id/scene_lyrics"
+		style="?ItemTrackLine2_scene_lyrics"
+		/>
+	<!-- line2 -->
+
+
+	<!-- meta -->
+	<com.maxmpz.widget.base.FastTextView android:id="@+id/meta"
+		style="?ItemTrackMeta"
+	/>
+	<SceneParams w:scene="@+id/scene_small" w:scene_2="@+id/scene_small_no_aa"
+		style="?ItemTrackMeta_scene_small"
+	/>
+	<SceneParams w:scene="@+id/scene_1"
+		style="?ItemTrackMeta_scene_1"
+	/>
+	<SceneParams w:scene="@+id/scene_1_small" w:scene_2="@+id/scene_1_small_no_aa"
+		style="?ItemTrackMeta_scene_1_small"
+	/>
+	<SceneParams w:scene="@+id/scene_zoomed"
+		style="?ItemTrackMeta_scene_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_1_zoomed"
+		style="?ItemTrackMeta_scene_1_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid"
+		style="?ItemTrackMeta_scene_grid"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1"
+		style="?ItemTrackMeta_scene_grid_1"
+	/>
+	<!-- meta -->
+	<SceneParams w:scene="@+id/scene_grid_1_alt" 
+		style="?ItemTrackMeta_scene_grid_1_alt"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_zoomed"
+		style="?ItemTrackMeta_scene_grid_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1_zoomed"
+		style="?ItemTrackMeta_scene_grid_1_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_grid_1_alt_zoomed"
+		style="?ItemTrackMeta_scene_grid_1_alt_zoomed"
+	/>
+	<SceneParams w:scene="@+id/scene_header" w:scene_2="@+id/scene_header_1"
+		style="?ItemTrackMeta_scene_header"
+	/>
+	<SceneParams w:scene="@+id/scene_aa"
+		style="?ItemTrackMeta_scene_aa" 
+	/>
+	<SceneParams w:scene="@+id/scene_aa_vis"
+		style="?ItemTrackMeta_scene_aa_vis" 
+	/>
+	<SceneParams w:scene="@+id/scene_aa_playing"
+		style="?ItemTrackMeta_scene_aa_playing" 
+	/>
+	<SceneParams w:scene="@+id/scene_item_menu"
+		style="?ItemTrackMeta_scene_item_menu"
+	/>
+	<SceneParams w:scene="@+id/scene_item_menu_lu"
+		style="?ItemTrackMeta_scene_item_menu_lu"
+	/>
+	<SceneParams w:scene="@+id/scene_bottom_toolbar"
+		android:visibility="gone"
+		/>
+	<SceneParams w:scene="@+id/scene_lyrics"
+		style="?ItemTrackMeta_scene_lyrics"
+		/>
+	<!-- meta -->
+
+
+	<!-- drag_handler -->
+	<!-- NOTE: drag handler is force-hidden and will not appear when list doesn't support dragging -->
+	<com.maxmpz.widget.list.DragHandler
+		android:id="@+id/drag_handler"
+		style="?ItemTrackDragHandler"
+	/>
+	<!-- NOTE: IMPORTANT: defining defaultScene right here to avoid auto-default-scene creation with the default visibility - needed as we operate this view
+	     visibility completely from code -->
+	<SceneParams w:scene="defaultScene" w:scene_2="@id/scene_zoomed" w:scene_3="@id/scene_1" w:scene_4="@id/scene_1_zoomed"
+		style="?ItemTrackDragHandler"
+	/>
+	<SceneParams w:scene="@+id/scene_small" w:scene_2="@+id/scene_1_small"
+		style="?ItemTrackDragHandler_scene_small"
+		/>
+	<SceneParams w:scene="@id/scene_grid" w:scene_2="@id/scene_grid_1" w:scene_3="@id/scene_grid_1_alt"
+		style="?ItemTrackDragHandler_scene_grid" 
+	/>
+	<SceneParams w:scene="@id/scene_grid_zoomed" w:scene_2="@id/scene_grid_1_zoomed" w:scene_3="@id/scene_grid_1_alt_zoomed"
+		style="?ItemTrackDragHandler_scene_grid_zoomed"
+		/>
+	<SceneParams w:scene="@id/scene_small_no_aa" w:scene_2="@id/scene_1_small_no_aa"
+		style="?ItemTrackDragHandler_scene_small_no_aa" 
+	/>
+	<!-- drag_handler -->
+
+
+	<!-- select_box -->
+	<!-- NOTE: not setting tint as default color is black -->
+	<!-- NOTE: _not_ clickable, so item instead is always clicked as we don't process checkbox clicks -->
+	<!-- Select box is force-hidden by code by default and programmatically made visible when needed -->
+	<com.maxmpz.widget.base.FastCheckBoxOnly android:id="@+id/select_box"
+		style="?ItemTrackSelectBox"
+	/>
+	<!-- NOTE: IMPORTANT: defining defaultScene right here to avoid auto-default-scene creation with the default visibility - needed as we operate this view 
+	     visibility completely from code -->
+	<SceneParams w:scene="defaultScene" w:scene_2="@id/scene_zoomed" w:scene_3="@id/scene_1" w:scene_4="@id/scene_1_zoomed" 
+		w:scene_5="@+id/scene_small" w:scene_6="@+id/scene_1_small"
+		style="?ItemTrackSelectBox"
+	/>
+	<SceneParams w:scene="@id/scene_grid" w:scene_2="@id/scene_grid_zoomed" w:scene_3="@id/scene_grid_1" w:scene_4="@id/scene_grid_1_zoomed"
+					w:scene_5="@id/scene_grid_1_alt" w:scene_6="@id/scene_grid_1_alt_zoomed"
+		style="?ItemTrackSelectBox_scene_grid" 
+	/>
+	<SceneParams w:scene="@+id/scene_small_no_aa" w:scene_2="@+id/scene_1_small_no_aa"
+		style="?ItemTrackSelectBox_scene_small_no_aa"
+	/>
+	<!-- select_box -->
+	
+		
+	<!-- NOTE: each loadable behavior only adds extra layout pass when target scene is loaded -->
+	<!-- NOTE: while we have scene_item_menu here, it's never loaded for scene_item_menu, as behavior is attached to AAItemView, but
+		 popup scene runs in some outer container view.
+		 If behavior_aa is already loaded (as it is for AA LE), then it's there, otherwise it's not loaded, and that's what is exactly needed
+	-->
+	<!-- NOTE: menu is used in header + aa scenes -->
+	<com.maxmpz.widget.base.LoadableBehavior android:id="@+id/behavior_aa_and_header"
+		android:layout="@layout/merge_item_aa_and_header"
+		w:loadForScene="@id/scene_aa"
+		w:loadForScene_2="@id/scene_item_menu"
+		w:loadForScene_3="@id/scene_item_menu_lu"
+		w:loadForScene_4="@id/scene_aa_vis"
+		w:loadForScene_5="@id/scene_aa_playing"
+		w:loadForScene_6="@id/scene_header"
+		w:loadForScene_7="@id/scene_header_1"
+		w:loadForScene_8="@id/scene_bottom_toolbar"
+		w:loadForScene_9="@id/scene_lyrics"
+	/>
+	
+	<!-- NOTE: scene_header here is needed for cases when we transition from header to menu
+		 If behavior_aa is loaded by PopupMenuHelper prior to actual transition start, then behavior_header loading forces current (scene_header) scene,
+		 and that causes unload for behavior_aa, unless scene_header is also set for it -->
+	<com.maxmpz.widget.base.LoadableBehavior android:id="@+id/behavior_header"
+		android:layout="@layout/merge_item_header"
+		w:loadForScene="@id/scene_header"
+		w:loadForScene_2="@id/scene_header_1"
+		w:loadForScene_3="@id/scene_bottom_toolbar"
+	/>
+	
+	<!-- NOTE: programmatically loaded for menu -->	
+	<com.maxmpz.widget.base.LoadableBehavior android:id="@+id/behavior_menu"
+		android:layout="@layout/merge_item_popup_menu"
+	/>
+</com.maxmpz.widget.player.list.AAItemView>

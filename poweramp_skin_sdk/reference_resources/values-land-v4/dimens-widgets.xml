@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- values-land -->
+<resources>
+    <dimen name="widget_conf_options_width">420dp</dimen>
+
+    <!-- 4x1 -->
+    <integer name="widget4x1_targetCellWidth">2</integer>
+    <integer name="widget4x1_targetCellHeight">2</integer>
+    <dimen name="widget4x1_conf_height">76dp</dimen>
+
+    <!-- Increased further for tabs -->
+    <dimen name="widget4x1_minWidth">190dp</dimen>
+    <dimen name="widget4x1_logo_marginRight">-8dp</dimen>
+
+</resources>

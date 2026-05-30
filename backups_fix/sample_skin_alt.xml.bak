@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceCycle, NewApi">
+
+	<style name="SampleSkin_Alt_Centered_Base">
+		<!-- Alt layout: text below album art. consumeSpace=vertical pushes parent space below AA -->
+		<item name="Alt_AAImage_consumeSpace">vertical</item>
+		<item name="com.maxmpz.audioplayer:textSizeMultiplierPref">@+id/titleLine2FontSize</item>
+
+		<!-- Use the skin-specific attrs for overrides -->
+		<item name="Alt_ItemTrackTitle_scene_aa_style">@style/Alt_Centered_ItemTrackTitle_scene_aa</item>
+		<item name="Alt_ItemTrackLine2_scene_aa_style">@style/Alt_Centered_ItemTrackLine2_scene_aa</item>
+
+		<!-- Buttons below text -->
+		<item name="com.maxmpz.audioplayer:TopSubAAButtons">@style/Alt_TopSubAAButtons</item>
+	</style>
+
+	<style name="SampleSkin_Alt_Centered" parent="SampleSkin_Alt_Centered_Base">
+	</style>
+
+	<!-- TITLE: Positioned above line2, centered. 
+	     Uses the bottom-up chain: title -> line2 -> parent bottom -->
+	<style name="Alt_Centered_ItemTrackTitle_scene_aa" parent="com.maxmpz.audioplayer:style/ItemTrackTitle_scene_aa">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="com.maxmpz.audioplayer:layout_attachLeft">@null</item>
+		<item name="com.maxmpz.audioplayer:layout_attachRight">@null</item>
+		<item name="com.maxmpz.audioplayer:layout_attachTop">@null</item>
+		<item name="com.maxmpz.audioplayer:layout_attachBottom">@com.maxmpz.audioplayer:id/line2</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+		<item name="android:gravity">center</item>
+		<item name="android:layout_marginLeft">16dp</item>
+		<item name="android:layout_marginRight">16dp</item>
+		<item name="android:layout_marginBottom">2dp</item>
+		<item name="android:textColor">?android:textColorPrimaryInverse</item>
+		<item name="com.maxmpz.audioplayer:lineBackground">@com.maxmpz.audioplayer:drawable/text_bg_alpha_rounded</item>
+	</style>
+
+	<!-- ARTIST: Anchored to parent bottom. Sits below AA because consumeSpace=vertical -->
+	<style name="Alt_Centered_ItemTrackLine2_scene_aa" parent="com.maxmpz.audioplayer:style/ItemTrackLine2_scene_aa">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="com.maxmpz.audioplayer:layout_attachLeft">@null</item>
+		<item name="com.maxmpz.audioplayer:layout_attachRight">@null</item>
+		<item name="com.maxmpz.audioplayer:layout_attachTop">@null</item>
+		<item name="com.maxmpz.audioplayer:layout_attachBottom">parent</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+		<item name="android:gravity">center</item>
+		<item name="android:layout_marginLeft">16dp</item>
+		<item name="android:layout_marginRight">16dp</item>
+		<item name="android:layout_marginBottom">8dp</item>
+		<item name="android:textColor">?android:textColorPrimaryInverse</item>
+		<item name="com.maxmpz.audioplayer:lineBackground">@com.maxmpz.audioplayer:drawable/text_bg_alpha_rounded</item>
+	</style>
+
+	<!-- BUTTONS: Below text, with burn-in alpha -->
+	<style name="Alt_TopSubAAButtons" parent="com.maxmpz.audioplayer:style/Alt_TopSubAAButtons">
+		<item name="android:alpha">?attr/button_opacity</item>
+	</style>
+
+</resources>

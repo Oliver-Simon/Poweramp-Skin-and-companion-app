@@ -1,0 +1,24 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: dais_dark_skin.apk
+compressionType: false
+doNotCompress:
+- resources.arsc
+- META-INF/androidx.appcompat_appcompat-resources.version
+- META-INF/androidx.core_core.version
+- META-INF/androidx.interpolator_interpolator.version
+- META-INF/androidx.lifecycle_lifecycle-runtime.version
+- META-INF/androidx.vectordrawable_vectordrawable-animated.version
+- META-INF/androidx.vectordrawable_vectordrawable.version
+- META-INF/androidx.versionedparcelable_versionedparcelable.version
+- png
+isFrameworkApk: false
+packageInfo: null
+sdkInfo:
+  minSdkVersion: '23'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  stamp-cert-sha256: '8'
+usesFramework: null
+version: 2.7.0-dirty
+versionInfo: null

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010-2020 Maksim Petrov
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted for themes, skins, widgets, plugins, applications and other software
+which communicate with Poweramp music player application on Android platform.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:w="http://schemas.android.com/apk/res-auto"
+>
+	<!-- NOTE: toast for the selection is shown via ListWidget.onBusMsg logic -->
+
+	<com.maxmpz.widget.base.BusSelectablePopupButtonLayout android:id="@+id/add_to_pl"
+		style="?SelectionListContextPopupButtonLayout"
+
+		w:disableForStateBusId="@id/list"
+		w:enableForStateId="@id/state_list_something_selected"
+		w:disableForStateMsgId="@id/state_list_selection_count"
+
+		w:stateBusId="@id/list"
+
+		w:stateId="@id/state_playlist_insert_pos"
+
+		w:clickOnClick="true"
+		w:clickBusId="@id/list"
+		w:clickMsgId="@id/cmd_list_add_to_pl_dialog"
+
+		w:buttonsBusId="@id/list"
+		w:buttonsMsgId="@id/cmd_set_playlist_insert_pos"
+		w:buttonsLabels="@array/add_to_pl_modes"
+		w:buttonsLabels2="@array/playlist_insert_modes"
+		w:buttonsDrawables="@array/add_to_pl_modes_icons_24dp"
+		w:buttonsArg1="@array/playlist_insert_args1"
+		>
+	</com.maxmpz.widget.base.BusSelectablePopupButtonLayout>
+	<SceneParams w:scene="@+id/scene_button_menu"
+		style="?SelectionListContextPopupButtonLayout_scene_item_menu"
+		/>
+
+	<!-- NOTE: using disableForStateBusId="@id/list" to enable disabling, but this is replaced to the actual target of the selection menu anyway
+	     NOTE: disableForStateBusId, stateBusId, buttonsBusId are set by the code
+	-->
+	<com.maxmpz.widget.base.BusSelectablePopupButtonLayout android:id="@+id/enqueue"
+		style="?SelectionListContextPopupButtonLayout"
+
+		w:disableForStateBusId="@id/list"
+		w:enableForStateId="@id/state_list_something_selected"
+		w:disableForStateMsgId="@id/state_list_selection_count"
+
+		w:stateBusId="@id/list"
+
+		w:stateId="@id/state_queue_insert_pos"
+
+		w:clickOnClick="true"
+		w:clickBusId="@id/list"
+		w:clickMsgId="@id/cmd_list_add_to_q"
+
+		w:buttonsBusId="@id/list"
+		w:buttonsMsgId="@id/cmd_set_queue_insert_pos"
+		w:buttonsLabels="@array/enqueue_modes"
+		w:buttonsLabels2="@array/enqueue_insert_modes"
+		w:buttonsDrawables="@array/enqueue_modes_icons_24dp"
+		w:buttonsArg1="@array/enqueue_modes_args1"
+		>
+	</com.maxmpz.widget.base.BusSelectablePopupButtonLayout>
+	<SceneParams w:scene="@+id/scene_button_menu"
+		style="?SelectionListContextPopupButtonLayout_scene_item_menu"
+		/>
+
+	<com.maxmpz.widget.base.BusSelectablePopupButtonLayout android:id="@+id/queue_as_next"
+		style="?SelectionListContextPopupButtonLayout"
+
+		w:disableForStateBusId="@id/list"
+		w:enableForStateId="@id/state_list_something_selected"
+		w:disableForStateMsgId="@id/state_list_selection_count"
+
+		w:stateBusId="@id/list"
+
+		w:stateId="@id/state_play_next_insert_pos"
+
+		w:clickOnClick="true"
+		w:clickBusId="@id/list"
+		w:clickMsgId="@id/cmd_list_add_as_next_to_q"
+
+		w:buttonsBusId="@id/list"
+		w:buttonsMsgId="@id/cmd_set_play_next_insert_pos"
+		w:buttonsLabels="@array/play_next_modes"
+		w:buttonsDrawables="@array/play_next_modes_icons_24dp"
+		w:buttonsLabels2="@array/play_next_insert_modes"
+		w:buttonsArg1="@array/enqueue_modes_args1"
+		>
+	</com.maxmpz.widget.base.BusSelectablePopupButtonLayout>
+	<SceneParams w:scene="@+id/scene_button_menu"
+		style="?SelectionListContextPopupButtonLayout_scene_item_menu"
+		/>
+
+	<com.maxmpz.widget.base.BusStateEnabledActionButton
+		style="?SelectionListContextButton"
+		android:drawable="?delete_24dp"
+		
+		android:text="@string/delete"
+		w:stateId="@id/state_list_can_delete"
+		w:stateMsgId="@id/state_list_selection_count"
+		
+		w:msgId="@id/cmd_list_delete_dialog"
+	/>
+	<!-- NOTE: this may be hidden for some editions -->
+	<com.maxmpz.widget.base.BusStateEnabledActionButton android:id="@+id/send"
+		style="?SelectionListContextButton"
+		android:drawable="?share_24dp"
+		
+		android:text="@string/share"
+		w:stateId="@id/state_list_something_selected"
+		w:stateMsgId="@id/state_list_selection_count"
+		
+		w:msgId="@id/cmd_list_send_dialog"
+	/>
+</merge>

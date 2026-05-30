@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="48.0" android:viewportHeight="48.0">
+            <group android:pivotX="24.0" android:pivotY="24.0" android:scaleX="0.96" android:scaleY="0.96">
+                <path android:fillColor="?2130772232" android:pathData="M45.66,18.34a8,8,0,0,1-2.35-5.65h0a8,8,0,0,0-8-8h0a8,8,0,0,1-5.65-2.35h0a8,8,0,0,0-11.32,0h0a8,8,0,0,1-5.65,2.35h0a8,8,0,0,0-8,8h0a8,8,0,0,1-2.35,5.65,8,8,0,0,0,0,11.32,8,8,0,0,1,2.35,5.65,8,8,0,0,0,8,8,8,8,0,0,1,5.65,2.35h0a8,8,0,0,0,11.32,0h0a8,8,0,0,1,5.65-2.35,8,8,0,0,0,8-8,8,8,0,0,1,2.35-5.65A8,8,0,0,0,45.66,18.34ZM33,26.6,26.9,30.13l-6.11,3.53a3,3,0,0,1-4.51-2.6V16.94a3,3,0,0,1,4.51-2.6l6.11,3.53L33,21.4A3,3,0,0,1,33,26.6Z" android:fillAlpha="0.2" />
+                <path android:pathData="M45.66,29.66h0a8,8,0,0,0,0-11.32h0a8,8,0,0,1-2.35-5.65h0a8,8,0,0,0-8-8h0a8,8,0,0,1-5.65-2.35h0a8,8,0,0,0-11.32,0h0a8,8,0,0,1-5.65,2.35h0a8,8,0,0,0-8,8h0a8,8,0,0,1-2.35,5.65h0a8,8,0,0,0,0,11.32h0a8,8,0,0,1,2.35,5.65h0a8,8,0,0,0,8,8h0a8,8,0,0,1,5.65,2.35h0a8,8,0,0,0,11.32,0h0a8,8,0,0,1,5.65-2.35h0a8,8,0,0,0,8-8h0A8,8,0,0,1,45.66,29.66Z" android:strokeColor="?2130772232" android:strokeWidth="1.0" />
+            </group>
+        </vector>
+    </item>
+    <item android:drawable="?2130772281" />
+</layer-list>

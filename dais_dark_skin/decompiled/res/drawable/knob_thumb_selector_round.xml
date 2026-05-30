@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="?2130773077" />
+                    <stroke android:width="2.0dip" android:color="?2130773099" />
+                </shape>
+            </item>
+            <item android:left="14.949982dip" android:top="25.0dip" android:right="14.949982dip" android:bottom="25.0dip">
+                <shape android:shape="oval">
+                    <solid android:color="?2130773099" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="?2130772245" />
+                </shape>
+            </item>
+            <item android:left="9.0dip" android:top="9.0dip" android:right="9.0dip" android:bottom="9.0dip">
+                <shape android:shape="oval">
+                    <solid android:color="?2130773077" />
+                </shape>
+            </item>
+            <item>
+                <vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="48.0" android:viewportHeight="48.0">
+                    <group android:pivotX="24.0" android:pivotY="24.0" android:scaleX="0.7" android:scaleY="0.7">
+                        <path android:fillColor="?2130772245" android:pathData="M 24 14.26 C 29.3792534634 14.26 33.74 18.6207465366 33.74 24 C 33.74 29.3792534634 29.3792534634 33.74 24 33.74 C 18.6207465366 33.74 14.26 29.3792534634 14.26 24 C 14.26 18.6207465366 18.6207465366 14.26 24 14.26 Z" android:strokeColor="?2130772245" android:strokeWidth="3.5" android:strokeMiterLimit="10.0" android:fillAlpha="0.3" />
+                    </group>
+                </vector>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_enabled="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="?2130773077" />
+                    <stroke android:width="1.6999817dip" android:color="?2130772245" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="?2130772246" />
+                </shape>
+            </item>
+            <item>
+                <vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="48.0" android:viewportHeight="48.0">
+                    <group android:pivotX="24.0" android:pivotY="24.0" android:scaleX="0.7" android:scaleY="0.7">
+                        <path android:fillColor="?android:textColorPrimary" android:pathData="M 24 14.26 C 29.3792534634 14.26 33.74 18.6207465366 33.74 24 C 33.74 29.3792534634 29.3792534634 33.74 24 33.74 C 18.6207465366 33.74 14.26 29.3792534634 14.26 24 C 14.26 18.6207465366 18.6207465366 14.26 24 14.26 Z" android:strokeColor="?android:textColorPrimary" android:strokeWidth="3.5" android:strokeMiterLimit="10.0" android:fillAlpha="0.3" />
+                    </group>
+                </vector>
+            </item>
+        </layer-list>
+    </item>
+</selector>

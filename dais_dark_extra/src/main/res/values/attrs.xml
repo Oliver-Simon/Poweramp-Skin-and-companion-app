@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="Bariol_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Basis_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Brains_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Comfortaa_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Dmsans_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Fira_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Gals_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Inter_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Jura_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Nasalization_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="OpenSans_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Play_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Prime_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="ProductSans_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Roboto_flex_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Roboto_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="SampleSkin_ItemTrackAAImage_scene_aa_scale" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="SampleSkin_ItemTrackAAImage_scene_aa_scale_playing" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="SampleSkin_counterLayout" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="SampleSkin_mainMiniSpectrumLayout" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="SampleSkin_mainVolumeLayout" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Ubuntu_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+    <attr name="Ubuntu_mono_font" format="reference|color|dimension|integer|boolean|string|enum|flags" />
+
+    <attr name="Alt_AAImage_consumeSpace" format="integer"/>
+
+    <!-- Added missing attributes from skins.xml keys -->
+    <attr name="cornersAA" format="dimension" />
+    <attr name="cornersTracks" format="dimension" />
+    <attr name="cornersAlbums" format="dimension" />
+    <attr name="cornersOther" format="dimension" />
+    <attr name="aaMaxYRotation" format="float" />
+    <attr name="aaMaxZRotation" format="float" />
+    <attr name="aaDenseFactor" format="float" />
+    <attr name="titleLine2FontSize" format="dimension" />
+    <attr name="elapseDuration" format="dimension" />
+    <attr name="trackCounter" format="dimension" />
+    <attr name="bottomMetaInfoFontSize" format="dimension" />
+    <attr name="miniPlayerTitleFontSize" format="dimension" />
+    <attr name="miniPlayerSubtitleFontSize" format="dimension" />
+    <attr name="cornersThumb" format="dimension" />
+    <attr name="bottombarcorners" format="dimension" />
+    <attr name="buttonscorners" format="dimension" />
+    <attr name="libraryiconcorners" format="dimension" />
+    <attr name="colorIconPrimary" format="color" />
+    <attr name="colorIconPrimaryForced" format="color" />
+    <attr name="colorIconAccent" format="color" />
+    <attr name="colorIconDisabled" format="color" />
+    <attr name="colorIconInverse" format="color" />
+    <attr name="colorIconInverseForced" format="color" />
+    <attr name="colorIconLessContrast" format="color" />
+    <attr name="colorBackground" format="color" />
+    <attr name="colorAccent" format="color" />
+    <attr name="play_trans" format="reference" />
+    <attr name="next_res" format="reference" />
+    <attr name="previous_res" format="reference" />
+    <attr name="ff_res" format="reference" />
+    <attr name="rw_res" format="reference" />
+
+    <!-- Robustness for "Text Background: None" -->
+    <attr name="ItemTrackTitle_scene_aa_no_bg" format="reference"/>
+    <attr name="ItemTrackLine2_scene_aa_no_bg" format="reference"/>
+</resources>

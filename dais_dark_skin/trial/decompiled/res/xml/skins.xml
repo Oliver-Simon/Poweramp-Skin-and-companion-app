@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skins>
+    <skin author="@string/skin_author" darkMode="@style/SampleSkin" forceGlobalOptions="true" name="@string/skin_sample" style="@style/SampleSkin">
+        <page icon="@drawable/skin_settings_aa" name="@string/aa_title" summary="@string/aa_summary">
+            <page icon="@drawable/icon_ui_corners" name="@string/category_aa_corners" summary="@string/category_corners_summary">
+                <option key="dynamicCorners" name="@string/category_aa_corners" overlapStyle="@style/SampleSkin_dynamicCorners" summary="@string/aa_corners_summary" />
+                <seekbar defaultValue="8" dependency="dynamicCorners" floatScale="1" id="@2139095359" key="cornersAA" max="64" min="-1" name="@string/skin_cornerRadiusAA" scale="1" step="1" summary="%.0fdp" />
+                <seekbar defaultValue="8" dependency="dynamicCorners" floatScale="1" id="@2139095362" key="cornersTracks" max="64" min="-1" name="@string/skin_cornerRadiusTracks" scale="1" step="1" summary="%.0fdp" />
+                <seekbar defaultValue="8" dependency="dynamicCorners" floatScale="1" id="@2139095360" key="cornersAlbums" max="64" min="-1" name="@string/skin_cornerRadiusAlbums" scale="1" step="1" summary="%.0fdp" />
+                <seekbar defaultValue="8" dependency="dynamicCorners" floatScale="1" id="@2139095361" key="cornersOther" max="64" min="-1" name="@string/skin_cornerRadiusOther" scale="1" step="1" summary="%.0fdp" />
+            </page>
+            <page icon="@drawable/icon_ui_default_aa_img" name="@string/default_aa_img" summary="@string/default_aa_img_summary">
+                <radio defaultValue="@style/DefaultAA" key="default_aa_img">
+                    <option key="default_aa_img_default" name="@string/default_img_default" overlapStyle="@style/DefaultAADefault" />
+                    <option key="default_aa_img_original" name="@string/default_img" overlapStyle="@style/DefaultAA" />
+                    <option key="default_aa_play" name="@string/default_aa_play" overlapStyle="@style/DefaultAA_Play" />
+                    <option key="default_aa_hide" name="@string/default_hide" overlapStyle="@style/DefaultHide" />
+                </radio>
+            </page>
+            <page icon="@drawable/icon_ui_aa_scale" name="@string/category_scale_title" summary="@string/category_scale_playing_summary">
+                <option key="aaOptionsPlaying" name="@string/category_scale_playing" overlapStyle="@style/SampleSkin_aaOptions" />
+                <seekbarOptions centerLabel="@string/skin_normal" defaultValue="@style/SampleSkin_aaScale_01" dependency="aaOptionsPlaying" key="aaScaleStylePlaying" leftLabel="@string/skin_smaller" rightLabel="@string/skin_larger" summary="%s">
+                    <option name="0.75" overlapStyle="@style/SampleSkin_aaScale_0075" />
+                    <option name="0.8" overlapStyle="@style/SampleSkin_aaScale_008" />
+                    <option name="0.85" overlapStyle="@style/SampleSkin_aaScale_0085" />
+                    <option name="0.9" overlapStyle="@style/SampleSkin_aaScale_009" />
+                    <option name="0.95" overlapStyle="@style/SampleSkin_aaScale_0095" />
+                    <option name="1.0" overlapStyle="@style/SampleSkin_aaScale_01" />
+                    <option name="1.1" overlapStyle="@style/SampleSkin_aaScale_011" />
+                    <option name="1.15" overlapStyle="@style/SampleSkin_aaScale_0115" />
+                    <option name="1.25" overlapStyle="@style/SampleSkin_aaScale_0125" />
+                    <option name="1.33" overlapStyle="@style/SampleSkin_aaScale_0133" />
+                    <option name="1.5" overlapStyle="@style/SampleSkin_aaScale_015" />
+                </seekbarOptions>
+                <option key="aaOptions" name="@string/category_scale_paused" overlapStyle="@style/SampleSkin_aaOptions" />
+                <seekbarOptions centerLabel="@string/skin_normal" defaultValue="@style/SampleSkin_aaScale_1" dependency="aaOptions" key="aaScaleStyle" leftLabel="@string/skin_smaller" rightLabel="@string/skin_larger" summary="%s">
+                    <option name="0.75" overlapStyle="@style/SampleSkin_aaScale_075" />
+                    <option name="0.8" overlapStyle="@style/SampleSkin_aaScale_08" />
+                    <option name="0.85" overlapStyle="@style/SampleSkin_aaScale_085" />
+                    <option name="0.9" overlapStyle="@style/SampleSkin_aaScale_09" />
+                    <option name="0.95" overlapStyle="@style/SampleSkin_aaScale_095" />
+                    <option name="1.0" overlapStyle="@style/SampleSkin_aaScale_1" />
+                    <option name="1.1" overlapStyle="@style/SampleSkin_aaScale_11" />
+                    <option name="1.15" overlapStyle="@style/SampleSkin_aaScale_115" />
+                    <option name="1.25" overlapStyle="@style/SampleSkin_aaScale_125" />
+                    <option name="1.33" overlapStyle="@style/SampleSkin_aaScale_133" />
+                    <option name="1.5" overlapStyle="@style/SampleSkin_aaScale_15" />
+                </seekbarOptions>
+            </page>
+            <page icon="@drawable/icon_ui_aa_shadow" name="@string/aa_shadow_title" summary="@string/aa_shadow_summary">
+                <option key="aaShadowRadius" name="@string/aa_shadow_radius_title" overlapStyle="@style/AAShadowFour" />
+                <seekbarOptions centerLabel="@string/skin_normal" defaultValue="@style/AAShadowFour" dependency="aaShadowRadius" key="aaShadow" leftLabel="@string/skin_smaller" rightLabel="@string/skin_larger" summary="%s">
+                    <option name="@string/aa_shadow_default_hide" overlapStyle="@style/AAShadowHide" />
+                    <option name="2.0dip" overlapStyle="@style/AAShadowTwo" />
+                    <option name="4.0dip" overlapStyle="@style/AAShadowFour" />
+                    <option name="6.0dip" overlapStyle="@style/AAShadowSix" />
+                    <option name="8.0dip" overlapStyle="@style/AAShadowEight" />
+                    <option name="10.0dip" overlapStyle="@style/AAShadowTen" />
+                    <option name="12.0dip" overlapStyle="@style/AAShadowTwelve" />
+                    <option name="14.0dip" overlapStyle="@style/AAShadowFourteen" />
+                    <option name="16.0dip" overlapStyle="@style/AAShadowSixteen" />
+                    <option name="18.0dip" overlapStyle="@style/AAShadowEighteen" />
+                    <option name="20.0dip" overlapStyle="@style/AAShadowTwenty" />
+                </seekbarOptions>
+            </page>
+            <page icon="@drawable/icon_ui_aa_swipe" name="@string/category_swipe_transition" summary="@string/category_swipe_transition_summary">
+                <option key="aaRotation" name="@string/category_swipe_transition" overlapStyle="@style/SampleSkin_aaOptions" summary="@string/swipe_transition_summary" />
+                <seekbar defaultValue="-1000" dependency="aaRotation" floatScale="100" id="@2139095314" key="aaMaxYRotation" max="3000" min="-3000" name="@string/skin_aaMaxYRotation" scale="100" step="10" summary="%.2f" />
+                <seekbar defaultValue="550" dependency="aaRotation" floatScale="100" id="@2139095315" key="aaMaxZRotation" max="3000" min="-3000" name="@string/skin_aaMaxZRotation" scale="100" step="10" summary="%.2f" />
+                <seekbar defaultValue="75" dependency="aaRotation" floatScale="100" id="@2139095312" key="aaDenseFactor" max="200" min="25" name="@string/skin_aaDenseFactor" scale="100" step="5" summary="@string/skin_summary_aaDenseFactor" summary2="%.2f" />
+            </page>
+        </page>
+        <page icon="@drawable/skin_settings_fonts" name="@string/fonts" summary="@string/skin_font_summary">
+            <page icon="@drawable/icon_ui_fonts" name="@string/font_size" summary="@string/font_size_summary">
+                <seekbar defaultValue="1000" floatScale="1000" id="@2139095394" key="titleLine2FontSize" leftLabel="@string/skin_smaller" max="2000" min="500" name="@string/skin_title_subtitle_font_size" rightLabel="@string/skin_larger" scale="1000" step="125" summary="@string/skin_size_2f" ticks="true" />
+                <seekbar defaultValue="1000" floatScale="1000" id="@2139095364" key="elapseDuration" leftLabel="@string/skin_smaller" max="2000" min="500" name="@string/font_size_elapse_durarion" rightLabel="@string/skin_larger" scale="1000" step="125" summary="@string/skin_size_2f" ticks="true" />
+                <seekbar defaultValue="1000" floatScale="1000" id="@2139095395" key="trackCounter" leftLabel="@string/skin_smaller" max="2000" min="500" name="@string/font_size_track_counter" rightLabel="@string/skin_larger" scale="1000" step="125" summary="@string/skin_size_2f" ticks="true" />
+                <seekbar defaultValue="1000" floatScale="1000" id="@2139095356" key="bottomMetaInfoFontSize" leftLabel="@string/skin_smaller" max="2000" min="500" name="@string/bottom_meta_info_font_size" rightLabel="@string/skin_larger" scale="1000" step="125" summary="@string/skin_size_2f" ticks="true" />
+                <seekbar defaultValue="1000" floatScale="1000" id="@2139095373" key="miniPlayerTitleFontSize" leftLabel="@string/skin_smaller" max="2000" min="500" name="@string/mini_player_title_text" rightLabel="@string/skin_larger" scale="1000" step="125" summary="@string/skin_size_2f" ticks="true" />
+                <seekbar defaultValue="1000" floatScale="1000" id="@2139095372" key="miniPlayerSubtitleFontSize" leftLabel="@string/skin_smaller" max="2000" min="500" name="@string/mini_player_subtitle_text" rightLabel="@string/skin_larger" scale="1000" step="125" summary="@string/skin_size_2f" ticks="true" />
+            </page>
+            <page icon="@drawable/icon_ui_fonts_color" name="@string/text_color_title" summary="@string/text_color_summary">
+                <option key="textColorAccent" name="@string/text_color_accent" overlapStyle="@style/TextColor_Accent" />
+            </page>
+            <category name="@string/skin_font">
+                <radio defaultValue="@style/SampleSkin_ProductSansFont" key="font">
+                    <option name="@string/_default" overlapStyle="" />
+                    <option name="@string/skin_bariol_font" overlapStyle="@style/SampleSkin_BariolFont" />
+                    <option name="@string/skin_basis_font" overlapStyle="@style/SampleSkin_BasisFont" />
+                    <option name="@string/skin_comfortaa_font" overlapStyle="@style/SampleSkin_ComfortaaFont" />
+                    <option name="@string/skin_dmsans_font" overlapStyle="@style/SampleSkin_DmsansFont" />
+                    <option name="@string/skin_fira_font" overlapStyle="@style/SampleSkin_FiraFont" />
+                    <option name="@string/skin_gals_font" overlapStyle="@style/SampleSkin_GalsFont" />
+                    <option name="@string/skin_inter_font" overlapStyle="@style/SampleSkin_InterFont" />
+                    <option name="@string/skin_opensans_font" overlapStyle="@style/SampleSkin_OpenSansFont" />
+                    <option name="@string/skin_productsans_font" overlapStyle="@style/SampleSkin_ProductSansFont" />
+                    <option name="@string/skin_play_font" overlapStyle="@style/SampleSkin_PlayFont" />
+                    <option name="@string/skin_prime_font" overlapStyle="@style/SampleSkin_PrimeFont" />
+                    <option name="@string/skin_brains_font" overlapStyle="@style/SampleSkin_BrainsFont" />
+                    <option name="@string/skin_jura_font" overlapStyle="@style/SampleSkin_JuraFont" />
+                    <option name="@string/skin_nasalization_font" overlapStyle="@style/SampleSkin_NasalizationFont" />
+                    <option name="@string/skin_roboto_font" overlapStyle="@style/SampleSkin_RobotoFont" />
+                    <option name="@string/skin_roboto_flex_font" overlapStyle="@style/SampleSkin_RobotoFlexFont" />
+                    <option name="@string/skin_ubuntu_font" overlapStyle="@style/SampleSkin_UbuntuFont" />
+                    <option name="@string/skin_ubuntu_mono_font" overlapStyle="@style/SampleSkin_UbuntuMonoFont" />
+                </radio>
+            </category>
+        </page>
+        <page icon="@drawable/skin_settings_ui" name="@string/skin_settings_ui" summary="@string/skin_settings_ui_summary">
+            <page icon="@drawable/icon_ui_accent" name="@string/accent" summary="@string/gradient_accents">
+                <category name="@string/accent_material_ui" />
+                <radio defaultValue="@style/SampleSkin_color_default_white" key="accent_material_ui">
+                    <option name="@string/skin_default_white" overlapStyle="@style/SampleSkin_color_default_white" />
+                    <option name="@string/skin_a200" overlapStyle="@style/SampleSkin_color_a200" />
+                    <option name="@string/skin_a400" overlapStyle="@style/SampleSkin_color_a400" />
+                    <option name="@string/skin_pa200" overlapStyle="@style/SampleSkin_color_pa200" />
+                    <option name="@string/skin_pa400" overlapStyle="@style/SampleSkin_color_pa400" />
+                    <option name="@string/skin_pua200" overlapStyle="@style/SampleSkin_color_pua200" />
+                    <option name="@string/skin_pua400" overlapStyle="@style/SampleSkin_color_pua400" />
+                    <option name="@string/skin_dpa200" overlapStyle="@style/SampleSkin_color_dpa200" />
+                    <option name="@string/skin_dpa400" overlapStyle="@style/SampleSkin_color_dpa400" />
+                    <option name="@string/skin_ba200" overlapStyle="@style/SampleSkin_color_ba200" />
+                    <option name="@string/skin_ba400" overlapStyle="@style/SampleSkin_color_ba400" />
+                    <option name="@string/skin_lba200" overlapStyle="@style/SampleSkin_color_lba200" />
+                    <option name="@string/skin_lba400" overlapStyle="@style/SampleSkin_color_lba400" />
+                    <option name="@string/skin_ca200" overlapStyle="@style/SampleSkin_color_ca200" />
+                    <option name="@string/skin_ca400" overlapStyle="@style/SampleSkin_color_ca400" />
+                    <option name="@string/skin_ta200" overlapStyle="@style/SampleSkin_color_ta200" />
+                    <option name="@string/skin_ta400" overlapStyle="@style/SampleSkin_color_ta400" />
+                    <option name="@string/skin_ga200" overlapStyle="@style/SampleSkin_color_ga200" />
+                    <option name="@string/skin_ga400" overlapStyle="@style/SampleSkin_color_ga400" />
+                    <option name="@string/skin_lga200" overlapStyle="@style/SampleSkin_color_lga200" />
+                    <option name="@string/skin_lga400" overlapStyle="@style/SampleSkin_color_lga400" />
+                    <option name="@string/skin_la200" overlapStyle="@style/SampleSkin_color_la200" />
+                    <option name="@string/skin_la400" overlapStyle="@style/SampleSkin_color_la400" />
+                    <option name="@string/skin_ya200" overlapStyle="@style/SampleSkin_color_ya200" />
+                    <option name="@string/skin_ya400" overlapStyle="@style/SampleSkin_color_ya400" />
+                    <option name="@string/skin_aa200" overlapStyle="@style/SampleSkin_color_aa200" />
+                    <option name="@string/skin_aa400" overlapStyle="@style/SampleSkin_color_aa400" />
+                    <option name="@string/skin_oa200" overlapStyle="@style/SampleSkin_color_oa200" />
+                    <option name="@string/skin_oa400" overlapStyle="@style/SampleSkin_color_oa400" />
+                    <option name="@string/skin_doa200" overlapStyle="@style/SampleSkin_color_doa200" />
+                    <option name="@string/skin_doa400" overlapStyle="@style/SampleSkin_color_doa400" />
+                </radio>
+                <category name="@string/accent_vivid" />
+                <radio defaultValue="" key="accent_material_ui">
+                    <option name="@string/skin_vivid_ruby" overlapStyle="@style/SampleSkin_color_vivid_ruby" />
+                    <option name="@string/skin_vivid_radical_red" overlapStyle="@style/SampleSkin_color_vivid_radical_red" />
+                    <option name="@string/skin_vivid_safety_orange" overlapStyle="@style/SampleSkin_color_vivid_safety_orange" />
+                    <option name="@string/skin_vivid_carrot_orange" overlapStyle="@style/SampleSkin_color_vivid_carrot_orange" />
+                    <option name="@string/skin_vivid_bourbon" overlapStyle="@style/SampleSkin_color_vivid_bourbon" />
+                    <option name="@string/skin_vivid_yellow" overlapStyle="@style/SampleSkin_color_vivid_yellow" />
+                    <option name="@string/skin_vivid_just_yellow" overlapStyle="@style/SampleSkin_color_vivid_just_yellow" />
+                    <option name="@string/skin_vivid_iris_blue" overlapStyle="@style/SampleSkin_color_vivid_iris_blue" />
+                    <option name="@string/skin_vivid_neon_blue" overlapStyle="@style/SampleSkin_color_vivid_neon_blue" />
+                    <option name="@string/skin_vivid_blue_violet" overlapStyle="@style/SampleSkin_color_vivid_blue_violet" />
+                    <option name="@string/skin_vivid_bright_purple" overlapStyle="@style/SampleSkin_color_vivid_bright_purple" />
+                    <option name="@string/skin_vivid_bright_green" overlapStyle="@style/SampleSkin_color_vivid_bright_green" />
+                    <option name="@string/skin_vivid_la_palma" overlapStyle="@style/SampleSkin_color_vivid_la_palma" />
+                    <option name="@string/skin_vivid_salad" overlapStyle="@style/SampleSkin_color_vivid_salad" />
+                </radio>
+                <category name="@string/accent_pastel" />
+                <radio defaultValue="" key="accent_material_ui">
+                    <option name="@string/skin_pastel_wewak" overlapStyle="@style/SampleSkin_color_pastel_wewak" />
+                    <option name="@string/skin_pastel_melon" overlapStyle="@style/SampleSkin_color_pastel_melon" />
+                    <option name="@string/skin_pastel_karry" overlapStyle="@style/SampleSkin_color_pastel_karry" />
+                    <option name="@string/skin_pastel_willow" overlapStyle="@style/SampleSkin_color_pastel_willow" />
+                    <option name="@string/skin_pastel_cruise" overlapStyle="@style/SampleSkin_color_pastel_cruise" />
+                    <option name="@string/skin_pastel_periwinkle" overlapStyle="@style/SampleSkin_color_pastel_periwinkle" />
+                    <option name="@string/skin_pastel_majesty" overlapStyle="@style/SampleSkin_color_pastel_majesty" />
+                    <option name="@string/skin_pastel_lily" overlapStyle="@style/SampleSkin_color_pastel_lily" />
+                    <option name="@string/skin_pastel_lace" overlapStyle="@style/SampleSkin_color_pastel_lace" />
+                    <option name="@string/skin_pastel_pipin" overlapStyle="@style/SampleSkin_color_pastel_pipin" />
+                    <option name="@string/skin_pastel_haze" overlapStyle="@style/SampleSkin_color_pastel_haze" />
+                </radio>
+                <category name="@string/accent_neutral" />
+                <radio defaultValue="" key="accent_material_ui">
+                    <option name="@string/skin_neutral_tuft" overlapStyle="@style/SampleSkin_color_neutral_tuft" />
+                    <option name="@string/skin_neutral_cashmere" overlapStyle="@style/SampleSkin_color_neutral_cashmere" />
+                    <option name="@string/skin_neutral_just" overlapStyle="@style/SampleSkin_color_neutral_just" />
+                    <option name="@string/skin_neutral_tan" overlapStyle="@style/SampleSkin_color_neutral_tan" />
+                    <option name="@string/skin_neutral_kangaroo" overlapStyle="@style/SampleSkin_color_neutral_kangaroo" />
+                    <option name="@string/skin_neutral_light" overlapStyle="@style/SampleSkin_color_neutral_light" />
+                    <option name="@string/skin_neutral_meiser" overlapStyle="@style/SampleSkin_color_neutral_meiser" />
+                    <option name="@string/skin_neutral_pearl" overlapStyle="@style/SampleSkin_color_neutral_pearl" />
+                    <option name="@string/skin_neutral_oyster" overlapStyle="@style/SampleSkin_color_neutral_oyster" />
+                </radio>
+            </page>
+            <page icon="@drawable/icon_ui_bg" name="@string/skin_select_bg_color" summary="@string/skin_summary_select_bg_color_s">
+                <radio defaultValue="@style/SampleSkin_bg_color_amoled" key="bgColor">
+                    <option name="@string/skin_background_amoled" overlapStyle="@style/SampleSkin_bg_color_amoled" />
+                    <option name="@string/skin_background_astronaut_blue" overlapStyle="@style/SampleSkin_bg_color_astronaut_blue" />
+                    <option name="@string/skin_background_blue_charcoal" overlapStyle="@style/SampleSkin_bg_color_blue_charcoal" />
+                    <option name="@string/skin_background_blue_lagoon" overlapStyle="@style/SampleSkin_bg_color_blue_lagoon" />
+                    <option name="@string/skin_background_blue_opal" overlapStyle="@style/SampleSkin_bg_color_blue_opal" />
+                    <option name="@string/skin_background_dark_navy_blue" overlapStyle="@style/SampleSkin_bg_color_dark_navy_blue" />
+                    <option name="@string/skin_background_dark_water" overlapStyle="@style/SampleSkin_bg_color_dark_water" />
+                    <option name="@string/skin_background_night_blue" overlapStyle="@style/SampleSkin_bg_color_night_blue" />
+                    <option name="@string/skin_background_pixie_powder" overlapStyle="@style/SampleSkin_bg_color_pixie_powder" />
+                    <option name="@string/skin_background_christalle" overlapStyle="@style/SampleSkin_bg_color_christalle" />
+                    <option name="@string/skin_background_very_blue" overlapStyle="@style/SampleSkin_bg_color_very_blue" />
+                    <option name="@string/skin_background_very_dark_blue" overlapStyle="@style/SampleSkin_bg_color_very_dark_blue" />
+                    <option name="@string/skin_background_dark_green" overlapStyle="@style/SampleSkin_bg_color_dark_green" />
+                    <option name="@string/skin_background_dark_olive" overlapStyle="@style/SampleSkin_bg_color_dark_olive" />
+                    <option name="@string/skin_background_elm_green" overlapStyle="@style/SampleSkin_bg_color_elm_green" />
+                    <option name="@string/skin_background_evergreen" overlapStyle="@style/SampleSkin_bg_color_evergreen" />
+                    <option name="@string/skin_background_garden_green" overlapStyle="@style/SampleSkin_bg_color_garden_green" />
+                    <option name="@string/skin_background_midnight_green" overlapStyle="@style/SampleSkin_bg_color_midnight_green" />
+                    <option name="@string/skin_background_racing_green" overlapStyle="@style/SampleSkin_bg_color_racing_green" />
+                    <option name="@string/skin_background_smoke_pine" overlapStyle="@style/SampleSkin_bg_color_smoke_pine" />
+                    <option name="@string/skin_background_very_dark_green" overlapStyle="@style/SampleSkin_bg_color_very_dark_green" />
+                    <option name="@string/skin_background_neutral_green" overlapStyle="@style/SampleSkin_bg_color_neutral_green" />
+                    <option name="@string/skin_background_copper_orange" overlapStyle="@style/SampleSkin_bg_color_copper_orange" />
+                    <option name="@string/skin_background_burgundy" overlapStyle="@style/SampleSkin_bg_color_burgundy" />
+                    <option name="@string/skin_background_dark_red" overlapStyle="@style/SampleSkin_bg_color_dark_red" />
+                    <option name="@string/skin_background_burnt_maroon" overlapStyle="@style/SampleSkin_bg_color_burnt_maroon" />
+                    <option name="@string/skin_background_pink_raspberry" overlapStyle="@style/SampleSkin_bg_color_pink_raspberry" />
+                    <option name="@string/skin_background_rustic_red" overlapStyle="@style/SampleSkin_bg_color_rustic_red" />
+                    <option name="@string/skin_background_alien_purple" overlapStyle="@style/SampleSkin_bg_color_alien_purple" />
+                    <option name="@string/skin_background_dark_purple" overlapStyle="@style/SampleSkin_bg_color_dark_purple" />
+                    <option name="@string/skin_background_midnight_purple" overlapStyle="@style/SampleSkin_bg_color_midnight_purple" />
+                    <option name="@string/skin_background_picklet_beet" overlapStyle="@style/SampleSkin_bg_color_picklet_beet" />
+                    <option name="@string/skin_background_pixel" overlapStyle="@style/SampleSkin_bg_color_pixel" />
+                    <option name="@string/skin_background_purple_brown" overlapStyle="@style/SampleSkin_bg_color_pixel" />
+                    <option name="@string/skin_background_blackcurrant" overlapStyle="@style/SampleSkin_bg_color_blackcurrant" />
+                    <option name="@string/skin_background_blackcurrant" overlapStyle="@style/SampleSkin_bg_color_blackcurrant" />
+                    <option name="@string/skin_background_antique_brown" overlapStyle="@style/SampleSkin_bg_color_antique_brown" />
+                    <option name="@string/skin_background_blackend_brown" overlapStyle="@style/SampleSkin_bg_color_blackend_brown" />
+                    <option name="@string/skin_background_dark_chocolate" overlapStyle="@style/SampleSkin_bg_color_dark_chocolate" />
+                    <option name="@string/skin_background_flat_brown" overlapStyle="@style/SampleSkin_bg_color_flat_brown" />
+                    <option name="@string/skin_background_marsh" overlapStyle="@style/SampleSkin_bg_color_marsh" />
+                    <option name="@string/skin_background_brick_grey" overlapStyle="@style/SampleSkin_bg_color_brick_grey" />
+                    <option name="@string/skin_background_cape_cod" overlapStyle="@style/SampleSkin_bg_color_cape_cod" />
+                    <option name="@string/skin_background_dark_grey" overlapStyle="@style/SampleSkin_bg_color_dark_grey" />
+                    <option name="@string/skin_background_pot_black" overlapStyle="@style/SampleSkin_bg_color_pot_black" />
+                    <option name="@string/skin_background_void" overlapStyle="@style/SampleSkin_bg_color_void" />
+                    <option name="@string/skin_background_black_chocolate" overlapStyle="@style/SampleSkin_bg_color_black_chocolate" />
+                </radio>
+            </page>
+            <page icon="@drawable/icon_ui_library" name="@string/library_icons_style_title" summary="@string/choose_alt_library_icons_style">
+                <category name="@string/library_icons_style">
+                    <radio defaultValue="@style/SampleSkin_LibraryIcons_Material_Multicolor" key="library_icons">
+                        <option name="@string/library_icons_bg_white" overlapStyle="@style/SampleSkin_LibraryIcons_BG_White" />
+                        <option name="@string/library_icons_bg_accent" overlapStyle="@style/SampleSkin_LibraryIcons_BG_Accent" />
+                        <option name="@string/library_icons_bg_multicolor" overlapStyle="@style/SampleSkin_LibraryIcons_Multicolor_Icons" />
+                        <option name="@string/library_icons_multicolor_bg" overlapStyle="@style/SampleSkin_LibraryIcons_Multicolor_BG" />
+                        <option name="@string/library_icons_minimal_white" overlapStyle="" />
+                        <option name="@string/library_icons_minimal_accent" overlapStyle="@style/SampleSkin_LibraryIcons_Minimal_Accent" />
+                        <option name="@string/library_icons_minimal_multicolor" overlapStyle="@style/SampleSkin_LibraryIcons_Minimal_Multicolor" />
+                        <option name="@string/library_icons_material_multicolor" overlapStyle="@style/SampleSkin_LibraryIcons_Material_Multicolor" />
+                        <option name="@string/library_icons_pastel" overlapStyle="@style/SampleSkin_LibraryIcons_Pastel" />
+                    </radio>
+                </category>
+                <category name="@string/library_icons_scale_category">
+                    <option key="LibraryIconsScale" name="@string/library_icons_scale" overlapStyle="@style/ScaleLibraryIcons_Default" summary="@string/library_icons_scale_summary" />
+                    <seekbarOptions centerLabel="@string/skin_normal" defaultValue="@style/ScaleLibraryIcons_Default" dependency="LibraryIconsScale" key="LibraryIconsScaleOptions" leftLabel="@string/skin_smaller" rightLabel="@string/skin_larger" summary="%s">
+                        <option name="@string/hide_library_icons" overlapAttr="@style/HideLibraryIcons" />
+                        <option name="22.0dip" overlapStyle="@style/ScaleLibraryIcons_022" />
+                        <option name="24.0dip" overlapStyle="@style/ScaleLibraryIcons_024" />
+                        <option name="26.0dip" overlapStyle="@style/ScaleLibraryIcons_026" />
+                        <option name="28.0dip" overlapStyle="@style/ScaleLibraryIcons_028" />
+                        <option name="30.0dip" overlapStyle="@style/ScaleLibraryIcons_030" />
+                        <option name="32.0dip" overlapStyle="@style/ScaleLibraryIcons_032" />
+                        <option name="34.0dip" overlapStyle="@style/ScaleLibraryIcons_034" />
+                        <option name="36.0dip" overlapStyle="@style/ScaleLibraryIcons_Default" />
+                        <option name="38.0dip" overlapStyle="@style/ScaleLibraryIcons_038" />
+                        <option name="40.0dip" overlapStyle="@style/ScaleLibraryIcons_040" />
+                        <option name="42.0dip" overlapStyle="@style/ScaleLibraryIcons_042" />
+                        <option name="44.0dip" overlapStyle="@style/ScaleLibraryIcons_044" />
+                        <option name="46.0dip" overlapStyle="@style/ScaleLibraryIcons_046" />
+                        <option name="48.0dip" overlapStyle="@style/ScaleLibraryIcons_048" />
+                        <option name="50.0dip" overlapStyle="@style/ScaleLibraryIcons_050" />
+                        <option name="52.0dip" overlapStyle="@style/ScaleLibraryIcons_052" />
+                    </seekbarOptions>
+                </category>
+            </page>
+            <page icon="@drawable/icon_ui_monet" name="@string/monet_wallpaper_title" summary="@string/monet_wallpaper_summary">
+                <category name="@string/monet_category_title">
+                    <option key="monetAccent" name="@string/monet_accent_category_title" overlapStyle="@style/Monet_Accent" />
+                    <option key="monetBackground" name="@string/monet_background_category_title" overlapStyle="@style/Monet_Background" />
+                    <option key="monetText" name="@string/monet_text_category_title" overlapStyle="@style/Monet_Text" />
+                    <option key="monetLibraryIcons" name="@string/monet_library_icons_category_title" overlapStyle="@style/Monet_Library_Icons" />
+                </category>
+            </page>
+            <page icon="@drawable/icon_ui_labels" name="@string/skin_alt_layout_labels" summary="@string/skin_summary_alt_layout">
+                <category name="@string/labels_alignment_category">
+                    <radio defaultValue="@style/SampleSkin_Alt_Centered" key="alt_layout_labels">
+                        <option name="@string/skin_alt_layout_disabled" overlapStyle="" />
+                        <option name="@string/skin_alt_layout_default" overlapStyle="@style/SampleSkin_Alt_Left" />
+                        <option name="@string/skin_alt_layout_centered" overlapStyle="@style/SampleSkin_Alt_Centered" />
+                    </radio>
+                </category>
+                <category name="@string/labels_title_color_category">
+                    <radio defaultValue="@style/LabelsTitleWhite" key="labelsTitleColor">
+                        <option name="@string/labels_color_white" overlapStyle="@style/LabelsTitleWhite" />
+                        <option name="@string/labels_color_accent" overlapStyle="@style/LabelsTitleAccent" />
+                        <option name="@string/labels_color_semitransparent" overlapStyle="@style/LabelsTitleSemiTransparent" />
+                    </radio>
+                </category>
+                <category name="@string/labels_line2_color_category">
+                    <radio defaultValue="@style/LabelsLine2SemiTransparent" key="labelsLine2Color">
+                        <option name="@string/labels_color_white" overlapStyle="@style/LabelsLine2White" />
+                        <option name="@string/labels_color_accent" overlapStyle="@style/LabelsLine2Accent" />
+                        <option name="@string/labels_color_semitransparent" overlapStyle="@style/LabelsLine2SemiTransparent" />
+                    </radio>
+                </category>
+            </page>
+            <page icon="@drawable/icon_ui_corners" name="@string/corner_radius" summary="@string/corner_radius_summary">
+                <option key="cornerRadius" name="@string/corner_radius" overlapStyle="@style/IconRoundness_Circle" />
+                <category name="@string/library_icons_corner_radius">
+                    <seekbarOptions defaultValue="@style/IconRoundness_Circle" dependency="cornerRadius" key="libraryiconcorners" summary="%s">
+                        <option name="0" overlapStyle="@style/IconRoundness_0dp" />
+                        <option name="2" overlapStyle="@style/IconRoundness_2dp" />
+                        <option name="4" overlapStyle="@style/IconRoundness_4dp" />
+                        <option name="6" overlapStyle="@style/IconRoundness_6dp" />
+                        <option name="8" overlapStyle="@style/IconRoundness_8dp" />
+                        <option name="10" overlapStyle="@style/IconRoundness_10dp" />
+                        <option name="12" overlapStyle="@style/IconRoundness_12dp" />
+                        <option name="14" overlapStyle="@style/IconRoundness_14dp" />
+                        <option name="16" overlapStyle="@style/IconRoundness_16dp" />
+                        <option name="@string/circle_default" overlapStyle="@style/IconRoundness_Circle" />
+                    </seekbarOptions>
+                </category>
+                <category name="@string/buttons_corner_radius">
+                    <seekbarOptions defaultValue="@style/ButtonsRoundness_Round" dependency="cornerRadius" key="buttonscorners" summary="%s">
+                        <option name="0" overlapStyle="@style/ButtonsRoundness_0dp" />
+                        <option name="2" overlapStyle="@style/ButtonsRoundness_2dp" />
+                        <option name="4" overlapStyle="@style/ButtonsRoundness_4dp" />
+                        <option name="6" overlapStyle="@style/ButtonsRoundness_6dp" />
+                        <option name="8" overlapStyle="@style/ButtonsRoundness_8dp" />
+                        <option name="10" overlapStyle="@style/ButtonsRoundness_10dp" />
+                        <option name="12" overlapStyle="@style/ButtonsRoundness_12dp" />
+                        <option name="14" overlapStyle="@style/ButtonsRoundness_14dp" />
+                        <option name="16" overlapStyle="@style/ButtonsRoundness_16dp" />
+                        <option name="@string/round_default" overlapStyle="@style/ButtonsRoundness_Round" />
+                    </seekbarOptions>
+                </category>
+                <category name="@string/bottombar_corner_radius">
+                    <seekbarOptions defaultValue="@style/BottombarRoundness_Round" dependency="cornerRadius" key="bottombarcorners" summary="%s">
+                        <option name="0" overlapStyle="@style/BottombarRoundness_0dp" />
+                        <option name="2" overlapStyle="@style/BottombarRoundness_2dp" />
+                        <option name="4" overlapStyle="@style/BottombarRoundness_4dp" />
+                        <option name="6" overlapStyle="@style/BottombarRoundness_6dp" />
+                        <option name="8" overlapStyle="@style/BottombarRoundness_8dp" />
+                        <option name="10" overlapStyle="@style/BottombarRoundness_10dp" />
+                        <option name="12" overlapStyle="@style/BottombarRoundness_12dp" />
+                        <option name="14" overlapStyle="@style/BottombarRoundness_14dp" />
+                        <option name="16" overlapStyle="@style/BottombarRoundness_16dp" />
+                        <option name="@string/round_default" overlapStyle="@style/BottombarRoundness_Round" />
+                    </seekbarOptions>
+                </category>
+            </page>
+            <page icon="@drawable/icon_ui_eq" name="@string/eq_knob_buttons_title" summary="@string/eq_knob_buttons_summary">
+                <radio defaultValue="@style/DefaultKnobButtons" key="EqKnobButtons">
+                    <option name="@string/eq_knob_buttons_default" overlapStyle="@style/DefaultKnobButtons" />
+                    <option name="@string/eq_knob_buttons_round" overlapStyle="@style/RoundKnobButtons" />
+                    <option name="@string/eq_knob_buttons_minimal" overlapStyle="@style/MinimalKnobButtons" />
+                </radio>
+            </page>
+            <page icon="@drawable/icon_ui_seekbar" name="@string/skin_seekbar_style_one" summary="@string/skin_seekbar_style_options">
+                <category name="@string/skin_seekbar_style_one">
+                    <radio defaultValue="@style/ActivityTheme_Blackpro_PlainSeekbar" key="seekbar">
+                        <option name="@string/skin_default_waveseek" overlapStyle="@style/DefaultSeekbar" />
+                        <option name="@string/skin_static_seekbar" overlapStyle="@style/ActivityTheme_Blackpro_StaticSeekbar" />
+                        <option name="@string/pref_plain_seekbar_with_buttons" overlapStyle="@style/ActivityTheme_Blackpro_PlainSeekbar" />
+                    </radio>
+                </category>
+                <category name="@string/seekbar_ui">
+                    <radio defaultValue="@style/Seekbar_Small" key="seekbarui">
+                        <option key="seekbar_small" name="@string/seekbar_small" overlapStyle="@style/Seekbar_Small" />
+                        <option key="seekbar_medium" name="@string/seekbar_medium" overlapStyle="@style/Seekbar_Medium" />
+                        <option key="seekbar_big" name="@string/seekbar_big" overlapStyle="@style/Seekbar_Big" />
+                        <option key="seekbar_a12" name="@string/seekbar_a12" overlapStyle="@style/Seekbar_A12" />
+                    </radio>
+                </category>
+                <category name="@string/progressbar_color">
+                    <radio defaultValue="@style/ProgressbarAccent" key="progressbar_color">
+                        <option key="progressbar_color_accent" name="@string/progressbar_color_accent" overlapStyle="@style/ProgressbarAccent" />
+                        <option key="progressbar_color_white" name="@string/progressbar_color_white" overlapStyle="@style/ProgressbarWhite" />
+                    </radio>
+                </category>
+            </page>
+            <page icon="@drawable/icon_ui_bottombar" name="@string/skin_bottombar_style" summary="@string/skin_bottombar_style_options">
+                <category name="@string/skin_bottombar_background" />
+                <radio defaultValue="@style/Bottombar_Transparent" key="bottombar">
+                    <option name="@string/skin_bottombar_outline" overlapStyle="@style/Bottombar_Bg_Outline" />
+                    <option name="@string/skin_bottombar_solid" overlapStyle="@style/Bottombar_Bg_Solid" />
+                    <option name="@string/skin_bottombar_semi_transparent" overlapStyle="@style/Bottombar_Bg_Semi_Transparent" />
+                    <option name="@string/skin_bottombar_transparent" overlapStyle="@style/Bottombar_Transparent" />
+                </radio>
+                <category name="@string/skin_bottombar_bg_color_title" />
+                <option key="bottomBarBackgroundAccent" name="@string/skin_bottombar_bg_color_accent" overlapStyle="@style/Bottombar_Background_Color_Accent" />
+                <option key="bottomBarBackgroundSystem" name="@string/skin_bottombar_bg_color_system" overlapStyle="@style/Bottombar_Background_Color_System" />
+                <category name="@string/skin_bottombar_icon_color" />
+                <radio defaultValue="@style/Bottombar_Icons_Default" key="bottombarIcons">
+                    <option name="@string/skin_bottombar_icons_default" overlapStyle="@style/Bottombar_Icons_Default" />
+                    <option name="@string/skin_bottombar_icons_white_all_icons" overlapStyle="@style/Bottombar_Icons_White_All_Icons" />
+                    <option name="@string/skin_bottombar_icons_accent" overlapAttr="@style/Bottombar_Icons_Accent" />
+                    <option name="@string/skin_bottombar_icons_accent_all" overlapAttr="@style/Bottombar_Icons_Accent_All" />
+                </radio>
+            </page>
+            <page icon="@drawable/icon_ui_player_controls" name="@string/player_ui_controls_title" summary="@string/player_ui_controls_summary">
+                <category name="@string/player_ui_controls_category" />
+                <radio defaultValue="@style/Player_Controls_Bg_Hide" key="player_controls">
+                    <option name="@string/player_controls_bg_solid" overlapStyle="@style/Player_Controls_Bg_Solid" />
+                    <option name="@string/player_controls_bg_accent" overlapStyle="@style/Player_Controls_Bg_Accent" />
+                    <option name="@string/player_controls_bg_semi_trans" overlapStyle="@style/Player_Controls_Bg_Semi_Trans" />
+                    <option name="@string/player_controls_bg_hide" overlapStyle="@style/Player_Controls_Bg_Hide" />
+                </radio>
+                <category name="@string/player_ui_controls_icons_category" />
+                <radio defaultValue="" key="playerControlsIcons">
+                    <option name="@string/player_controls_default" overlapStyle="" />
+                    <option name="@string/player_controls_accent" overlapStyle="@style/PlayerControlsIconsAccent" />
+                    <option name="@string/player_controls_accent_all" overlapStyle="@style/PlayerControlsIconsAccentAll" />
+                </radio>
+            </page>
+            <page icon="@drawable/icon_ui_knobs" name="@string/knob_highlight_title" summary="@string/knob_highlight_summary">
+                <category name="@string/knob_highlights_title">
+                    <radio defaultValue="" key="knob_highlight_line">
+                        <option name="@string/knob_disabled" overlapStyle="" />
+                        <option name="@string/knob_single_color" overlapStyle="@style/ActivityTheme_Whitepro_EqKnobsHiliteMonochromatic" />
+                        <option name="@string/knob_colorful" overlapStyle="@style/ActivityTheme_Whitepro_EqKnobsHiliteColorful" />
+                        <option name="@string/knob_white" overlapStyle="@style/ActivityTheme_Whitepro_EqKnobsHiliteWhite" />
+                    </radio>
+                </category>
+                <category name="@string/knob_alt_style_title">
+                    <radio defaultValue="@style/RoundKnob_Alt_Ring" key="knob_alt">
+                        <option key="knob_alt_disc_outline" name="@string/knob_alt_disc_outline" overlapStyle="" />
+                        <option key="knob_alt_disc_filled" name="@string/knob_alt_disc_filled" overlapStyle="@style/RoundKnob_Alt_Disc_Filled" />
+                        <option key="knob_alt_ring" name="@string/knob_alt_ring" overlapStyle="@style/RoundKnob_Alt_Ring" />
+                        <option key="knob_alt_simple_outline" name="@string/knob_alt_simple_outline" overlapStyle="@style/RoundKnob_Alt_Simple_Outline" />
+                    </radio>
+                </category>
+            </page>
+            <page icon="@drawable/icon_ui_play_pause" name="@string/play_pause_buttons" summary="@string/play_pause_button_summary">
+                <category name="@string/play_button" />
+                <radio defaultValue="@style/Play_Outline" key="playButton">
+                    <option key="play_outline" name="@string/play_outline" overlapStyle="@style/Play_Outline" />
+                    <option key="play_horizon_default" name="@string/play_horizon_default" overlapStyle="@style/Play_Horizon_Default" />
+                    <option key="play_flower_outline" name="@string/play_flower_outline" overlapStyle="@style/Play_Flower_Outline" />
+                    <option key="play_hexagon" name="@string/play_hexagon" overlapStyle="@style/Play_Hexagon" />
+                    <option key="playSolid" name="@string/play_solid" overlapStyle="@style/Play_Solid" />
+                    <option key="playSolidSemiTransparent" name="@string/play_semi_transparent" overlapStyle="@style/Play_Semi_Transparent" />
+                    <option key="play_trans" name="@string/play_trans" overlapStyle="@style/Play_Trans" />
+                </radio>
+                <category name="@string/play_button_styles" />
+                <option key="playIconNormal" name="@string/play_icon_normal" overlapStyle="@style/Play_Icon_Style_Normal" />
+                <option key="playIconColorAccent" name="@string/play_icon_color_accent" overlapStyle="@style/Play_Icon_Accent" />
+                <option key="playIconBackgroundAccent" name="@string/play_icon_background_accent" overlapStyle="@style/Play_Background_Accent" />
+                <option key="playIconBackgroundSystem" name="@string/play_icon_background_system" overlapStyle="@style/Play_Background_System" />
+                <category name="@string/pause_button" />
+                <radio defaultValue="@style/Pause_Outline" key="pauseButton">
+                    <option key="pause_outline" name="@string/pause_outline" overlapStyle="@style/Pause_Outline" />
+                    <option key="pause_horizon_default" name="@string/pause_horizon_default" overlapStyle="@style/Pause_Horizon_Default" />
+                    <option key="pause_flower_outline" name="@string/pause_flower_outline" overlapStyle="@style/Pause_Flower_Outline" />
+                    <option key="pause_hexagon" name="@string/pause_hexagon" overlapStyle="@style/Pause_Hexagon" />
+                    <option key="pauseSolid" name="@string/pause_solid" overlapStyle="@style/Pause_Solid" />
+                    <option key="pauseSolidSemiTransparent" name="@string/pause_semi_transparent" overlapStyle="@style/Pause_Semi_Transparent" />
+                    <option key="pause_trans" name="@string/pause_trans" overlapStyle="@style/Pause_Trans" />
+                </radio>
+                <category name="@string/pause_button_styles" />
+                <option key="pauseIconNormal" name="@string/pause_icon_normal" overlapStyle="@style/Pause_Icon_Style_Normal" />
+                <option key="pauseIconColorAccent" name="@string/pause_icon_color_accent" overlapStyle="@style/Pause_Icon_Accent" />
+                <option key="pauseIconBackgroundAccent" name="@string/pause_icon_background_accent" overlapStyle="@style/Pause_Background_Accent" />
+                <option key="pauseIconBackgroundSystem" name="@string/pause_icon_background_system" overlapStyle="@style/Pause_Background_System" />
+                <category name="@string/pnffrw_buttons_background" />
+                <radio defaultValue="@style/PNFFRW_Trans" key="pnffrwButtonDefault">
+                    <option key="pnffrwDefault" name="@string/pnffrw_default" overlapStyle="@style/PNFFRW_Default" />
+                    <option key="pnffrwHorizon" name="@string/pnffrw_horizon" overlapStyle="@style/PNFFRW_Horizon" />
+                    <option key="pnffrwFlower" name="@string/pnffrw_flower" overlapStyle="@style/PNFFRW_Flower" />
+                    <option key="pnffrwHexagon" name="@string/pnffrw_hexagon" overlapStyle="@style/PNFFRW_Hexagon" />
+                    <option key="pnffrwSolid" name="@string/pnffrw_solid" overlapStyle="@style/PNFFRW_Solid" />
+                    <option key="pnffrwSolidSemiTransparent" name="@string/pnffrw_semi_transparent" overlapStyle="@style/PNFFRW_Semi_Transparent" />
+                    <option key="pnffrw_trans" name="@string/pnffrw_trans" overlapStyle="@style/PNFFRW_Trans" />
+                </radio>
+                <category name="@string/pnffrw_button_styles" />
+                <option key="prevNextIconColorAccent" name="@string/pnffrw_icon_color_accent" overlapStyle="@style/Prev_Next_Icon_Accent" />
+                <option key="prevNextIconBackgroundAccent" name="@string/pnffrw_icon_background_accent" overlapStyle="@style/Prev_Next_Background_Accent" />
+                <option key="prevNextIconBackgroundSystem" name="@string/pnffrw_icon_background_system" overlapStyle="@style/Prev_Next_Background_System" />
+            </page>
+            <page icon="@drawable/icon_ui_statusbar_navbar" name="@string/skin_setting_statusbar_navbar" summary="@string/skin_setting_statusbar_summary">
+                <category name="@string/skin_setting_statusbar">
+                    <radio defaultValue="@style/Statusbar_Transparent" key="statusbar_background">
+                        <option key="statusbar_trans" name="@string/statusbar_transparent" overlapStyle="@style/Statusbar_Transparent" />
+                        <option key="statusbar_semi_trans" name="@string/statusbar_semi_transparent" overlapStyle="@style/Statusbar_SemiTransparent" />
+                        <option key="statusbar_shadow" name="@string/statusbar_shadow" overlapStyle="@style/StatusBar_Shadow" />
+                        <option key="statusbar_shadow_accent" name="@string/statusbar_shadow_accent" overlapStyle="@style/StatusBar_Shadow_Accent" />
+                        <option key="statusbar_solid" name="@string/statusbar_solid" overlapStyle="@style/StatusBar_Solid" />
+                    </radio>
+                </category>
+                <category name="@string/skin_setting_navbar">
+                    <radio defaultValue="@style/NavBar_Transparent" key="navbarBackground">
+                        <option key="navbar_trans" name="@string/navbar_transparent" overlapStyle="@style/NavBar_Transparent" />
+                        <option key="navbar_semi_trans" name="@string/navbar_semi_transparent" overlapStyle="@style/NavBar_SemiTransparent" />
+                        <option key="navbar_shadow" name="@string/navbar_shadow" overlapStyle="@style/NavBar_Shadow" />
+                        <option key="navbar_shadow_accent" name="@string/navbar_shadow_accent" overlapStyle="@style/NavBar_Shadow_Accent" />
+                        <option key="navbar_solid" name="@string/navbar_solid" overlapStyle="@style/NavBar_Solid" />
+                    </radio>
+                </category>
+            </page>
+            <page icon="@drawable/icon_ui_bottom_bg_shadow" name="@string/controls_shadow_title" summary="@string/controls_shadow_summary">
+                <radio defaultValue="" key="controlShadow">
+                    <option key="controls_shadow_disabled" name="@string/controls_shadow_disabled" overlapStyle="" />
+                    <option key="controls_shadow_accent" name="@string/controls_shadow_accent" overlapStyle="@style/Controls_Shadow_Accent" />
+                    <option key="controls_shadow_25" name="@string/controls_shadow_25" overlapStyle="@style/Controls_Shadow_25" />
+                    <option key="controls_shadow_50" name="@string/controls_shadow_50" overlapStyle="@style/Controls_Shadow_50" />
+                    <option key="controls_shadow_100" name="@string/controls_shadow_100" overlapStyle="@style/Controls_Shadow_100" />
+                </radio>
+            </page>
+            <page icon="@drawable/icon_ui_logo" name="@string/bottom_menu_logo" summary="@string/bottom_menu_logo_summary">
+                <radio defaultValue="@style/BottomMenuLogoDefault" key="bottom_menu_logo">
+                    <option key="bottom_menu_logo_hide" name="@string/bottom_menu_logo_hide" overlapStyle="@style/BottomMenuLogoHide" />
+                    <option key="bottom_menu_logo_default" name="@string/bottom_menu_logo_default" overlapStyle="@style/BottomMenuLogoDefault" />
+                    <option key="bottom_menu_logo_dais" name="@string/bottom_menu_logo_dais" overlapStyle="@style/BottomMenuLogoDais" />
+                </radio>
+            </page>
+        </page>
+        <page icon="@drawable/skin_settings_hide" name="@string/hide_ui_elements" summary="@string/skin_ui_elements_hide_show">
+            <option key="hide_menu" name="@string/hide_menu" overlapStyle="@style/OptionHideMenu" />
+            <option key="rating_menu_option" name="@string/hide_rating_menu" overlapStyle="@style/OptionRatingStarsMenu" />
+            <option key="chromecast_option" name="@string/hide_chromecast" overlapStyle="@style/OptionCCDisabled" />
+            <option key="bottom_meta_info" name="@string/bottom_meta_info_option" overlapStyle="@style/Bottom_Meta_Info" />
+            <option key="main_controls" name="@string/controls_bg" overlapStyle="@style/Main_Control_Buttons_BG" />
+            <option key="cat_buttons" name="@string/prev_next_cat_buttons" overlapStyle="@style/Category_Buttons" />
+            <option key="preamp_bg" name="@string/preamp_bg" overlapStyle="@style/PreampBgHide" />
+        </page>
+        <page icon="@drawable/skin_settings_more" name="@string/skin_ui_elements" summary="@string/skin_ui_extra_options">
+            <option key="trans_bg_main" name="@string/skin_trans_bg_main" overlapStyle="@style/SampleSkin_transBgMain" summary="@string/skin_summary_trans_bg_main" />
+            <option key="semi_trans_bg_main" name="@string/skin_semi_trans_bg_main" overlapStyle="@style/SampleSkin_Semi_TransBgMain" summary="@string/skin_summary_semi_trans_bg_main" />
+            <option key="more_buttons" name="@string/skin_more_buttons" overlapAttr="@2130773305" summary="@string/skin_summary_more_buttons" />
+            <option key="divided_waveseek" name="@string/skin_divided_waveseek" overlapStyle="@style/SampleSkin_dividedWaveseek" summary="@string/skin_summary_divided_waveseek" />
+            <option key="navbar_offset" name="@string/skin_navbar_offset" overlapAttr="@2130773502" summary="@string/skin_summary_navbar_offset" />
+        </page>
+    </skin>
+</skins>

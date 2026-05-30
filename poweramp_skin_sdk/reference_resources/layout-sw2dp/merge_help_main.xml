@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOTE: as HelpLayout is Scene by itself, it's own StateAnimParams (forId="parent") will be pushed into it, if placed inside -->
+<com.maxmpz.widget.player.HelpLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:w="http://schemas.android.com/apk/res-auto" 
+	android:id="@+id/help_main"
+	style="@style/TopHelpLayout"
+	w:enableStateAnim="true"
+>
+	<com.maxmpz.widget.player.Help android:id="@+id/help_main_bubble"
+		style="@style/TopHelpMain"
+		
+		w:help_anchor="@id/aa_bounds"
+		w:help_position="top"
+		w:help_inside="true"
+		w:showArrow="false"
+
+		w:html="@string/h_main_aa"
+	/>
+	<StateAnimParams style="@style/TopHelp_anim_help_visible"/>
+	
+	<TextView
+		style="@style/TopHelpTitle"
+		android:text="@string/pref_main_screen"
+		/>
+	<StateAnimParams style="@style/TopHelp_anim_help_visible"/>
+
+	<include android:layout="@layout/merge_help_buttons"/>
+
+	<com.maxmpz.widget.player.Help
+		style="@style/TopHelp"
+		android:layout_marginTop="72dp"
+		
+		w:help_anchor="@id/aa_bounds"
+		w:help_position="bottom"
+		w:help_inside="true"
+		w:showArrow="false"
+		
+		w:html="@string/h_main_rating"
+	/>
+	<StateAnimParams style="@style/TopHelp_anim_help_visible"/>
+		
+	<com.maxmpz.widget.player.Help
+		style="@style/TopHelpSmaller"
+		
+		w:help_anchor="@id/meta_info_layout"
+		android:text="@string/h_main_meta_info"
+	/>
+	<StateAnimParams style="@style/TopHelp_anim_help_visible"/>
+
+
+	<com.maxmpz.widget.player.Help
+		style="@style/TopHelpSmaller"
+		w:layout_maxWidth="150dp"
+
+		w:help_anchor="@id/sub_aa_buttons"
+		w:help_position="top"
+
+		android:text="@string/long_press_between_buttons_to_edit"
+		/>
+	<StateAnimParams style="@style/TopHelp_anim_help_visible"/>
+
+	<com.maxmpz.widget.player.Help
+		style="@style/TopHelpSmaller"
+		
+		w:help_anchor="@id/vis_button_layout"
+		w:help_position="bottom"
+		
+		android:text="@string/visualization"
+		w:line2="@string/long_press_for_menu"
+	/>
+	<StateAnimParams style="@style/TopHelp_anim_help_visible"/>
+	
+	<!--
+	<com.maxmpz.widget.player.Help
+		style="@style/TopHelpSmaller"
+		
+		w:help_anchor="@id/sleep_timer_layout"
+		w:help_position="bottom"
+		
+		android:text="@string/sleep_timer"
+	/>
+	<StateAnimParams style="@style/TopHelp_anim_help_visible"/>
+	-->
+
+	<com.maxmpz.widget.player.Help
+		style="@style/TopHelpSmaller"
+
+		w:help_anchor="@id/shuffle_button_layout"
+		w:help_position="bottom"
+
+		android:text="@string/shuffle"
+		w:line1="@string/long_press_for_menu"
+		/>
+	<StateAnimParams style="@style/TopHelp_anim_help_visible"/>
+
+	<!--<com.maxmpz.widget.player.Help-->
+	<!--	style="@style/TopHelpSmaller"-->
+
+	<!--	w:help_anchor="@id/repeat_button_layout"-->
+	<!--	w:help_position="bottom"-->
+
+	<!--	android:text="@string/repeat"-->
+	<!--	w:line2="@string/long_press_for_menu"-->
+	<!--	/>-->
+	<!--<StateAnimParams style="@style/TopHelp_anim_help_visible"/>-->
+
+
+	<com.maxmpz.widget.player.Help
+		style="@style/TopHelpSmaller"
+		w:help_inside="true"
+		w:showArrow="false"
+		w:help_anchor="@id/prev_cat"
+		android:text="@string/h_prev_list"
+	/>
+	<StateAnimParams style="@style/TopHelp_anim_help_visible"/>
+		
+	<com.maxmpz.widget.player.Help
+		style="@style/TopHelpSmaller"
+		w:help_inside="true"
+		w:showArrow="false"
+		w:help_anchor="@id/next_cat"
+		android:text="@string/h_next_list"
+	/>
+	<StateAnimParams style="@style/TopHelp_anim_help_visible"/>
+	
+	<com.maxmpz.widget.player.Help
+		style="@style/TopHelpSmaller"
+		w:help_oneAxis="true"
+		w:help_anchor="@id/cmd_nav_to_lib"
+		android:text="@string/library"
+	/>
+	<StateAnimParams style="@style/TopHelp_anim_help_visible"/>
+	
+	
+	<com.maxmpz.widget.player.Help
+		style="@style/TopHelpSmaller"
+		
+		w:help_anchor="@id/cmd_nav_to_eq"
+		w:showArrow="false"
+		w:help_inside="true"
+		android:text="@string/h_equ_effects"
+		w:line2="@string/long_press_for_menu"
+	/>
+	<StateAnimParams style="@style/TopHelp_anim_help_visible"/>
+
+	<com.maxmpz.widget.player.Help
+		style="@style/TopHelpSmaller"
+		w:help_inside="true"
+		w:showArrow="false"
+		w:help_anchor="@id/cmd_nav_more"
+		w:line1="@string/long_press_skin_opts"
+	/>
+	<StateAnimParams style="@style/TopHelp_anim_help_visible"/>
+</com.maxmpz.widget.player.HelpLayout>

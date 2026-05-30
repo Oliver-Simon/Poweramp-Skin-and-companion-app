@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010-2025 Maksim Petrov
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted for themes, skins, widgets, plugins, applications and other software
+which communicate with Poweramp music player or Poweramp Equalizer applications on Android platform.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<!-- REVISIT: why scene, why private, why stateAnim?
+     - private is mostly to avoid top scenes to go into eq layouts (though we have higher level private scenes already)
+     - scene - now used for 1-2line anim
+     - stateAnim? -->
+<com.maxmpz.widget.base.SceneFastLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:w="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/top_eq_tab_container"
+	style="?EqTabLayout"
+	w:privateScene="true"
+	w:enableStateAnim="true"
+	>
+	<!-- PowerList based band list -->
+	<com.maxmpz.widget.player.EqKnobsList android:id="@+id/eq_knobs_layout"
+		style="?EqKnobsLayout"
+		w:listScroller="@+id/frequency_response_scroller"
+	/>
+
+	<com.maxmpz.widget.player.MilkFRS android:id="@+id/milk_frs"
+		style="?EqMilkFrs"
+		android:contentDescription="@string/h_frs_drag_to_scroll"
+	/>
+	
+	<!-- NOTE: for the EqKnobsList (based on PowerList) the list scroller is set for in the list attributes, not vice versa as for EqKnobsFastLayout -->
+	<com.maxmpz.widget.player.FrequencyResponseScroller android:id="@+id/frequency_response_scroller"
+		style="?EqFrequencyResponseScroller"
+		w:useDSPBus="true"
+		android:importantForAccessibility="yes"
+		android:contentDescription="@string/h_frs_drag_to_scroll"
+	/>
+	
+	<com.maxmpz.widget.base.BusActionPopupLayout android:id="@+id/frs_info_label"
+		style="?EqInfo"
+		w:menuItemsLayout="@layout/merge_dsp_info_popup_layout"
+		w:busId="@id/bus_dsp_cmd"
+		w:msgId="@id/cmd_dsp_switch_dsp_meta"
+		w:firstPressToast="@string/long_press_for_more_options"
+		android:importantForAccessibility="no"
+	>
+		<!-- bus is different in PA vs Peq -->
+		<com.maxmpz.widget.player.BusStatusText android:id="@id/_label"
+			style="?EqInfoLabel"
+			w:stateBusId="@id/bus_dsp"
+			w:labelStateId="@id/dsp_meta"
+			w:updateMsgId="@id/msg_dsp_started"
+			w:updateMsgId_2="@id/msg_dsp_boolean_param"
+			w:updateMsgId_3="@id/msg_dsp_eq_changed"
+			w:updateMsgId_4="@id/msg_dsp_other_changed"
+			w:updateMsgId_5="@id/msg_dsp_reverb_changed"
+			w:updateMsgId_6="@id/msg_dsp_meta_changed"
+		/>
+		<SceneParams w:scene="@+id/scene_button_menu"
+			android:visibility="gone"
+		/>
+		<SceneParams w:scene="@+id/scene_button_menu_closed"
+			android:visibility="visible"
+		/>
+	</com.maxmpz.widget.base.BusActionPopupLayout>
+	<SceneParams w:scene="@+id/scene_button_menu" 
+		style="?EqInfo_scene_item_menu" 
+	/>
+
+	<!-- Overridden for peq -->
+	<include android:layout="@layout/merge_eq_equalizer_buttons"/>
+
+
+	<!-- Avoid attaching to this view - it's a popup layout thus it's re-attached (though we keep the stub in place) -->
+	<com.maxmpz.widget.player.EqPresetPopupListLayout android:id="@+id/preset_button"
+		style="?EqEquPresetButtonLayout"
+		android:contentDescription="@string/preset"
+		w:disableParentLayoutForPopup="false"
+	>
+		<com.maxmpz.widget.player.BusStatusText android:id="@id/_label"
+			style="?EqEquPresetLabel"
+			w:defaultTextOnNoState="true"
+			w:stateBusId="@id/bus_dsp"
+			w:labelStateId="@id/dsp_eq_preset_name"
+			w:iconStateId="@id/dsp_eq_preset_icon"
+			w:updateMsgId="@id/msg_dsp_eq_changed"
+			w:updateMsgId_2="@id/msg_dsp_started"
+			android:text="@string/preset"
+		/>
+		<!-- NOTE: invisible (vs gone) is needed here for a bit better animation (text gets layout earlier, thus, better positioned when popup closes) -->
+		<SceneParams w:scene="@+id/scene_button_menu"
+			android:visibility="gone"
+		/>
+		<SceneParams w:scene="@+id/scene_button_menu_closed"
+			android:visibility="visible"
+		/>
+	</com.maxmpz.widget.player.EqPresetPopupListLayout>
+	<SceneParams w:scene="@+id/scene_button_menu" 
+		style="?EqEquPresetButtonLayout_scene_button_menu"
+	/>
+
+	<!-- Do not attach to this view - it's a popup layout thus it's re-attached -->
+	<com.maxmpz.widget.base.BusActionPopupLayout android:id="@+id/eq_menu"
+		style="?EqMenu"
+		android:contentDescription="@string/menu"
+		w:menuItemsLayout="@layout/merge_eq_menu_layout"
+		w:busId="@id/bus_dsp_cmd"
+		w:msgId="@id/cmd_dsp_switch_dsp_meta"
+		>
+		<com.maxmpz.widget.base.FastTextView android:id="@id/_icon"
+			style="?EqMenuIcon"
+			/>
+		<SceneParams w:scene="@+id/scene_button_menu"
+			android:visibility="gone"
+			/>
+		<SceneParams w:scene="@+id/scene_button_menu_closed"
+			android:visibility="visible"
+			/>
+	</com.maxmpz.widget.base.BusActionPopupLayout>
+	<SceneParams w:scene="@+id/scene_button_menu"
+		style="?EqMenu_scene_item_menu"
+	/>
+
+	<com.maxmpz.widget.base.InvisibleView android:id="@+id/eq_tone_panel_spacer"
+		style="?EqTonePanelSpacer"
+		/>
+
+	<com.maxmpz.widget.base.FastLayout android:id="@+id/tone_panel"
+		style="?EqTonePanel"
+	>
+		
+		<!-- NOTE: format is set by code depending on user prefs -->
+		<com.maxmpz.widget.player.DSPToneRoundKnobLayout android:id="@+id/eq_bass_knob_layout"
+			style="?EqBassToneKnobLayout"
+			
+			w:param="@id/dsp_bass_gain"
+			w:enablingParam="@id/dsp_tone_enabled"
+			w:updateMsgId="@id/msg_dsp_eq_changed"
+	
+			w:labelText="@string/bass_tone"
+		/>
+		
+		<!-- NOTE: format is set by code depending on user prefs -->
+		<com.maxmpz.widget.player.DSPToneRoundKnobLayout android:id="@+id/eq_treble_knob_layout"
+			style="?EqTrebleToneKnobLayout"
+	
+			w:param="@id/dsp_treble_gain"
+			w:enablingParam="@id/dsp_tone_enabled"
+			w:updateMsgId="@id/msg_dsp_eq_changed"
+	
+			w:labelText="@string/treble"
+		/>
+	</com.maxmpz.widget.base.FastLayout>
+</com.maxmpz.widget.base.SceneFastLayout>

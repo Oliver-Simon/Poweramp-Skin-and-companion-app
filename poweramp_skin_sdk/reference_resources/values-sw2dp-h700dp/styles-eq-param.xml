@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010-2021 Maksim Petrov
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted for themes, skins, widgets, plugins, applications and other software
+which communicate with Poweramp music player application on Android platform.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<!-- NOTE: the parametric styles applied as "landscape" to all devices with not enough vertical space
+     in any orientation (portrait/landscape). As soon as enough vertical space is available,
+     values-sw2dp-h700dp is applied for the "portrait" layout.
+     NOTE: for Peq this is applied earlier (via dir symbolic link - we start at 616dp).
+     NOTE: ensure this dir contains stuff just related to styles-eq-param and properly update Peq link on changes -->
+<resources 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:w="http://schemas.android.com/apk/res-auto"
+>
+	<!--
+	  EqParamGainLinearKnob (@id/_gain)
+	           |       +========================================+
+	           |     |       +=============+                     |   <- _placeholder2 pushes knobs (_q and below)
+	           |    |   |    |_placeholder2|                      |     and limits their overal size by consuming the available
+	           +====|==>|    +=============+                      |     height. _placeholder2 height is roughly the height
+	                |   |      [ _lr ]                            |     of _lr + _type buttons with the margins
+	                |   =      [_type]                            |  <- _type button is attached to the top of _q knob.
+	                |   =                                         |     The buttons are not affected by _placeholder2 and
+	                |   |      +=====+                            |     can go over _placeholder2 if not enough space,
+	                |   |      | _q  |                            |     but still will be inside container as _placeholder2
+	                |   |      +=====+                            |     ensures that
+	                |   =      [_q_label_and_value]               |
+	                |                                             |
+	                |          +=====+                            | <- height of _freq/_q knobs is limited with maxHeight,
+	                |          +=====+                   [_color] |    so they grows to a limited size. The grow itself is caused
+	                |          [_freq_label_and_value]   [_edit]  |    by layout_heightPercent
+	                 |                                           |
+	                  +=========================================+
+
+	-->
+
+
+	<!-- port -->
+	<!-- _placeholder1 has no size and is invisible -->
+	<style name="EqParamPlaceholder1">
+		<item name="android:id">@id/_placeholder1</item>
+		<!--<item name="android:background">#00f</item>-->
+	</style>
+	
+	<!-- port -->
+	<style name="EqParamPlaceholder2">
+		<item name="android:id">@id/_placeholder2</item>
+		<!-- Should match LR and type buttons height + their margins, thus depends
+		     on EqParamPopupButtonLayout_height_port -->
+		<item name="android:layout_height">@dimen/EqParamPlaceholder2_height_port</item>
+		<item name="android:layout_width">88dp</item>
+		<item name="layout_consumeSpace">vertical|size</item>
+		
+		<!--<item name="android:background">#f00</item>-->
+	</style>
+
+	<!-- port -->
+	<style name="EqParamLRPopupButtonLayout" parent="EqParamLRPopupButtonLayoutBase">
+		<item name="android:layout_height">@dimen/EqParamPopupButtonLayout_height_port</item>
+		<item name="layout_attachBottom">@id/_type</item>
+
+		<item name="layout_gravityTarget">@id/_q</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+
+		<item name="android:layout_marginTop">4dp</item>
+		<item name="android:layout_marginBottom">0dp</item>
+	</style>
+
+	<!-- port -->
+	<style name="EqParamTypePopupButtonLayout" parent="EqParamTypePopupButtonLayoutBase">
+		<item name="android:layout_height">@dimen/EqParamPopupButtonLayout_height_port</item>
+		<item name="android:layout_marginTop">4dp</item>
+		<item name="android:layout_marginBottom">@dimen/EqParamTypePopupButtonLayout_marginBottom_port</item><!-- 4dp -->
+
+		<item name="layout_attachBottom">@id/_q</item>
+		<item name="layout_gravityTarget">@id/_q</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+	</style>
+
+	<!-- port -->
+	<style name="EqParamEditButton" parent="EqParamEditButtonBase">
+		<item name="layout_attachLeft">@id/_freq</item>
+		<item name="layout_attachBottom">parent</item>
+		<item name="android:layout_marginBottom">6dp</item>
+		<item name="android:layout_marginRight">8dp</item>
+		<item name="android:layout_marginLeft">-16dp</item>
+	</style>
+
+	<!-- port -->
+	<style name="EqParamColorPopupLayout" parent="EqParamColorPopupLayoutBase">
+		<item name="layout_attachLeftToLeft">@id/_edit</item>
+		<item name="layout_attachBottom">@id/_edit</item>
+	</style>
+
+	<!-- port -->
+	<style name="EqParamLockButton" parent="EqParamLockButtonBase">
+		<item name="layout_attachLeftToLeft">@id/_edit</item>
+		<item name="layout_attachBottom">@id/_color</item>
+	</style>
+
+
+	<!-- port -->
+	<style name="EqParamRoundKnobPortBase" parent="EqParamRoundKnobBase">
+		<item name="layout_maxHeight">@dimen/EqParamRoundKnobBase_maxSize_port</item>
+		<item name="android:layout_width">wrap_content</item>
+		<!-- NOTE: for a longer screens layout_maxHeight is in effect up to an available space or maxHeight and limit -->
+		<item name="layout_heightPercent">50%</item>
+		<item name="android:layout_gravity">top|left</item>
+
+		<item name="android:layout_marginTop">@dimen/EqParamRoundKnobPortBase_marginTop</item>
+		<!-- Matching the gain linear knob total offset from bottom. This margin is applied to the knob labels, as those are aligned
+		     bottom-to-bottom -->
+		<item name="android:layout_marginBottom">4dp</item>
+				
+		<item name="android:paddingBottom">@dimen/EqParamRoundKnobPortBase_paddingBottom</item><!-- 36sp. Should be enough for label and values to fit -->
+
+		<!--<item name="android:background">#500f</item>-->
+	</style>
+	
+	<!-- port -->
+	<style name="EqParamQRoundKnob" parent="EqParamRoundKnobPortBase">
+		<item name="android:id">@id/_q</item>
+		<item name="android:contentDescription">@string/q_factor</item>
+		
+		<item name="layout_attachTop">@null</item>
+		<item name="layout_attachBottom">@id/_freq</item>
+
+		<!--<item name="android:background">#f00</item>-->
+	</style>
+	
+	<!-- port -->
+	<style name="EqParamQLabelAndValue" parent="EqParamLabelAndValueBase">
+		<item name="android:id">@id/_q_label_and_value</item>
+		<item name="android:importantForAccessibility">no</item>
+
+		<item name="layout_minWidth">52sp</item><!-- Reduce width jumps when rotating and changing value by defining some resonable min width -->
+		<item name="layout_attachBottomToBottom">@id/_q</item>
+		<item name="android:layout_marginTop">0dp</item>
+		<item name="android:layout_marginBottom">0dp</item><!-- Ensure to reset margin bottom -->
+
+		<item name="layout_gravityTarget">@id/_q</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+		
+	</style>
+	
+	<!-- port -->
+	<style name="EqParamFreqRoundKnob" parent="EqParamRoundKnobPortBase">
+		<item name="android:id">@id/_freq</item>
+		<item name="android:contentDescription">@string/frequency</item>
+		
+		<item name="layout_attachTop">@null</item>
+		<item name="layout_attachBottom">parent</item>
+
+		<item name="layout_minWidth">52sp</item><!-- Reduce width jumps when rotating and changing value by defining some resonable min width -->
+	</style>
+	
+	<!-- port -->
+	<!-- NOTE: we have offset from parent bottom as we're attached bottom-to-bottom to knob, which has some marignBottom already -->
+	<style name="EqParamFreqLabelAndValue" parent="EqParamLabelAndValueBase">
+		<item name="android:id">@id/_freq_label_and_value</item>
+		<item name="android:importantForAccessibility">no</item>
+		
+		<item name="layout_attachBottomToBottom">@id/_freq</item>
+		<item name="layout_gravityTarget">@id/_freq</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+		<item name="android:layout_marginBottom">0dp</item><!-- Ensure to reset margin bottom -->
+	</style>
+</resources>

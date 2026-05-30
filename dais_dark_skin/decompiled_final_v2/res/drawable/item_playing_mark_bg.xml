@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="3.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <selector android:enterFadeDuration="250" android:exitFadeDuration="250">
+        <item android:state_activated="true">
+            <layer-list>
+                <item>
+                    <shape android:shape="rectangle">
+                        <corners android:radius="12.0dip" />
+                        <solid android:color="?2130772246" />
+                        <stroke android:width="1.5dip" android:color="?2130772245" />
+                    </shape>
+                </item>
+            </layer-list>
+        </item>
+    </selector>
+</inset>

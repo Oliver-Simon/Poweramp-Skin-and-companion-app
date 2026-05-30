@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="4.0dip">
+        <LinearLayout android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="?colorPrimary" android:id="@id/fragment_discovery_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Discovery Radar" />
+            <TextView android:textSize="12.0sp" android:textColor="?colorOnSurfaceVariant" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="Finde Musik, die perfekt in deine Sammlung passt." />
+            
+            <com.google.android.material.button.MaterialButton android:layout_marginTop="12.0dip" android:id="@+id/btnSelectPlaylist" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="💿 Aus Playlist inspirieren..." />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup android:gravity="center" android:id="@id/toggleDiscoveryType" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" app:selectionRequired="true" app:singleSelection="true">
+                <com.google.android.material.button.MaterialButton android:textSize="12.0sp" android:id="@id/btnDiscoveryAll" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Alles" android:layout_weight="1.0" style="@style/Widget.Material3.Button.OutlinedButton" />
+                <com.google.android.material.button.MaterialButton android:textSize="12.0sp" android:id="@id/btnDiscoveryTracks" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tracks" android:layout_weight="1.0" style="@style/Widget.Material3.Button.OutlinedButton" />
+                <com.google.android.material.button.MaterialButton android:textSize="12.0sp" android:id="@id/btnDiscoveryAlbums" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Alben" android:layout_weight="1.0" style="@style/Widget.Material3.Button.OutlinedButton" />
+                <com.google.android.material.button.MaterialButton android:textSize="12.0sp" android:id="@id/btnDiscoveryArtists" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Artists" android:layout_weight="1.0" style="@style/Widget.Material3.Button.OutlinedButton" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <com.google.android.material.button.MaterialButtonToggleGroup android:visibility="gone" android:gravity="center" android:id="@+id/togglePlaylistMode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" app:selectionRequired="true" app:singleSelection="true">
+                <com.google.android.material.button.MaterialButton android:textSize="12.0sp" android:id="@+id/btnPlaylistLocal" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lokal (Bibliothek)" android:layout_weight="1.0" style="@style/Widget.Material3.Button.OutlinedButton" />
+                <com.google.android.material.button.MaterialButton android:textSize="12.0sp" android:id="@+id/btnPlaylistGlobal" android:padding="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Global (Neu entdecken)" android:layout_weight="1.0" style="@style/Widget.Material3.Button.OutlinedButton" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/swipeRefreshDiscovery" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/rvDiscovery" android:padding="8.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <androidx.core.widget.NestedScrollView android:id="@id/layoutEmptyDiscovery" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="32.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="48.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🧭" />
+                        <TextView android:textSize="16.0sp" android:textColor="?android:textColorSecondary" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="Noch keine Funde" />
+                        <TextView android:textSize="12.0sp" android:textColor="?android:textColorSecondary" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="Hör mehr Musik oder ziehe nach unten zum Aktualisieren." />
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </FrameLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <com.google.android.material.progressindicator.CircularProgressIndicator android:layout_gravity="center" android:id="@id/progressDiscovery" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" />
+    </FrameLayout>
+</LinearLayout>

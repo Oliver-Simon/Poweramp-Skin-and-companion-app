@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="?attr/cornersOther" />
+            <size android:height="36.0dip" android:width="36.0dip" />
+            <solid android:color="?attr/colorAccent" />
+        </shape>
+    </item>
+    <item>
+        <vector android:tint="#ffffffff" android:height="24.0dip" android:width="24.0dip" android:viewportWidth="48.0" android:viewportHeight="48.0">
+            <group android:pivotX="24.0" android:pivotY="24.0" android:scaleX="0.65" android:scaleY="0.65">
+                <path android:fillColor="#ffffffff" android:pathData="M14,43.55a5.14,5.14,0,1,1-0.72-10.24,5,5,0,0,1,5.21,5.91A5.21,5.21,0,0,1,14,43.55Zm25.55-12a5,5,0,0,0-5.21-5.91,5.14,5.14,0,1,0,5.21,5.91Zm0.06-0.67V7.22a2.8,2.8,0,0,0-3.72-2.65L21.1,10a3.71,3.71,0,0,0-2.49,3.5V38.34s0-15.54,0-15.61a5.67,5.67,0,0,1,3.73-5.12l15.12-5.48a3.14,3.14,0,0,0,2.19-3.05" android:strokeColor="#ffffffff" android:strokeWidth="2.5" android:strokeMiterLimit="10.0" android:fillAlpha="0.2" />
+            </group>
+        </vector>
+    </item>
+</layer-list>

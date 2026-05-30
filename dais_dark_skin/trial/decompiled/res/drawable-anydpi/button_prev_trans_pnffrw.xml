@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item>
+        <vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="48.0" android:viewportHeight="48.0">
+            <group android:pivotX="24.0" android:pivotY="24.0" android:scaleX="1.05" android:scaleY="1.05">
+                <path android:fillColor="?2130772229" android:pathData="M35.76,24V17.72a3.26,3.26,0,0,0-4.89-2.83L25.43,18,20,21.18a3.25,3.25,0,0,0,0,5.64L25.43,30l5.44,3.14a3.26,3.26,0,0,0,4.89-2.83Z" android:strokeColor="?2130772229" android:strokeWidth="1.8" android:strokeLineCap="round" android:strokeLineJoin="round" android:fillAlpha="0.2" />
+                <path android:pathData="M 11.02 14.45 L 11.02 33.55" android:strokeColor="?2130772229" android:strokeWidth="1.8" android:strokeLineCap="round" android:strokeLineJoin="round" />
+            </group>
+        </vector>
+    </item>
+</layer-list>

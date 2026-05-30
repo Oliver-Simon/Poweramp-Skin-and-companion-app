@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector android:enterFadeDuration="250" android:exitFadeDuration="250"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_activated="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="?2130773077" />
+                </shape>
+            </item>
+            <item>
+                <inset android:drawable="@drawable/check_big" android:insetLeft="4.0dip" android:insetRight="4.0dip" android:insetTop="4.0dip" android:insetBottom="4.0dip" />
+            </item>
+        </layer-list>
+    </item>
+</selector>

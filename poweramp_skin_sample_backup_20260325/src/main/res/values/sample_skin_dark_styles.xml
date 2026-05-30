@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceCycle, NewApi">
+	<!-- Here we just reuse Poweramp dark skin. Real skin will redefine styles, probably, based on its own light version of the skin (e.g. here - sample_skin) -->
+	<style name="SampleSkinDark" parent="com.maxmpz.audioplayer:style/ActivityTheme_Black">
+		<item name="com.maxmpz.audioplayer:corners_navbar">0dp</item>
+		<item name="com.maxmpz.audioplayer:corners_popup">2dp</item>
+		<item name="com.maxmpz.audioplayer:corners_medium">4dp</item>
+		<item name="com.maxmpz.audioplayer:corners_medium_plus">4dp</item>
+		<item name="com.maxmpz.audioplayer:corners_searchbar">4dp</item>
+		<item name="com.maxmpz.audioplayer:corners_mini">0dp</item>
+		<item name="com.maxmpz.audioplayer:corners_large">8dp</item>
+		<item name="com.maxmpz.audioplayer:corners_small">1dp</item>
+
+		<item name="com.maxmpz.audioplayer:corners_aa_tracks">2dp</item>
+		<item name="com.maxmpz.audioplayer:corners_aa_albums">2dp</item>
+		<item name="com.maxmpz.audioplayer:corners_aa_other">matchHeight</item>
+
+		<item name="com.maxmpz.audioplayer:corners_aa_tracks_zoomed">2dp</item>
+		<item name="com.maxmpz.audioplayer:corners_aa_albums_zoomed">2dp</item>
+		<item name="com.maxmpz.audioplayer:corners_aa_other_zoomed">matchHeight</item>
+
+		<item name="com.maxmpz.audioplayer:corners_aa_tracks_grid">2dp</item>
+		<item name="com.maxmpz.audioplayer:corners_aa_albums_grid">2dp</item>
+		<item name="com.maxmpz.audioplayer:corners_aa_other_grid">matchHeight</item>
+
+		<item name="com.maxmpz.audioplayer:corners_aa_tracks_grid_zoomed">2dp</item>
+		<item name="com.maxmpz.audioplayer:corners_aa_albums_grid_zoomed">2dp</item>
+		<item name="com.maxmpz.audioplayer:corners_aa_other_grid_zoomed">matchHeight</item>
+
+		<item name="com.maxmpz.audioplayer:corners_aa_tracks_small">2dp</item>
+		<item name="com.maxmpz.audioplayer:corners_aa_scene_aa">2dp</item>
+		<item name="com.maxmpz.audioplayer:corners_miniplayer_aa">0dp</item>
+
+		<item name="com.maxmpz.audioplayer:TopContainer">@style/TopContainer</item>
+		<item name="com.maxmpz.audioplayer:TopListWidget">@style/TopListWidget</item>
+		<item name="com.maxmpz.audioplayer:listSubstyle">@style/ListSubstyle</item>
+
+		<!-- Standard styles links to enable overrides by settings -->
+		<item name="com.maxmpz.audioplayer:ItemTrackTitle">@style/ItemTrackTitle</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackLine2">@style/ItemTrackLine2</item>
+		<item name="com.maxmpz.audioplayer:TopMetaInfo">@style/TopMetaInfo</item>
+		<item name="com.maxmpz.audioplayer:TopMetaInfoLabel">@style/TopMetaInfoLabel</item>
+
+		<!-- Header Redesign Overrides for Dark Mode -->
+		<item name="com.maxmpz.audioplayer:ItemHeaderButtonsBg">@style/ItemHeaderButtonsBg</item>
+		<item name="com.maxmpz.audioplayer:ItemHeaderButtonsBg_scene_header">@style/ItemHeaderButtonsBg_scene_header</item>
+		<item name="com.maxmpz.audioplayer:ItemHeaderShuffleButton">@style/ItemHeaderShuffleButton</item>
+		<item name="com.maxmpz.audioplayer:ItemHeaderPlayButton">@style/ItemHeaderPlayButton</item>
+		<item name="com.maxmpz.audioplayer:ItemHeaderSelectButton">@style/ItemHeaderSelectButton</item>
+		<item name="com.maxmpz.audioplayer:ItemHeaderSearchButton">@style/ItemHeaderSearchButton</item>
+		<item name="com.maxmpz.audioplayer:ItemTextHeaderShuffleButton">@style/ItemTextHeaderShuffleButton</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackMenu_scene_header">@style/ItemTrackMenu_scene_header</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackAAImage_scene_header">@style/ItemTrackAAImage_scene_header</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackTitle_scene_header">@style/ItemTrackTitle_scene_header</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackLine2_scene_header">@style/ItemTrackLine2_scene_header</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackMeta_scene_header">@style/ItemTrackMeta_scene_header_w_meta</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackBackDecorTitle">@style/ItemTrackBackDecorTitle_w_meta</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackBackDecorTitle_scene_header_1">@style/ItemTrackBackDecorTitle_scene_header_1_w_meta</item>
+
+		<!-- Use ItemHeaderButtonsBg for some buttons at the bottom of header -->
+		<item name="com.maxmpz.audioplayer:ItemHeaderButtonsBg">@style/ItemHeaderButtonsBg</item>
+		<item name="com.maxmpz.audioplayer:ItemHeaderButtonsBg_scene_header">@style/ItemHeaderButtonsBg_scene_header</item>
+
+		<!-- Explicitly disable stretchy image to prevent rectangle behavior -->
+		<item name="com.maxmpz.audioplayer:headerStretchyImage">@null</item>
+
+		<!-- Fix for potential index 75 failure -->
+		<item name="com.maxmpz.audioplayer:ItemTrackLine2_scene_1_small">@com.maxmpz.audioplayer:style/ItemTrackLine2_scene_1_small</item>
+		<item name="com.maxmpz.audioplayer:ItemTrackLine2_scene_1">@com.maxmpz.audioplayer:style/ItemTrackLine2_scene_1</item>
+	</style>
+
+</resources>

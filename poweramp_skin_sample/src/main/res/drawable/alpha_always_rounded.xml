@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="#ffffffff"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="?com.maxmpz.audioplayer:corners_large" />
+            <gradient android:startColor="#26333333" android:endColor="#40333333" android:angle="90.0" />
+        </shape>
+    </item>
+</ripple>

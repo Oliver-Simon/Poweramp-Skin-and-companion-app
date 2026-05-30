@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?android:colorBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:background="#00000000" android:paddingTop="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" app:elevation="0.0dip">
+        <com.google.android.material.appbar.MaterialToolbar android:id="@id/toolbar" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:title="POWERAMP AI" app:titleTextColor="?colorPrimary">
+            <ImageButton android:layout_gravity="end" android:id="@id/btnOpenPoweramp" android:background="?selectableItemBackgroundBorderless" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/ic_media_play" app:tint="?colorPrimary" />
+            <ImageButton android:layout_gravity="end" android:id="@id/btnInsights" android:background="?selectableItemBackgroundBorderless" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/ic_menu_info_details" app:tint="?colorPrimary" />
+            <ImageButton android:layout_gravity="end" android:id="@id/btnSettings" android:background="?selectableItemBackgroundBorderless" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@android:drawable/ic_menu_preferences" app:tint="?colorPrimary" />
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layoutQueueStatus" android:background="#1affffff" android:padding="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip">
+        <ImageView android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@android:drawable/ic_menu_sort_by_size" android:layout_marginEnd="8.0dip" app:tint="?colorPrimary" />
+        <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="?colorPrimary" android:id="@id/tvQueueStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Warteschlange: 0/0" />
+    </LinearLayout>
+    <androidx.fragment.app.FragmentContainerView android:id="@id/fragmentContainer" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layoutMiniPlayer" android:background="?colorSurfaceVariant" android:padding="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="4.0dip">
+        <com.google.android.material.imageview.ShapeableImageView android:id="@id/ivMiniPlayerArt" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@android:drawable/ic_menu_gallery" android:scaleType="centerCrop" android:layout_marginEnd="12.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="?colorOnSurfaceVariant" android:ellipsize="end" android:id="@id/tvMiniPlayerTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Song Title" android:singleLine="true" />
+            <TextView android:textSize="12.0sp" android:textColor="?android:textColorSecondary" android:ellipsize="end" android:id="@id/tvMiniPlayerArtist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Artist Name" android:singleLine="true" />
+        </LinearLayout>
+        <ImageButton android:id="@id/btnMiniPlayerPrev" android:background="?selectableItemBackgroundBorderless" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@android:drawable/ic_media_previous" android:layout_marginEnd="4.0dip" app:tint="?colorOnSurfaceVariant" />
+        <ImageButton android:id="@id/btnMiniPlayerPlayPause" android:background="?selectableItemBackgroundBorderless" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@android:drawable/ic_media_pause" app:tint="?colorOnSurfaceVariant" />
+        <ImageButton android:id="@id/btnMiniPlayerNext" android:background="?selectableItemBackgroundBorderless" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@android:drawable/ic_media_next" android:layout_marginStart="4.0dip" app:tint="?colorOnSurfaceVariant" />
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView android:id="@id/bottomNavigationView" android:background="?colorSurface" android:layout_width="fill_parent" android:layout_height="wrap_content" app:menu="@menu/menu_bottom_nav" />
+</LinearLayout>

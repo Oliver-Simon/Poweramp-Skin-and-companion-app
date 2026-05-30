@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:w="http://schemas.android.com/apk/res/com.maxmpz.audioplayer">
+    <com.maxmpz.widget.player.MilkFRS android:visibility="invisible" style="@style/SampleSkin_mainMiniSpectrum_MilkFRS" />
+    <SceneParams android:visibility="visible" w:scene="@2131558444" />
+    <SceneParams android:visibility="invisible" w:scene="@2131558449" w:scene_2="@2131558450" w:scene_3="@2131558448" w:scene_4="@2131558446" w:scene_5="@2131558447" w:scene_6="@2131558445" />
+</merge>

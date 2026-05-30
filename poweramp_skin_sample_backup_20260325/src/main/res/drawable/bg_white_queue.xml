@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="?android:colorAccent" />
+            <size android:height="36.0dip" android:width="36.0dip" />
+            <solid android:color="?android:colorAccent" />
+        </shape>
+    </item>
+    <item>
+        <vector android:tint="#ffffffff" android:height="24.0dip" android:width="24.0dip" android:viewportWidth="48.0" android:viewportHeight="48.0">
+            <group android:pivotX="24.0" android:pivotY="24.0" android:scaleX="0.65" android:scaleY="0.65">
+                <path android:pathData="M29.22,35.51a7.28,7.28,0,1,0-7.28,7.27A7.28,7.28,0,0,0,29.22,35.51Z" android:strokeColor="#ffffffff" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeMiterLimit="10.0" />
+                <path android:pathData="M29.22,35.54V23.67a6.38,6.38,0,0,1,4.19-5.75L39,15.67l1.28-0.52a3.54,3.54,0,0,0,2.45-3.44l0.09-4.82c0-1.92,0-1.92-4.26-0.24L37.68,7,32,9.38a4.16,4.16,0,0,0-2.79,3.93V23.67" android:strokeColor="#ffffffff" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeMiterLimit="10.0" />
+                <path android:pathData="M 5.48 8.98 L 23 8.98" android:strokeColor="#ffffffff" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeMiterLimit="10.0" />
+                <path android:pathData="M 5.48 16.54 L 21.94 16.54" android:strokeColor="#ffffffff" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeMiterLimit="10.0" />
+                <path android:pathData="M 5.48 24.1 L 14.24 24.1" android:strokeColor="#ffffffff" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeMiterLimit="10.0" />
+                <path android:fillColor="#ffffffff" android:pathData="M 21.94 28.79 C 25.6513535189 28.79 28.66 31.7986464811 28.66 35.51 C 28.66 39.2213535189 25.6513535189 42.23 21.94 42.23 C 18.2286464811 42.23 15.22 39.2213535189 15.22 35.51 C 15.22 31.7986464811 18.2286464811 28.79 21.94 28.79 Z" android:strokeWidth="1.0" android:strokeAlpha="0.2" android:fillAlpha="0.2" />
+                <path android:fillColor="#ffffffff" android:pathData="M42.38,6.1l-0.1,5.47A2.4,2.4,0,0,1,40.62,14l-8.29,3.35a9.11,9.11,0,0,0-2.68,1.52V13.47a3.24,3.24,0,0,1,2.26-3.07l7.77-3.25C40.72,6.74,41.67,6.36,42.38,6.1Z" android:strokeWidth="1.0" android:strokeAlpha="0.2" android:fillAlpha="0.2" />
+            </group>
+        </vector>
+    </item>
+</layer-list>

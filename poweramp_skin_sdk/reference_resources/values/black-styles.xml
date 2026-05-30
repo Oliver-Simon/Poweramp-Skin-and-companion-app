@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010-2025 Maksim Petrov
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted for themes, skins, widgets, plugins, applications and other software
+which communicate with Poweramp music player or Poweramp Equalizer applications on Android platform.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+	<style name="Base_ActivityTheme_Black" parent="Base_ActivityTheme_Default">
+		<item name="OptionEquFRSRounded">@style/OptionEquFRSRounded_Dark</item>
+		
+		<!-- NOTE: any alpha value in this color enables transparent Android status bar and appropriate Poweramp layout changes, i.e. layout spans behind that bar.
+			 Poweramp places id/status_bar_bg view under status bar, with statusBarBg drawable, which can be any drawable, not just color.
+			 Use either android:statusBarColor for just color, or statusBarBg, but avoid using both to limit overdraw (set other to transparent/#0000)-->
+		<item name="android:statusBarColor">@android:color/transparent</item>
+		<item name="android:windowLightStatusBar" tools:ignore="NewApi">false</item>
+		<item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item><!-- For 9.0 -->
+		<item name="windowLightNavigationBar">false</item>
+				
+		<!-- NOTE: any alpha value in this color enables transparent android navigation bar and appropriate Poweramp layout changes,
+		     i.e. layout spans behind that bar.
+			 Poweramp places id/navigation_bar_bg view under navigation bar, with navigationBarBg drawable, which can be any drawable,
+			 not just color.
+			 Use either android:navigationBarColor for just color, or navigationBarBg, but avoid using both to limit overdraw
+			 (set other to transparent/#0000)
+			 
+			 NOTE: some devices may always ignore these colors (OnePlus - ignores #FF000000, but accepts #FF000001)
+		-->
+		<item name="android:navigationBarColor">#FF000001</item>
+		<item name="android:navigationBarDividerColor" tools:ignore="NewApi">#0000</item><!-- Force nothing for divider as it doesn't look well on some devices which use light divider -->
+		<item name="statusBarBg">#5000</item><!-- Drawable/color for a view under Android status bar.  -->
+		<item name="navigationBarBg">#0000</item><!-- Drawable/color for a view under Android navigation bar. -->
+		
+		<item name="colorPrimary">#fff</item>
+		<item name="colorAccent">#fff</item>
+		
+		<item name="colorControlNormal">#fff</item><!-- E.g. checkboxes -->
+		<item name="colorControlActivated">#fff</item><!-- E.g. checkboxes -->
+		<item name="colorControlHighlight">#3fff</item><!-- E.g. ripple color for most selectable controls/buttons/items -->
+
+		<item name="android:textColorPrimary">#fff</item>
+		<item name="android:textColorSecondary">#aaa</item>
+		<item name="android:textColorTertiary">#bbb</item>
+		<item name="android:textColorPrimaryInverse">#fff</item>
+
+
+		<item name="colorIconPrimary">#fff</item>
+		<item name="colorIconPrimaryForced">#fff</item>
+		<item name="colorIconLessContrast">?colorLessContrast</item>
+		<item name="colorIconInverse">#fff</item>
+		<item name="colorIconInverseForced">#fff</item>
+		<item name="colorIconDisabled">#7eee</item><!-- NOTE: used only in few places, e.g. vis/repeat/shuffle icons (alt) -->
+		
+		<item name="colorTextDisabled">#5a5a5a</item>
+		<item name="colorTextDisabledSecondary">#555555</item>
+		
+		<item name="colorBgPrimary">#222</item>
+		<item name="colorBgPrimaryAlpha">#4333</item>
+		<item name="colorBgSeekbarLine">#4333</item>
+		<item name="colorBgLessAlpha">#d444</item>
+		<item name="colorBgPrimaryStrictAlpha">#f0222222</item>
+		<item name="colorInverse">#fff</item>
+		<item name="colorPlaybackRipple">#999</item><!-- We change this for Android 13+ -->
+		<item name="colorBgInverse">#000</item>
+		<item name="colorBgInverseChecked">#222</item>
+		<item name="colorStroke">#5f5f5f</item>
+		<item name="colorLessContrast">#eee</item>
+		<item name="colorLessContrastRipple">?colorLessContrast</item>
+		<item name="colorTextBgAlpha">#c0000000</item>
+
+		<item name="colorBgPositive">#555</item>
+
+		<item name="colorStrokeHelp">#ccc</item>
+		<item name="colorBgHelp">#333</item>
+		<item name="colorBgHelpEnd">#383838</item>
+		
+		<item name="colorShade">#88000000</item>
+		<item name="colorBgLight">#333</item><!-- Used ATM for the Search Frame bg -->
+		<item name="colorBgCheckedLight">#444</item>
+		<item name="colorItemPlayingMark">#282828</item>
+		
+		<item name="colorAABgColor">#000</item>
+		<item name="colorDraggedBg">#a000</item>
+
+		<!-- NOTE: used only for overlap_track_labels_no_bg styles -->
+		<item name="colorOnAABg">#fff</item>
+		<item name="colorOnAABgLessContrast">#eee</item>
+
+		<item name="colorFastScroller">#888</item>
+		<item name="colorFastScrollerPressed">#444</item>
+		<item name="colorFastScrollerTrack">#0000</item>
+		<item name="colorScrollPopupBg">#a555</item>
+		<item name="colorAZBg">#A111</item>
+		<item name="colorAZPressed">#fff</item>
+		<item name="colorAZSeparator">#0000</item><!-- Do not draw separators -->
+
+		<item name="colorFrsSelectionBgRipple">#eee</item>
+		<item name="colorFrsSelectionBgPressed">#3fff</item>
+		<item name="colorFrsSelectionBg">#1fff</item>
+		<item name="colorEqKnobsLines1">#aaa</item>
+		<item name="colorEqKnobsLines2">#333</item>
+		
+		<item name="colorFrs">#fff</item>
+		<item name="colorFrsTone">#afff</item>
+		<item name="colorFrsToneFill">#28ffffff</item>
+		<item name="colorFrsBackline">#777</item>
+		
+		<item name="colorKnobHolePressed">#ccc</item>
+		<item name="colorKnobHole">#555</item>
+		<item name="colorKnobRipple">#676767</item>
+		<item name="colorKnob">#484848</item>
+		<item name="colorKnobIndicator">#ccc</item>
+		<item name="colorKnobIndicatorPressed">#fff</item>
+		<item name="colorKnobIndicatorDisabled">#333</item>
+		
+		<item name="colorKnobPressed">#fff</item>
+		<item name="colorKnobBg">#222</item>
+		<item name="colorKnobDisabled">#7444</item>
+		<item name="colorKnobHoleDisabled">#7444</item>
+		<item name="colorPreampBg">#111</item>
+		
+		<item name="colorTrackMeta">#999</item>
+		<item name="colorTrackNum">#999</item>
+		<item name="colorSeparator">#F555</item>
+		<item name="colorSeparatorLight">#2A2A2A</item>
+				
+		<item name="colorNavbarIcons">@color/navbar_icons_selector</item>
+		<item name="colorNavbarIconsLessContrast">#999</item>
+		<item name="colorBgNavbar">#181818</item>
+		<item name="colorBgTransparentNavbar">#88181818</item>		
+		
+		<item name="colorSeekbarThumb">#7eee</item>
+		
+		<item name="colorIconCC">#dfff</item>
+		
+		<item name="defaultHiResAA">@drawable/black_poweramp_logo_hd</item>
+		<item name="defaultLowResAA">@drawable/black_poweramp_logo</item>
+				
+		<item name="waveseek_bar">@drawable/inverse_bar</item>
+		<item name="waveseek_elapsedbar">@drawable/inverse_elapsedbar</item>
+		
+		<item name="nav_lists">@drawable/lists_rounded</item>
+		<item name="nav_equ">@drawable/equ_rounded_24dp</item>
+		<item name="nav_search">@drawable/search_rounded</item>
+		<item name="nav_hamburger">@drawable/hamburger_rounded</item>
+		
+		<item name="eq_equalizer">@drawable/equ_thumbs</item>
+		<item name="eq_vol">@drawable/vol</item>
+		<item name="eq_reverb">@drawable/reverb</item>
+		
+		<item name="miniplayer_play_pause">@drawable/miniplayer_play_pause_rounded</item>
+		
+		<item name="repeat_none_32dp">@drawable/repeat_none_32dp_tinted</item>
+		<item name="vis_none_32dp">@drawable/vis_disabled_32dp_tinted</item>
+		<item name="sleep_timer_32dp">@drawable/sleep_timer_32dp_selector</item>
+		<item name="EqMilkFrs_presetUri">internal://#fft2</item>
+		
+		<item name="shuffle_none_32dp">@drawable/shuffle_none_32dp_tinted</item>
+
+		<item name="list_buttons_outline_provider">none</item>
+
+		<!-- Change AA backgrounds for lyrics/lists -->
+		<item name="aaEffectReadable">@style/ActivityTheme_Black_MilkViewEffect_Lyrics</item>
+		<item name="aaEffectList">@style/ActivityTheme_Black_MilkViewEffect_List</item>
+		<!-- Enable aa bg gradient for dark theme -->
+		<item name="aaAllowBgGradientForList">true</item>
+
+		<item name="lyricsPrevAlpha">0.25</item>
+		<item name="lyricsNextAlpha">0.6</item>
+
+		<!-- Android mediarouter icons -->
+		<item name="media_route" tools:ignore="PrivateResource">@drawable/mr_button_dark</item>
+		<item name="mediaRouteCloseDrawable" tools:ignore="PrivateResource">@drawable/mr_dialog_close_dark</item>
+		<item name="mediaRoutePlayDrawable" tools:ignore="PrivateResource">@drawable/mr_media_play_dark</item>
+		<item name="mediaRoutePauseDrawable" tools:ignore="PrivateResource">@drawable/mr_media_pause_dark</item>
+		<item name="mediaRouteStopDrawable" tools:ignore="PrivateResource">@drawable/mr_media_stop_dark</item>
+		<item name="mediaRouteAudioTrackDrawable" tools:ignore="PrivateResource">@drawable/mr_vol_type_audiotrack_dark</item>
+		<item name="mediaRouteDefaultIconDrawable" tools:ignore="PrivateResource">@drawable/ic_mr_button_disconnected_dark</item>
+		<item name="mediaRouteTvIconDrawable" tools:ignore="PrivateResource">@drawable/ic_vol_type_tv_dark</item>
+		<item name="mediaRouteSpeakerIconDrawable" tools:ignore="PrivateResource">@drawable/ic_vol_type_speaker_dark</item>
+		<item name="mediaRouteSpeakerGroupIconDrawable" tools:ignore="PrivateResource">@drawable/ic_vol_type_speaker_group_dark</item>
+		
+		<!-- Skin overlap -->
+		<item name="overlap_more_buttons">@style/ActivityTheme_Blackpro_MoreButtons</item>
+		<item name="overlap_less_rounding">@style/ActivityTheme_Black_LessRounding</item>
+		<item name="overlap_alt_layout">@style/ActivityTheme_Black_AltLayout</item>
+		<item name="overlap_alt_layout2">@style/ActivityTheme_Black_AltLayout2</item>
+		<item name="overlap_graphic_frs_color">@style/ActivityTheme_Black_GraphicFrsColorful</item>
+
+		<item name="DialogForceLightSystemUIStyle">@style/ActivityTheme_Black_DialogForceLightSystemUIStyle</item>
+		<item name="DialogForceDarkSystemUIStyle">@style/ActivityTheme_Black_DialogForceDarkSystemUIStyle</item>
+		
+		<item name="arcGlowWidth">6dp</item><!-- Increased for black -->
+		<item name="holeGlowWidth">6dp</item><!-- Increased for black -->
+		
+		<item name="control_elevation">0dp</item><!-- Not visible on black + improves performance -->
+		<item name="bottom_toolbar_buttons_elevation">3dp</item><!-- Increased elevation for black theme -->
+
+		<item name="EqTonePanel_paddingBottom">@dimen/EqTonePanel_paddingBottom_none</item><!-- 0dp as no need for a shadow -->
+
+	</style>
+
+	<style name="ActivityTheme_Black_MilkViewEffect_Lyrics">
+		<item name="aaBlurIntensity">.45</item>
+		<item name="aaBlurSaturation">1.5</item>
+		<item name="aaBlurScaleSize">8</item>
+		<item name="aaBlurPinLight">-1</item><!-- Disable pinLight/lighten/darken - not needed for the black theme -->
+	</style>
+	<style name="ActivityTheme_Black_MilkViewEffect_List">
+		<item name="aaBlurIntensity">.125</item>
+		<item name="aaBlurSaturation">1.75</item>
+		<item name="aaBlurScaleSize">4</item>
+		<item name="aaBlurPinLight">0.17</item>
+		<item name="aaBlurDarken">.175</item>
+	</style>
+
+	<style name="ActivityTheme_Black_LessRounding" parent="ActivityTheme_White_LessRounding">
+		<item name="nav_lists">@drawable/lists</item>
+		<item name="nav_equ">@drawable/equ_24dp</item>
+		<item name="nav_search">@drawable/search</item>
+		<item name="nav_hamburger">@drawable/hamburger</item>
+		<item name="miniplayer_play_pause">@drawable/miniplayer_play_pause</item>
+	</style>
+
+		
+	<!-- NOTE: theme may be further overridden, e.g. in values-h700dp-port, etc. so keeping a separate base theme.
+		 This helps with overriding specific styles for e.g. values-h700dp-port only, not overriding them here -->
+	<style name="ActivityTheme_Black" parent="Base_ActivityTheme_Black">
+	</style>
+
+	<!-- NOTE: changing statusbar background is not looking well on many devices, so not touching it here -->
+	<style name="ActivityTheme_Black_DialogForceLightSystemUIStyle" tools:ignore="NewApi">
+		<item name="android:navigationBarColor">@android:color/white</item>
+		<item name="android:windowLightNavigationBar">true</item>
+		<item name="windowLightNavigationBar">true</item> 
+		<item name="android:windowLightStatusBar">true</item>
+		<item name="android:navigationBarDividerColor">#08000000</item>
+	</style>
+	<style name="ActivityTheme_Black_DialogForceDarkSystemUIStyle" tools:ignore="NewApi">
+		<item name="android:navigationBarColor">@android:color/black</item>
+		<item name="android:windowLightNavigationBar">false</item>
+		<item name="windowLightNavigationBar">false</item> 
+		<item name="android:windowLightStatusBar">false</item>
+		<item name="android:navigationBarDividerColor">#08FFFFFF</item>
+	</style>
+		
+	<!-- An overlay style -->
+	<style name="ActivityTheme_Blackpro_StaticSeekbar">
+		<item name="waveseek_bar">@drawable/inverse_narrow_bar</item>
+		<item name="waveseek_elapsedbar">@drawable/inverse_narrow_elapsedbar</item>
+		<item name="TopWaveseek">@style/TopWaveseekStatic</item>
+	</style>
+	
+	<!-- An overlay style -->
+	<style name="ActivityTheme_Blackpro_MoreButtons">
+		<!-- Additional layout which is otherwise missing -->
+		<item name="TopWaveseekLayout_extraLayout">@layout/merge_topwaveseeklayout_extralayout</item>
+
+		<item name="TopPlay_scene_playing">@style/TopPlayMoreButtons_scene_playing</item>
+		
+		<item name="TopPause">@style/TopPauseMoreButtons</item>
+		<item name="TopPause_scene_playing">@style/TopPauseMoreButtons_scene_playing</item>
+		
+		<item name="TopTrackElapsed">@style/TopTrackElapsedMoreButtons</item>
+		<item name="TopTrackElapsed_scene_playing">@style/TopTrackElapsedMoreButtons_scene_playing</item>
+		
+		<item name="TopTrackDuration">@style/TopTrackDurationMoreButtons</item>
+		<item name="TopTrackDuration_scene_playing">@style/TopTrackDurationMoreButtons_scene_playing</item>
+	</style>
+		
+	<!-- An overlay style -->
+	<!-- Overridden for 26+ -->
+	<style name="ActivityTheme_Blackpro_TransparentNavbar">
+		<item name="android:windowTranslucentNavigation">true</item>
+		
+		<item name="Navbar">@style/Navbar_transparentNavbar</item>
+		<item name="Navbar_scene_navbar_1line_sheet">@style/Navbar_scene_navbar_1line_sheet_transparentNavbar</item>
+		<item name="Navbar_scene_navbar_2lines">@style/Navbar_scene_navbar_2lines_transparentNavbar</item>
+	</style>
+
+	<!-- An overlay style -->
+	<style name="ActivityTheme_Blackpro_NoMainNavbarBg">
+		<!-- Disable possible extra background applied by system on some devices -->
+		<item name="android:enforceNavigationBarContrast" tools:targetApi="q">false</item>
+
+		<item name="Navbar">@style/Navbar_noBgNavbar</item>
+		<item name="Navbar_scene_navbar_1line_sheet">@style/Navbar_scene_navbar_1line_sheet_transparentNavbar</item>
+		<item name="Navbar_scene_navbar_2lines">@style/Navbar_scene_navbar_2lines_transparentNavbar</item>
+	</style>
+
+	<!-- An overlay style -->
+	<style name="ActivityTheme_Blackpro_SwapLand">
+		<!-- NOTE: applied in landscape -->
+	</style>
+	
+</resources>

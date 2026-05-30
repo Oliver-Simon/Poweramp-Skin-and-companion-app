@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:w="http://schemas.android.com/apk/res/com.maxmpz.audioplayer">
+    <include android:layout="?SampleSkin_counterLayout" w:optional="true" />
+    <include android:layout="?SampleSkin_mainMiniSpectrumLayout" w:optional="true" />
+    <include android:layout="?SampleSkin_mainVolumeLayout" w:optional="true" />
+</merge>

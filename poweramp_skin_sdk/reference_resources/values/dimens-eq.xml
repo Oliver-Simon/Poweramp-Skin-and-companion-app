@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010-2023 Maksim Petrov
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted for themes, skins, widgets, plugins, applications and other software
+which communicate with Poweramp music player or Poweramp Equalizer applications on Android platform.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<resources>
+	<!-- Base -->
+	
+	<dimen name="TopActionModeBar_marginTop">4dp</dimen>
+	<!-- eq_top_margin+EqKnobsLayout_marginTop should match EqFrequencyResponseScroller_marginTop  -->
+	<dimen name="TopActionModeBar_marginBottom">@dimen/eq_top_margin</dimen>
+	<dimen name="eq_top_margin">4dp</dimen>
+	<dimen name="EqReverbPanel12_paddingLR">0dp</dimen>
+	<dimen name="EqKnobsLayout_marginTop">0dp</dimen><!-- NOTE: overridden for Peq -->
+
+	<!-- NOTE: overridden by peq dimens-eq.xml -->
+	<dimen name="EqFrequencyResponseScroller_marginTop">@dimen/EqKnobsLayout_paddingBottom</dimen>
+	<dimen name="EqKnobsLayout_paddingBottom">4dp</dimen>
+	
+	<dimen name="TopPeqEqLayoutBase_scenes_vis_marginTop">56dp</dimen>
+
+	<dimen name="EqParamRoundKnobPortBase_marginTop">6dp</dimen>
+	
+	<dimen name="EqRoundKnobValueLabel_marginTop">1dp</dimen><!-- Overridden for scripts with tall characters, such as Chinese -->
+	
+	<dimen name="EqInfoLabel_maxWidth">300dp</dimen>
+	
+	<dimen name="preamp_knob_width">60dp</dimen>
+	<dimen name="preamp_bg_insetRight">4dp</dimen>
+	
+	<dimen name="eq_frs_height">30dp</dimen>
+	<dimen name="EqInfoBase_marginTB">4dp</dimen><!-- Increased for longer screens -->
+	
+	<dimen name="linear_knob_text_size">12sp</dimen>
+	
+	<dimen name="EqLinearKnob_paddingLR">4dp</dimen> 
+	  	
+	<!-- Baseline values (for large scaling). Overridden by various resource specifiers, e.g. values-w400dp-port -->
+	<dimen name="EqKnobValueText_size">9.5sp</dimen>
+	<dimen name="EqKnobLabelText_size">11dp</dimen>
+	
+	<dimen name="RoundKnob_arcWidth">3dp</dimen>
+	<dimen name="RoundKnob_arcOffset">3dp</dimen>
+
+
+	
+	<dimen name="EqLinearKnob_thumbWidth">24dp</dimen>
+	<dimen name="EqLinearKnob_thumbHeight">48dp</dimen>
+	<dimen name="EqLinearKnob_paddingTB">2dp</dimen>
+	<dimen name="EqParamFreqLabelAndValue_marginBottom">4dp</dimen>
+
+	<dimen name="knob_thumb_indicator_top_bottom">23dp</dimen>
+	<dimen name="knob_thumb_indicator_left_right">7.5dp</dimen>
+	<dimen name="knob_thumb_radius">16dp</dimen>
+	<dimen name="knob_thumb_radius_less_rounded">9dp</dimen>
+
+	<dimen name="knob_thumb_lock_size">16dp</dimen>
+	<dimen name="knob_thumb_lock_top">16dp</dimen>
+	<dimen name="knob_thumb_lock_left">4dp</dimen>
+	
+	<dimen name="EqButton_width">48dp</dimen>
+	<dimen name="EqButton_height">28dp</dimen>
+	<dimen name="EqButtonsBase_smallSlotWidth">35dp</dimen>
+
+
+	<dimen name="EqParamPopupButtonLayout_height_port">28dp</dimen>
+	<dimen name="EqParamPlaceholder2_height_port">68dp</dimen><!-- 4 + 28 + 4 + 28 + 4 -->
+	<dimen name="EqParamTypePopupButtonLayout_marginBottom_port">4dp</dimen>
+	
+	<dimen name="EqMenu_size">28dp</dimen>
+	<dimen name="EqButton_paddingLR">12dp</dimen>
+
+	<dimen name="EqParamRoundKnobPortBase_paddingBottom">38sp</dimen>
+	<dimen name="EqParamFreqLabelAndValue_marginBottom_port">2dp</dimen>
+
+	<dimen name="EqParamGainLinearKnob_layout_marginLeft">14dp</dimen>
+	
+	<dimen name="EqButton_maxWidth">70dp</dimen>
+	<dimen name="EqReverbPresetButtonLayout_maxWidth">90dp</dimen>
+	<dimen name="EqButton_marginSide">4dp</dimen>
+	<dimen name="EqButton_textSize">11dp</dimen><!-- Default (fixed) font -->
+	
+	<dimen name="EqEquButton_maxWidth">75dp</dimen>
+
+	<fraction name="EqTonePanel_widthPercent">15%</fraction><!-- Used for land only, reduced for the longer phones -->
+	
+	<dimen name="EqTonePanel_paddingTop">12dp</dimen>
+	<dimen name="EqTonePanel_paddingBottom_none">0dp</dimen>
+	<dimen name="EqTonePanel_paddingBottom">8dp</dimen><!-- Needed at least 8dp when knob arc highlight is disabled (white + shadow) -->
+	<!-- This is increased for Peq + longer screens -->
+	<dimen name="Peq_EqTonePanel_paddingTop">14dp</dimen>
+	<dimen name="Peq_EqTonePanel_paddingBottom">2dp</dimen>
+
+	<dimen name="EqMenuIcon_size">20dp</dimen>
+
+	<dimen name="ItemPopupListFrs_marginRight">8dp</dimen>
+	<dimen name="ItemEqPresetTitle_drawablePadding">4dp</dimen>
+	
+	<dimen name="EqVolPanel1_paddingTop">0px</dimen>
+	
+	<dimen name="EqRoundKnobLabel_maxWidth">120dp</dimen>
+	<dimen name="EqRoundKnobLabel_marginTop">4dp</dimen><!-- Reduced for land -->
+	<dimen name="EqToneRoundKnobLabel_maxWidth">50dp</dimen>
+	<!-- Used for land + large only -->
+	<dimen name="EqToneKnobLayout_marginOffset">0dp</dimen>
+	<!-- Used for land + large only -->
+	<dimen name="EqRoundKnobValueLabel_marginBottom">0dp</dimen>
+
+	<dimen name="RoundKnobLabelLeftTop_marginRight">4dp</dimen>
+	<dimen name="RoundKnobLabelLeftTop_marginTop">8dp</dimen>
+	<dimen name="RoundKnobLabelLeftTop_minWidth">72dp</dimen>
+	<dimen name="EqEquPresetButtonLayout_width">120dp</dimen>
+	<dimen name="EqMenu_marginBottom">0dp</dimen><!-- For land large -->
+
+	<dimen name="EqKnob_spacing">4dp</dimen>
+	<dimen name="EqReverbPanel3_paddingTop">8dp</dimen><!-- == EqKnob_spacing*2 --> 
+	
+	<dimen name="EqPresetButtonLayout_width">120dp</dimen>
+
+	<!-- NOTE: includes labels, some paddings -->
+	<dimen name="EqSmallRoundKnobLayout_maxSize">120dp</dimen>
+	<dimen name="EqToneRoundKnobLayout_maxSize">200dp</dimen>
+	<!-- Not used ATM -->
+	<dimen name="EqToneRoundKnobLayout_maxWidth">220dp</dimen><!-- Further limit width for large tablets -->
+	<!-- Not used ATM -->
+	<dimen name="EqToneKnobLayout_marginSide">4dp</dimen><!-- Margin applied to bass right and treble left, so actual padding between those == x2 -->
+
+	<fraction name="EqToneKnobLayout_widthPercent">50%</fraction>
+
+	<fraction name="EqBassToneKnobLayout_attachLeft">0%</fraction>
+	<fraction name="EqTrebleToneKnobLayout_attachLeft">50%</fraction>
+
+	<dimen name="EqRoundKnobLayout_maxSize">200dp</dimen>
+	<dimen name="EqLargerRoundKnobLayout_maxSize">220dp</dimen>
+	
+	<dimen name="EqSmallRoundKnob_maxSize">80dp</dimen>
+	<dimen name="EqToneRoundKnob_maxSize">140dp</dimen>
+	<dimen name="EqRoundKnob_maxSize">140dp</dimen>
+	<dimen name="EqParamRoundKnobBase_maxSize_port">140dp</dimen>
+	<dimen name="EqLargerRoundKnob_maxSize">180dp</dimen>
+
+	<!-- Land and port on the small devices, reduced for real land -->
+	<dimen name="EqParamLRPopupButtonLayout_marginBottom_land">8dp</dimen>
+	<dimen name="EqParamTypePopupButtonLayout_marginBottom_land">16dp</dimen>
+
+	<dimen name="EqParamRoundKnob_marginBottom">4dp</dimen>
+	<dimen name="Peq_EqParamRoundKnob_marginBottom">4dp</dimen>
+
+	<dimen name="EqPresetButtonLayoutBase_listItemSize">64dp</dimen>
+
+	<!-- Overridden for longer screens (reduced), and increased here for smaller screens -->
+	<fraction name="EqEquPresetButtonLayout_scene_button_menu_heightPercent">70%</fraction>
+
+	<fraction name="eq_left_buttons_width">20%</fraction>
+	<fraction name="tone_panel_width">75%</fraction>
+
+	<dimen name="TopPeqEqLayoutBase_paddingBottom">8dp</dimen>
+</resources>

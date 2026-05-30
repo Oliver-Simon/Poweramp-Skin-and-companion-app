@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+	android:color="?com.maxmpz.audioplayer:colorPlaybackRipple"
+>
+	<item android:drawable="?com.maxmpz.audioplayer:back_10s_round" android:alpha="?attr/button_opacity" />
+</ripple>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" tools:ignore="ResourceCycle, NewApi">
+	<!-- Define few skin related attributes we'll be using inside skin -->
+
+	<!-- This is a reference to counter layout (when enabled by Poweramp settings) -->
+	<attr name="SampleSkin_counterLayout" format="reference"/>
+
+	<!-- This is a reference to main mini spectrum (when enabled by skin option) -->
+	<attr name="SampleSkin_mainMiniSpectrumLayout" format="reference"/>
+
+	<!-- This is a reference to main volume knob (when enabled by skin option) -->
+	<attr name="SampleSkin_mainVolumeLayout" format="reference"/>
+
+	<!-- Using those attributes to set both playing and paused AA scale -->
+	<attr name="SampleSkin_ItemTrackAAImage_scene_aa_scale" format="float"/>
+	<attr name="SampleSkin_ItemTrackAAImage_scene_aa_scale_playing" format="float"/>
+	
+	<!-- Indirection for Alternative Layouts -->
+	<attr name="Alt_AAImage_consumeSpace" format="integer|reference">
+		<flag name="none" value="0"/>
+		<flag name="horizontal" value="0x1000000"/>
+		<flag name="vertical" value="0x2000000"/>
+		<flag name="both" value="0x3000000"/>
+		<flag name="size" value="0x80000000"/>
+		<flag name="skip_last_margin" value="0x80000"/>
+		<flag name="reset_horizontal" value="0x4000000"/>
+		<flag name="reset_vertical" value="0x8000000"/>
+	</attr>
+	<attr name="Alt_ItemTrackAAImage_scene_aa_style" format="reference"/>
+	<attr name="Alt_ItemTrackTitle_scene_aa_style" format="reference"/>
+	<attr name="Alt_ItemTrackLine2_scene_aa_style" format="reference"/>
+
+	<!-- Burn-In Protection Attributes -->
+	<attr name="button_opacity" format="float"/>
+	<attr name="colorPlayerButtons" format="color|reference"/>
+
+	<!-- Add standard Poweramp attributes that might be missing in some environments -->
+	<attr name="ItemTrackLine2_scene_1" format="reference"/>
+	<attr name="ItemTrackLine2_scene_1_small" format="reference"/>
+
+	<!-- Robustness for "Text Background: None" -->
+	<attr name="ItemTrackTitle_scene_aa_no_bg" format="reference"/>
+	<attr name="ItemTrackLine2_scene_aa_no_bg" format="reference"/>
+
+</resources>

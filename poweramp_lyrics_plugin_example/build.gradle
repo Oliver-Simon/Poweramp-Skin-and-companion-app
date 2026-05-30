@@ -1,0 +1,28 @@
+plugins {
+    alias(libs.plugins.agp.application)
+    alias(libs.plugins.kotlin.android)
+}
+
+android {
+    compileSdk COMPILE_SDK
+    namespace "com.maxmpz.poweramplyricspluginexample"
+
+    defaultConfig {
+        minSdk MIN_SDK
+        targetSdk TARGET_SDK
+        versionCode 1
+        versionName "1.0"
+    }
+    compileOptions {
+        sourceCompatibility = JAVA_SOURCE_COMPATIBILITY
+        targetCompatibility = JAVA_TARGET_COMPATIBILITY
+    }
+}
+
+dependencies {
+    implementation project(path: ':poweramp_api_lib')
+    implementation libs.kotlinx.coroutines.android
+    implementation libs.androidx.annotation
+    implementation libs.androidx.core
+    project(':poweramp_api_example')
+}

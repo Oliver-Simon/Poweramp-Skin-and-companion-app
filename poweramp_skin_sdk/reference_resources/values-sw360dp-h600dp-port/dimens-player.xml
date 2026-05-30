@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010-2022 Maksim Petrov
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted for themes, skins, widgets, plugins, applications and other software
+which communicate with Poweramp music player or Poweramp Equalizer applications on Android platform.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<resources>
+	<dimen name="ItemTrackAAImage_scene_item_menu_size">104dp</dimen>
+	<dimen name="ItemTrackAAImage_scene_item_menu_marginTBL">16dp</dimen>
+	<dimen name="ItemTrackAAImage_scene_item_menu_marginR">6dp</dimen>
+
+
+	<dimen name="Navbar_height">48dp</dimen>
+	<dimen name="NavbarNavButtonsLayout_height">44dp</dimen>
+	<dimen name="NavBarButton_drawableSize">32dp</dimen>
+
+	<dimen name="ItemMiniplayerAAImage_size">36dp</dimen>
+	<dimen name="corners_miniplayer_aa">12dp</dimen>
+
+	<dimen name="NavbarBounds_height">56dp</dimen>
+	<dimen name="corners_navbar">28dp</dimen>
+	<dimen name="NavbarBounds_height_scene_navbar_2lines">108dp</dimen>
+
+	<dimen name="Navbar_marginB_more_rounded">8dp</dimen>
+	<dimen name="NavbarBounds_height_more_rounded">58dp</dimen>
+	<dimen name="NavbarBounds_height_scene_navbar_2lines_more_rounded">100dp</dimen>
+
+	<!-- Same for overlap_navbar_offset -->
+	<dimen name="NavbarBounds_height_offset">60dp</dimen>
+	<dimen name="NavbarBounds_height_scene_navbar_2lines_offset">112dp</dimen>
+	
+	<dimen name="TopPlay_maxSize">82dp</dimen>
+	<dimen name="TopPauseMoreButtons_maxSize_scene_playing">80dp</dimen>
+	<dimen name="TopMediumButton_size">58dp</dimen> 
+	<dimen name="TopSmallButton_size">42dp</dimen>
+	
+	<!-- Meizu pro 5, Mi1 360x616, Redmi Note4 360x620, Mi5s 360x620, S7e 360x616, S4Active 360x615 -->
+	
+	<dimen name="PlainSeekbar_buttons_offset">26dp</dimen>
+	<dimen name="Alt_PlainSeekbar_buttons_offset">26dp</dimen>
+	
+	<!-- Alt -->
+	
+	<dimen name="Alt_ItemTrackTitle_scene_aa_marginTop">0dp</dimen>
+	<item type="dimen" format="float" name="Alt_ItemTrackTitle_scene_aa_scale">.85</item>
+	<dimen name="Alt_TopAABounds_marginBottom">64dp</dimen>
+	<dimen name="Alt_TopListSubstyle_aaMarginBottom">208dp</dimen>
+</resources>

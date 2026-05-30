@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dais Dark Extra</string>
+    <string name="skin_author">giannisgx89</string>
+    <string name="skin_sample">Dais Dark Extra</string>
+    <string name="skin_sample_description">Clone of Dais Dark (Extra)</string>
+    
+    <string name="theme_settings">Skin Settings</string>
+    <string name="start_with_sample_skin">Apply Dais Dark Extra</string>
+    <string name="skin_poweramp_not_installed">Poweramp is not installed!</string>
+    <string name="tips">Dais Dark skin for Poweramp v3.\n\nTo apply this skin, you can use the button below or go to Poweramp Settings -> Look and Feel -> Skin.</string>
+</resources>

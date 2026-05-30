@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010-2023 Maksim Petrov
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted for themes, skins, widgets, plugins, applications and other software
+which communicate with Poweramp music player application on Android platform.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<resources>
+	<integer name="activity_start_click_delay">160</integer><!-- Match ~ aa popup collapse time -->
+	<!-- Match navbar extension collapse. Reduced for the faster devices, e.g. sdk=31+ -->
+	<integer name="activity_start_navbar_click_delay">100</integer>
+	
+	
+	<item type="id" name="aa_image"/>
+	
+	<item type="id" name="list_scroller"/>
+	<item type="id" name="list_indexer"/>
+	<item type="id" name="menu_placeholder"/>
+	<item type="id" name="sub_aa_buttons"/>
+	<item type="id" name="status_bar_bg"/>
+	
+	<item type="id" name="dialog_progress"/>
+	
+	<item type="id" name="navbar_bounds"/>
+	
+	<item type="id" name="waveseek_cursor"/>
+	<item type="id" name="like_button"/>
+	<item type="id" name="milk"/>
+	<item type="id" name="ff"/>
+	<item type="id" name="rw"/>
+	<item type="id" name="prev_cat"/>
+	<item type="id" name="next_cat"/>
+	
+	
+	<item type="id" name="anim_waveseek_pressed"/>
+
+	<item type="id" name="state_active"/>
+	
+	<!-- Top scenes. Also includes scene=0 default scene (paused state) -->
+	<item type="id" name="scene_playing"/>
+	<item type="id" name="scene_lyrics"/>
+	<item type="id" name="scene_vis"/><!-- playing implied, no UI visible  -->
+	<item type="id" name="scene_vis_w_ui"/><!-- playing implied, some UI is visible, but optionally faded by alpha set by user preferences -->	
+	<item type="id" name="scene_vis_temp_ui"/><!-- playing implied, shown on user touch while vis runs. UI is fully visible with alpha = 1 with vis behind UI -->
+	<item type="id" name="scene_eq"/>
+	<item type="id" name="scene_lib"/>
+	<item type="id" name="scene_search"/>
+
+	<item type="id" name="scene_1"/>
+	<item type="id" name="scene_alt"/>
+
+	<item type="id" name="_dragged_container"/>
+	<item type="id" name="_clickable_memo"/>
+
+	<!-- This is directly implemented via ButtonsFactory.kt, so no need for the layout for this button -->
+	<!-- NOTE: run pa_gen_public/pa_compile_public_to_flat when changed, as ids drift on rebuilds -->
+	<item type="id" name="subaabutton_vis"/>
+	<item type="id" name="subaabutton_sleeptimer"/>
+	<item type="id" name="subaabutton_counter"/>
+	<item type="id" name="subaabutton_shuffle"/>
+	<item type="id" name="subaabutton_repeat"/>
+	<item type="id" name="subaabutton_like"/>
+	<item type="id" name="subaabutton_unlike"/>
+	<item type="id" name="subaabutton_like_unlike"/>
+	<item type="id" name="subaabutton_love"/>
+	<item type="id" name="subaabutton_unlove"/>
+	<item type="id" name="subaabutton_loveUnloveButton"/>
+	<item type="id" name="subaabutton_menu"/>
+	<item type="id" name="subaabutton_cast"/>
+	<item type="id" name="subaabutton_delete"/>
+	<item type="id" name="subaabutton_add_to_pl"/>
+	<item type="id" name="subaabutton_bookmark"/>
+	<item type="id" name="subaabutton_aa"/>
+	<item type="id" name="subaabutton_info"/>
+	<item type="id" name="subaabutton_tags"/>
+	<item type="id" name="subaabutton_lyrics"/>
+	<item type="id" name="subaabutton_artist"/>
+	<item type="id" name="subaabutton_album"/>
+	<item type="id" name="subaabutton_folder"/>
+	<item type="id" name="subaabutton_genre"/>
+	<item type="id" name="subaabutton_audio_info"/>
+	<item type="id" name="subaabutton_nextcat"/>
+	<item type="id" name="subaabutton_prevcat"/>
+	<item type="id" name="subaabutton_plus10s"/>
+	<item type="id" name="subaabutton_minus10s"/>
+	<!-- 29 -->
+
+
+	<!-- ?references are resolved too, if needed. IMPORTANT: these should be stable, as they are stored in the prefs -->
+	<array name="sub_aa_buttons">
+		<item>@id/subaabutton_vis</item>
+		<item>@id/subaabutton_sleeptimer</item>
+		<item>@id/subaabutton_counter</item>
+		<item>@id/subaabutton_shuffle</item>
+		<item>@id/subaabutton_repeat</item>
+		<item>@id/subaabutton_menu</item>
+		<item>@id/subaabutton_cast</item>
+		<item>@id/subaabutton_delete</item>
+		<item>@id/subaabutton_add_to_pl</item>
+		<item>@id/subaabutton_bookmark</item>
+		<item>@id/subaabutton_aa</item>
+		<item>@id/subaabutton_info</item>
+		<item>@id/subaabutton_lyrics</item>
+		<item>@id/subaabutton_tags</item>
+		<item>@id/subaabutton_artist</item>
+		<item>@id/subaabutton_album</item>
+		<item>@id/subaabutton_genre</item>
+		<item>@id/subaabutton_folder</item>
+		<item>@id/subaabutton_like</item>
+		<item>@id/subaabutton_unlike</item>
+		<item>@id/subaabutton_like_unlike</item>
+		<item>@id/subaabutton_love</item>
+		<item>@id/subaabutton_unlove</item>
+		<item>@id/subaabutton_loveUnloveButton</item>
+		<item>@id/subaabutton_prevcat</item>
+		<item>@id/subaabutton_nextcat</item>
+		<item>@id/subaabutton_minus10s</item>
+		<item>@id/subaabutton_plus10s</item>
+		<item>@id/subaabutton_audio_info</item>
+	</array>
+
+
+	<item type="id" name="eqbutton_eq_and_tone"/>
+	<item type="id" name="eqbutton_eq"/>
+	<item type="id" name="eqbutton_vis"/>
+	<item type="id" name="eqbutton_tone"/>
+	<item type="id" name="eqbutton_limit"/>
+	<item type="id" name="eqbutton_toggle_on_off"/>
+	<item type="id" name="eqbutton_global"/>
+	<item type="id" name="eqbutton_compressor"/>
+	<item type="id" name="eqbutton_dvc"/>
+
+	<array name="eq_buttons">
+		<item>@id/eqbutton_toggle_on_off</item>
+		<item>@id/eqbutton_eq_and_tone</item>
+		<item>@id/eqbutton_limit</item>
+		<item>@id/eqbutton_tone</item>
+		<item>@id/eqbutton_vis</item>
+		<item>@id/eqbutton_eq</item>
+		<item>@id/eqbutton_global</item>
+		<item>@id/eqbutton_compressor</item>
+		<item>@id/eqbutton_dvc</item>
+		<item>@id/subaabutton_audio_info</item>
+	</array>
+
+</resources>

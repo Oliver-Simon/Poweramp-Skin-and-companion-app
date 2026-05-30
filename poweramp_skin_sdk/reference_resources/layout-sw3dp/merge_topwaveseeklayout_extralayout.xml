@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (C) 2010-2021 Maksim Petrov
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted for themes, skins, widgets, plugins, applications and other software
+which communicate with Poweramp music player application on Android platform.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<merge
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:w="http://schemas.android.com/apk/res-auto"
+>
+
+	<!-- Update default pause button scene with jumpVisibility=true -->
+	<com.maxmpz.widget.base.SceneParams w:scene="defaultScene" w:baseScene="defaultScene" w:forId="@id/pause"
+		w:jumpVisibility="true"
+	/>
+
+	<!-- prev_cat -->
+	<!-- NOTE: this button changes it's drawable and press messaging from <<< to 10s 
+	     w:morphArg2="2" x2 for duration for long press (10s, 40s) -->	
+	<com.maxmpz.widget.base.MorphableBusActionButton android:id="@+id/prev_cat"
+		style="?TopPrevCat"
+	/>
+	<SceneParams w:scene="@+id/scene_playing" w:scene_2="@id/scene_vis_temp_ui" w:scene_3="@id/scene_vis_w_ui"
+		w:scene_4="@id/scene_lyrics"/>
+	<StateAnimParams w:stateAnim="@id/anim_seeking"
+		style="?TopPlay_state_seeking"
+	/>
+	<!-- prev_cat -->
+
+
+	<!-- rw -->
+	<com.maxmpz.widget.base.BusActionButton android:id="@+id/rw"
+		style="?TopRw"
+	/>
+	<SceneParams w:scene="@+id/scene_playing" w:scene_2="@id/scene_vis_temp_ui" w:scene_3="@id/scene_vis_w_ui"
+		w:scene_4="@id/scene_lyrics"
+		style="?TopRw_scene_playing"
+	/>
+	<StateAnimParams w:stateAnim="@id/anim_seeking"
+		style="?TopPlay_state_seeking"
+	/>
+	<!-- rw -->
+
+
+	<!-- ff -->
+	<!-- arg1="1" - forward -->	
+	<!-- REVISIT: use start seek/stop seek cmds instead -->
+	<com.maxmpz.widget.base.BusActionButton android:id="@+id/ff"
+		style="?TopFf"
+	/>
+	<SceneParams w:scene="@+id/scene_playing" w:scene_2="@id/scene_vis_temp_ui" w:scene_3="@id/scene_vis_w_ui"
+		w:scene_4="@id/scene_lyrics"
+		style="?TopFf_scene_playing"
+	/>
+	<StateAnimParams w:stateAnim="@id/anim_seeking"
+		style="?TopPlay_state_seeking"
+	/>
+	<!-- ff -->
+
+
+	<!-- next_cat -->
+	<!-- NOTE: this button changes it's drawable and press messaging from <<< to 10s -->
+	<com.maxmpz.widget.base.MorphableBusActionButton android:id="@+id/next_cat"
+		style="?TopNextCat"
+	/>
+	<SceneParams w:scene="@+id/scene_playing" w:scene_2="@id/scene_vis_temp_ui" w:scene_3="@id/scene_vis_w_ui"
+		w:scene_4="@id/scene_lyrics"/>
+	<StateAnimParams w:stateAnim="@id/anim_seeking"
+		style="?TopPlay_state_seeking"
+	/>
+	<!-- next_cat -->
+
+	<!-- The anchor view we're using for the (optional) seekbar alignment -->
+	<com.maxmpz.widget.base.InvisibleView android:id="@+id/top_probuttons_separator"
+		style="@style/TopProbuttonsSeparator"
+		/>
+</merge>
