@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:padding="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="?colorPrimary" android:id="@id/tvInsightsTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="AI Music Insights" />
-    <ScrollView android:scrollbarThumbVertical="?colorPrimary" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fadeScrollbars="false">
-        <TextView android:textSize="16.0sp" android:textColor="?android:textColorPrimary" android:id="@id/tvInsightsContent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Analysiere deine Poweramp Bibliothek..." android:lineSpacingExtra="4.0dip" />
-    </ScrollView>
-    <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@id/insightsProgressIndicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:indeterminate="true" />
-</LinearLayout>
